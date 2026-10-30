@@ -1,154 +1,124 @@
 # 14 — The Earth Information Jukebox
 
-**Difficulty:** Intermediate · Beginner/Youth  
-**Subjects:** Arts & Multimedia · Earth Science · Software  
-**NeuraX preliminary score:** **7.4/10 — Tier B+**  
-**Current v2 position:** **#11**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Intermediate · Beginner/Youth.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 14/14, từ dòng 692; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-## Confirmed challenge intent
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-NASA's Earth Information Center (EIC) creates visualizations of our changing planet. The challenge asks teams to make Earth science more accessible and multisensory by translating visual information into sound: build an **“Earth Jukebox”**—an interface, script, or application that pairs EIC visual frames with **dynamic sonifications generated in real time**.
+## Yêu cầu cốt lõi theo bản đề
 
-Sources:
-- https://www.spaceappschallenge.org/2026/challenges/
-- https://nasaspaceapps.ae/challenges
+Sonification từ EIC visual frames, ghép hình với âm thanh có quan hệ giải thích được, hướng tới tiếp cận đa giác quan. Phần mở đầu nói real-time, nhưng Objectives chấp nhận cả bộ audio đã tạo kèm hình.
 
-## What makes this challenge interesting
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-A strong entry should create a mapping between Earth-science information and sound that is:
+ML, computer vision, API, desktop, playlist và tactile feedback là lựa chọn. Không cần vừa realtime vừa tất cả hình thức; NeuraX chọn một giao diện có điều khiển.
 
-- understandable;
-- repeatable;
-- meaningful rather than arbitrary;
-- useful for accessibility and/or pattern exploration;
-- engaging in a live demo.
+## DATA — đầu vào và những gì phải xác minh
 
-## NeuraX concept: “Earth Resonance”
+EIC frames/animation với caption, legend, thời điểm và đơn vị nếu có. Không coi màu ảnh đã stylize là giá trị vật lý trực tiếp nếu chưa có mapping/legend.
 
-An interactive EIC viewer where the user selects an Earth-science visualization and explores it visually and sonically.
+## AI — phân tích và baseline
 
-### Timeline sonification
+Baseline mapping nhất quán giữa đặc trưng hình và pitch/nhịp; dùng giới hạn âm lượng và quy tắc âm nhạc. AI chỉ cần nếu giúp tách đặc trưng; không thay bằng nhạc tạo ngẫu nhiên.
 
-As time advances through frames, selected global/regional statistics control sound parameters.
+## AI — prediction có phù hợp không?
 
-### Spatial scan
+Prediction không tự nhiên với đề. Có thể phân tích pattern nhưng đừng làm forecast chỉ để đủ cấu trúc ba block.
 
-A cursor or scan line moves across the image/map. Pixel/region values are translated to sound so users can hear gradients, hotspots, boundaries or change.
+## DEPLOY — demo, dashboard và hardware
 
-### Compare mode
+Một visual sequence, audio đồng bộ, keyboard/screen-reader labels và điều khiển tactile. An làm nút/rung, Quang Luật kiểm mapping và thống kê đặc trưng, hỗ trợ thử điều khiển.
 
-Two regions or timestamps produce contrasting sound signatures while the visual frames remain linked.
+## Concept NeuraX: Earth Resonance — nghe mẫu biến đổi từ khung hình Earth data
 
-The mapping must be documented so sound encodes data rather than acting as soundtrack.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-## Candidate official resources — verify 2026-10-28
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Thiết kế mapping và kiểm độ trung thực |
+| Việt — Technical Lead / DATA + AI | Đặc trưng hình và audio pipeline; kiến trúc/contract và review kỹ thuật |
+| Bích | Diễn giải Earth science và legend |
+| Hiếu | Player, đồng bộ và accessibility |
+| Tiểu An | Nút vật lý hoặc rung có ý nghĩa |
+| Quang Luật | Thống kê đặc trưng hình/âm thanh, trực quan mapping và cùng An test điều khiển |
 
-The challenge explicitly centers on **Earth Information Center visual frames**, but the full resource list should clarify:
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-- which EIC visualizations/frames are provided;
-- whether raw underlying values are available or only images/video frames;
-- metadata, color scales and units;
-- expected sonification examples/libraries;
-- accessibility guidance.
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-Sonifying underlying numerical data is more scientifically defensible than inferring values from rendered colors unless the color mapping is precisely known.
+Một bộ EIC frames và 2 preset mapping giải thích rõ; playback có pause/volume; thuyết minh bằng chữ; dùng được chỉ bằng bàn phím.
 
-## Sonification design principles
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-### Preserve semantics
+## Cách đánh giá và bằng chứng cần có
 
-Use sound parameters with intuitive or learnable relationships to data.
+Cùng input cho mapping nhất quán; người thử phân biệt được pattern mục tiêu; kiểm không chỉ dựa vào màu, độ lệch audio/frame và thao tác không nhìn màn hình.
 
-### Keep dimensions separable
+## Rủi ro và phạm vi nên cắt
 
-Possible dimensions include pitch, loudness, rhythm/event rate, timbre, stereo position and duration.
+Nhạc hay nhưng sai dữ liệu hoặc không tiếp cận được; chưa xác nhận kỹ năng audio của team.
 
-### Make the mapping inspectable
+## Điều kiện chọn trước khi triển khai
 
-A user should be able to pause and see:
+Có EIC frames đủ metadata, mapping và cách thử accessibility.
 
-`data value → normalized value → sound parameter`
+## Đánh giá độ phù hợp
 
-### Avoid misleading aesthetics
+Hardware và kiểm mapping có đóng góp rõ, nhưng không phù hợp ưu tiên prediction bằng shortlist chính.
 
-Separate **data encoding** from optional artistic accompaniment.
+## Bản đề người dùng cung cấp — nguyên văn
 
-## AI/ML opportunity
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-AI is not required, but NeuraX could add a secondary layer:
+### The Earth Information Jukebox
 
-- identify interesting regions/times for sonification;
-- summarize the data pattern in text alongside sound;
-- personalize sound mapping;
-- cluster temporal patterns and assign consistent audio motifs.
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Intermediate
+Beginner/Youth
+Subjects
+Arts & Multimedia
+Earth Science
+Software
+NASA’s Earth Information Center (EIC) produces stunning visualizations of our changing planet, but presenting Earth science through visualization alone limits who can reach it. We invite you to make this complex Earth science accessible, engaging, and multi-sensory by translating sight into sound. Your challenge is to build an "Earth Jukebox"—an interface, script, or application that pairs EIC visual frames with dynamic sonifications generated in real time.
 
-Generative music should not obscure the underlying data encoding.
+Background
+NASA’s EIC provides extraordinary visualizations that track how our planet is changing, from shifting global temperatures to evolving oceanic currents. However, this vital information is predominantly presented in a visual format. This current landscape presents a significant gap: relying exclusively on sight limits accessibility for blind and low-vision users and constrains how the public can interact with complex Earth science.
 
-## Technical decomposition
+Sonification—the process of translating data into sound—offers a powerful way to bridge this gap. Converting visual elements into audio unlocks multi-sensory ways to experience Earth data. Auditory processing can reveal subtle data patterns that might be missed by the naked eye and can foster a deeper emotional connection to our home planet. Participants might prioritize creating an interactive environment where the translation from sight to sound is exploratory, blending scientific data with artistic expression.
 
-### Data/image adapter
-- load EIC frames and metadata;
-- access raw values where possible;
-- normalize values consistently;
-- define regions/time steps.
+To do this, participants need a way to connect visual imagery with audio generation. You may consider building a "jukebox" interface or algorithm that analyzes EIC visual frames and plays a corresponding soundscape. Potential solutions could involve using computer vision to map color spectrums to musical chords, applying algorithms to translate pixel density into rhythm, or writing artistic rulesets that drive synthesizer parameters based on visual shapes. These are just examples, and we encourage you to develop your own creative alternatives that blend software development, data processing, and audio engineering.
 
-### Sonification engine
-- deterministic data-to-audio mapping;
-- Web Audio API or equivalent real-time synthesis;
-- user-selectable mapping presets;
-- playback/scrub controls.
+Objectives
+Your challenge is to create an "Earth Jukebox" experience that generates dynamic sonifications from NASA's EIC visual frames. The desired outcome is a project where individuals can select or experience a specific EIC visualization alongside its corresponding soundscape. You may consider developing an interactive tool that actively translates the visual data into sound, or you may choose to submit a curated collection of original, generated audio files that tell the auditory story of the data.
 
-### Frontend
-- EIC visual frame;
-- timeline;
-- play/pause/scrub;
-- legend for sound encoding;
-- spatial scan control;
-- accessibility options;
-- compare mode.
+As you build your project, you may consider exploring a variety of methods and technologies to process the visual data. You might use computer vision techniques to analyze color palettes, shapes, or pixel densities in the EIC imagery, and map those elements to audio parameters like pitch, tempo, or instrumentation. You are welcome to employ machine learning algorithms, open-source audio synthesis frameworks, or custom data-driven artistic rulesets to generate the soundscapes. The exact method of translation is entirely up to you — we encourage you to aim for soundscapes that balance data interpretation with artistic, musically pleasing outputs.
 
-## 48-hour MVP
+The final deliverable can take many forms to suit your team's skills. You may consider developing an interactive web-based jukebox, a standalone desktop application, a backend API endpoint, or an engaging playlist of original, generated audio files accompanied by an explanation of the creative process used to make them. Think about how your audience will experience the visual data and how your approach can best convey the complexity of our changing planet through sound. By blending software development, audio engineering, and artistic creativity, you can create a unique multi-sensory experience.
 
-1. Choose **one EIC dataset/story** with a clear temporal or spatial pattern.
-2. Confirm raw numeric data or faithful color/value mapping.
-3. Define only 2–3 sonification dimensions.
-4. Build deterministic real-time playback synchronized with the visual frame.
-5. Add spatial or temporal exploration.
-6. Create an explicit audio legend/tutorial.
-7. Test whether users can extract information from sound.
+Potential Considerations
+You may (but are not required to) consider the following:
 
-## Evaluation
+Understanding the Concepts
 
-Useful tests include:
+Sonification: the use of non-speech audio to convey information or perceptualize data.
+Visual Frames: many EIC visualizations are animated sequences or images. You might explore extracting individual images (frames) from these sequences to serve as the foundation for your audio generation.
+Designing Your "Jukebox" Experience
 
-- can users distinguish high vs low values through audio?
-- can users detect a peak/change point without seeing the visualization?
-- is the mapping consistent and learnable?
-- does audio preserve ordering/trends from the source data?
-- accessibility/usability feedback from real users where possible.
+Your final submission can take many forms, from a coded, interactive user interface (UI) to a thoughtfully curated digital gallery or playlist of your original, generated audio files paired with the imagery.
+If you choose to build an interactive tool, you might consider the user experience (UX) and how intuitively someone can select a visualization and initiate the audio.
+Accessibility is a core theme of this challenge. You could explore adding features that support blind and low-vision users, such as screen-reader compatibility, tactile feedback, or rich descriptive text accompanying your audio.
+Approaches to Data Translation
 
-## Team fit
+You might explore mapping visual elements—color spectrums, brightness, geometric shapes, or spatial pixel density—to audio parameters such as pitch, rhythm, tempo, volume, or instrumentation.
+Consider the balance between strict data translation and musicality. A direct pixel-to-sound translation might result in chaotic noise; you may want to apply artistic rulesets, musical scales, or harmonies to make the audio engaging and pleasant to listen to.
+You may explore using a variety of disciplines, from writing custom computer vision algorithms and machine learning models to utilizing audio synthesizers and digital audio workstations.
+Telling the Story
 
-- **Hiếu:** interactive web/audio implementation.
-- **Hưng/Việt:** data normalization, anomaly extraction, evaluation and optional intelligent navigation.
-- **Bích:** Earth-science interpretation and meaningful environmental variable selection.
-- **Tiểu An:** hardware/audio interface experimentation could be possible, though not required.
+Documenting your process can help others understand your vision. You might consider sharing the "why" behind your artistic choices or explaining the algorithms and scripts you used to generate the sounds.
+Think about the emotional impact of the Earth science data. You might consider how your soundscapes can reflect the urgency of climate change or the beauty of our planet's interconnected systems.
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
 
-### Gaps
-
-- no confirmed audio/sonification specialist;
-- no dedicated accessibility expert;
-- less use of the team's strongest ML/simulation advantage.
-
-## Risks
-
-- producing attractive music that carries little data;
-- sonifying RGB colors rather than scientific values;
-- too many audio dimensions becoming noise;
-- accessibility claims without user testing;
-- venue/browser audio issues during judging.
-
-## Recommendation
-
-**Creative second-tier option with excellent demo potential.** It becomes much more attractive if NASA supplies underlying numeric EIC data and strong accessibility/sonification resources, but it currently underuses NeuraX's simulation/AI/hardware combination relative to the top candidates.
+</details>

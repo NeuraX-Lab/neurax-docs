@@ -1,98 +1,111 @@
 # 12 — Planet X and SPHEREx
 
-**Difficulty:** Advanced  
-**Subjects:** Astrophysics · Planets & Moons · Software  
-**NeuraX preliminary score:** **7.8/10 — Tier B+**  
-**Current v2 position:** **#13**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Advanced.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 12/14, từ dòng 561; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-## Confirmed challenge intent
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-NASA's SPHEREx mission has been mapping the whole sky every six months in **102 near-infrared bands**, producing imagery/data for more than a billion objects. Objects such as comets, asteroids, stars, brown dwarfs and potentially new planets can reveal themselves through change or apparent motion between observations. NASA asks for a **public-facing web tool** that displays SPHEREx sky imagery and makes temporal changes easy for anyone to inspect.
+## Yêu cầu cốt lõi theo bản đề
 
-Sources:
-- https://www.spaceappschallenge.org/2026/challenges/
-- https://nasaspaceapps.ae/challenges
+Web công khai nhận Right Ascension/declination, hiển thị chuỗi ảnh cùng vùng như video để thấy biến đổi. Bản đề yêu cầu thử Barnard’s Star, Epsilon Indi B, WISE 0855, RW Aurigae và R Draconis.
 
-## Important interpretation
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-The title says “Planet X,” but the published summary does **not** require a team to discover a new planet. The confirmed deliverable is a public-facing temporal exploration tool for SPHEREx imagery. Any automated candidate-detection feature should therefore be framed as helping users inspect change, not as claiming discovery without scientific validation.
+Gộp 102 bands theo detector, spectra, cộng/trừ ảnh, field of view, overlay Gaia/WISE, query trong URL và cờ contamination là gợi ý. Không yêu cầu tìm ra Planet X.
 
-## NeuraX concept: “SPHEREx Blink”
+## DATA — đầu vào và những gì phải xác minh
 
-A web sky viewer designed around the classic astronomy “blink comparator” idea, modernized for multi-epoch/multi-band SPHEREx data.
+Ảnh SPHEREx nhiều epoch, WCS/coordinates, band, PSF và quality flags. Dữ liệu đủ epoch ở cả 5 đối tượng là gate; không thay SPHEREx hoàn toàn bằng survey khác.
 
-### Core interaction
+## AI — phân tích và baseline
 
-`navigate/search sky → choose two epochs → blink/swipe/difference → inspect candidate moving/changing sources → view multi-band evidence → save/share candidate`
+Baseline blink ảnh đã căn chỉnh; AI đề xuất candidate thay đổi khi có phép kiểm độc lập. Cân nhắc chuyển động riêng/parallax, nhiễu và PSF trước gắn nhãn object.
 
-### Optional AI assistance
+## AI — prediction có phù hợp không?
 
-Rather than “AI discovers Planet X,” use AI to **rank interesting candidate changes** for human inspection.
+Dự đoán quỹ đạo hoặc phát hiện hành tinh không thuộc MVP; từ vài chấm khác biệt chưa thể tuyên bố khám phá.
 
-Candidate ranking factors could include:
+## DEPLOY — demo, dashboard và hardware
 
-- positional shift between epochs;
-- brightness change;
-- consistency across nearby bands;
-- source morphology/quality flags;
-- cross-match status with known objects if official resources permit.
+RA/Dec → cutout → playback → metadata; cập nhật release bằng manifest. Hardware là nút điều khiển blink, đóng góp cơ khí nhỏ.
 
-## Candidate data/resources — verify after 2026-10-28
+## Concept NeuraX: SPHEREx Blink — quan sát chuyển động qua nhiều thời điểm
 
-The full resource package should clarify which SPHEREx products are expected, access methods, file formats/coordinate metadata, sample sky regions, expected handling of 102 bands and whether catalogs are in scope.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-Potential implementation technologies may involve FITS, WCS/sky coordinates, catalog cross-matching and web-suitable image pyramids—but these are contingent on supplied products.
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Candidate detection và false positives |
+| Việt — Technical Lead / DATA + AI | WCS, epoch alignment và kiểm ảnh; kiến trúc/contract và review kỹ thuật |
+| Bích | Tổng hợp bằng chứng và giới hạn, cần hỗ trợ thiên văn |
+| Hiếu | Viewer, cache và query |
+| Tiểu An | Điều khiển playback tùy chọn |
+| Quang Luật | QC epoch/missingness, biểu đồ kiểm alignment và báo cáo targets |
 
-## Analytical possibilities
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-### Baseline
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-- align images to a common sky coordinate frame;
-- normalize display/brightness appropriately;
-- enable blink/swipe/difference views;
-- show timestamps/bands/source metadata.
+Cutout nhỏ, vài bands/epochs và checklist đủ 5 mục tiêu được nêu; thiếu đối tượng nào phải ghi partial, không tuyên bố đáp ứng toàn bộ.
 
-### Candidate change detection
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-- image differencing after registration;
-- source detection per epoch;
-- nearest-neighbor/cross-epoch matching;
-- motion vectors;
-- variability score;
-- quality/artifact rejection.
+## Cách đánh giá và bằng chứng cần có
 
-## 48-hour MVP
+Ngôi sao cố định căn khớp; playback đúng thứ tự; quan sát trên 5 targets; không nhầm background/PSF/contamination thành chuyển động.
 
-1. Use **one or a few small sky regions**, not the whole archive.
-2. Load two epochs with a manageable subset of bands.
-3. Implement coordinate-aligned blink/difference.
-4. Add a basic candidate-change detector or precomputed candidate list.
-5. Build candidate inspection cards with temporal/multi-band plots.
-6. Validate against known moving/variable objects if examples are provided.
+## Rủi ro và phạm vi nên cắt
 
-## Evaluation
+Astronomy domain gap, tải nhiều bands, WCS sai và quá ít epochs.
 
-- image registration residual/error;
-- recovery of known moving/variable examples;
-- false positives from artifacts/noise;
-- candidate ranking precision on a manually labeled small set;
-- coordinate-transform verification.
+## Điều kiện chọn trước khi triển khai
 
-## Team fit
+Có cutout SPHEREx multi-epoch và hướng kiểm chuẩn ở targets.
 
-- **Hưng/Việt:** CV/change detection, candidate ranking and evaluation.
-- **Hiếu:** sky viewer/API.
-- **Bích:** limited direct domain advantage.
-- **Tiểu An:** limited native hardware contribution.
+## Đánh giá độ phù hợp
 
-## Domain gaps
+Ưu tiên thấp; có chiều sâu AI nhưng ít tận dụng môi trường/hardware; Quang Luật vẫn có vai trò QC và báo cáo.
 
-- astronomy data formats and World Coordinate System concepts;
-- interpreting motion/variability scientifically;
-- artifact rejection;
-- potentially very large data volume.
+## Bản đề người dùng cung cấp — nguyên văn
 
-## Recommendation
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-**High-upside AI/data project but weaker whole-team fit.** It becomes more attractive if the full brief provides prepared cutouts, catalog helpers or example moving objects that sharply reduce astronomy/data-engineering overhead.
+### Planet X and SPHEREx
+
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Advanced
+Subjects
+Astrophysics
+Planets & Moons
+Software
+Since 2025, NASA’s SPHEREx mission has been mapping the entire sky every six months in 102 bands of near-infrared light, returning images of more than a billion objects. Comets, asteroids, stars, brown dwarfs, and even new planets reveal themselves by shifting position between images, but no one person can sift through all that data alone. Your challenge is to create a public-facing web tool to display images of the sky from SPHEREx mission, making it easy for anyone to quickly see how they change over time.
+
+Background
+Asteroids and comets orbit around the Sun. Nearby stars march across the sky as they orbit around the Galaxy. The Earth orbits the Sun too, causing objects near us to change their apparent positions. Watching for these motions help us discover new astronomical objects and also help measure the distances to these objects. For example, the dwarf planet Pluto was discovered when an astronomer compared two images of the sky taken at different times and recognized that one point of light had shifted between images.
+
+More recently, astronomers have mounted massive searches for nearby objects using this process with help from the public. Hundreds of thousands of volunteers have used this technique to discover asteroids, comets, stars and brown dwarfs—balls of gas too massive to be considered planets yet without enough mass to burn like stars. In fact, most of the known comets and brown dwarfs were discovered by volunteers in this manner through projects like backyardworlds.org.
+
+Since May 2025, NASA’s new SPHEREx mission has been returning unique data that could yield new discoveries. SPHEREx is mapping the whole sky once every six months in 102 bands of near-infrared light, making it uniquely sensitive to objects that are rich in hydrogen, water, carbon dioxide, carbon monoxide, and many other molecules. There will be too much data for any one person or even computer code to completely comprehend. There will be images of more than a billion objects - including brown dwarfs, quasars, comets, asteroids, stars, supernovae and galaxies - which often overlap or vary in brightness. We need your creative new tools to make the most of this treasure trove and help as many people as possible pitch in to make discoveries.
+
+Objectives
+Your challenge is to create a public-facing web tool to display images of the sky from the SPHEREx mission, making it easy for anyone to quickly see how they change over time. Users will enter the coordinates of a patch of sky (Right Ascension and declination). Your tool will display a series of images of that patch like a little video, making it easy to spot moving objects.
+
+Test your tool on Barnard’s Star, Epsilon Indi B (a pair of brown dwarfs orbiting a star), WISE 0855, (a fast-moving brown dwarf Right Ascension 08h55m10.831s, declination -7d14m42.53s), and variable stars RW Aurigae and R Draconis.
+
+Potential Considerations
+You may (but are not required to) consider the following:
+
+New SPHEREx data is arriving fast! Make sure to design a tool that’s easy to update with the latest data releases.
+Think creatively about how to display those 102 infrared bands so users can take advantage of them to make new discoveries! For example, it may make sense to separately add together all the data taken by each of the six detector arrays to improve the signal-to-noise in the images you display. Extra kudos if your tool can generate spectra on the fly.
+It may help users discover moving objects if they have the options to add together or subtract images taken at different times.
+Let users choose the field of view! Larger fields of view can make it possible to track faster-moving sources, at the cost of longer data transfer times.
+Users could benefit from having the option to overlay astronomical data from other telescopes, such as the Gaia mission or the WISE mission.
+If you make it possible to query your tool by including coordinates in the URL, users will be able to easily embed it in other websites and projects.
+It can be useful to display metadata, like contamination flags.
+Consider looking for publicly available tools that may help in handling astronomical data, like the Astrophy tools, and in displaying astronomical data, like the Aladin tool developed by the Strasbourg Astronomical Data Center (CDS).
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
+
+</details>

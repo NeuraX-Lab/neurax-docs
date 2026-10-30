@@ -83,6 +83,12 @@ nasasac26-neurax/
 
 Directories should be created only when needed.
 
+## 2026-10-30 — preparation-phase clarification
+
+The user explicitly requested docs and Mermaid architecture planning inside `neurax-docs` before product implementation. Proposed architecture, data contracts, member setup, hardware BOMs and scope/optimization decisions therefore live under `nasa-space-apps-2026/planning/` for this phase. These are proposals, not as-built specifications. When implementation begins, maintain the actual architecture/methodology in `nasasac26-neurax` and link back to these decisions.
+
+Reusable repo-local planning skills live in `.agents/skills/`, indexed by [skills-catalog.md](skills-catalog.md). They contain Markdown instructions only and do not deploy code, create external tasks or run scheduled jobs.
+
 ## Branch strategy
 
 ### Product repository

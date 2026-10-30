@@ -1,165 +1,136 @@
-# 04 — CLPS Lunar Mission Browser / Lunar Landing Site Navigator
+# 04 — Lunar Landing Site Navigator
 
-**Published overview name:** CLPS Lunar Mission Browser  
-**Current official challenge page heading:** Lunar Landing Site Navigator  
-**Difficulty:** Advanced · Intermediate  
-**Subjects:** Human Exploration · Moon · Software · Space Exploration  
-**NeuraX preliminary score:** **7.6/10 — Tier B+**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Advanced · Intermediate.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 11/14, từ dòng 499; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-> **Naming note:** The 2026 all-challenges overview currently labels this challenge “CLPS Lunar Mission Browser,” while the linked NASA Space Apps challenge page is headed “Lunar Landing Site Navigator.” Treat these as the same challenge unless NASA changes the naming in the full release.
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-## Confirmed challenge intent
+## Yêu cầu cốt lõi theo bản đề
 
-Missions near the Moon's south pole have difficult illumination and communication geometry. NASA asks for an intuitive tool that allows mission planners, educators, and the public to compare candidate landing sites and dates while visualizing the **Sun and Earth relative to the local horizon**, helping assess solar-power potential and direct-to-Earth communication windows.
+Tên trong bản đề là Lunar Landing Site Navigator. Giúp so sánh site/date và hiển thị Sun/Earth tương đối với chân trời để hiểu cơ hội cấp điện và liên lạc trực tiếp về Earth.
 
-Official page currently available:
-- https://www.spaceappschallenge.org/2026/challenges/lunar-landing-site-navigator/
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-## Why the challenge is technically interesting
+Danh sách CLPS/Apollo, tọa độ tùy nhập, 3D, timeline và đếm ngược sunset/Earthset là các cách triển khai gợi ý. Giữ tên file cũ để không gãy liên kết; không coi CLPS là yêu cầu giới hạn toàn bộ bài.
 
-This is not merely a map problem. A credible tool combines:
+## DATA — đầu vào và những gì phải xác minh
 
-- lunar position/topography;
-- time/date;
-- Sun/Moon/Earth geometry;
-- local horizon obstruction;
-- power and communication implications;
-- interactive visualization.
+Đề nêu JPL Horizons, LOLA, Moon Trek và Quickmap. Cần tọa độ lunar, hệ quy chiếu, mốc thời gian và DEM/horizon; dữ liệu tính sẵn được cho phép.
 
-The judging value likely comes from turning specialist calculations into an interface that makes mission constraints understandable quickly.
+## AI — phân tích và baseline
 
-## NeuraX product concept
+Tính azimuth/elevation và so với profile chân trời theo phương vị; tích hợp khoảng nhìn thấy. Baseline hình học đáng tin hơn ML học lại thiên văn; terrain resolution và quy ước thời gian phải rõ.
 
-### “LunaWindow”
+## AI — prediction có phù hợp không?
 
-A mission-browser interface where the user selects:
+Dự tính cửa sổ tương lai bằng ephemeris là phép tính hình học; AI xếp hạng site là extension. Góc cao Mặt Trời không tự quyết định toàn bộ công suất panel hay link budget.
 
-1. landing site(s);
-2. candidate date/time range;
-3. mission duration.
+## DEPLOY — demo, dashboard và hardware
 
-The app produces:
+So 2 sites × 2 dates; biểu đồ horizon và cửa sổ power/comms. An làm panel/LED mô phỏng chiếu sáng, Quang Luật đối chiếu góc/cửa sổ và kiểm log phép đo.
 
-- local 3D/2.5D terrain context;
-- Sun elevation/azimuth over time;
-- Earth elevation/azimuth over time;
-- approximate illumination windows;
-- direct-to-Earth visibility windows;
-- side-by-side site/date scorecards;
-- explanation of why one window is more favorable.
+## Concept NeuraX: LunaWindow — so sánh địa điểm và thời gian hạ cánh
 
-A polished comparison mode could be the central demo: two sites, same date, visibly different power/comms opportunities.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-## Candidate resources — verify on 2026-10-28
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Hình học và đối chiếu ephemeris |
+| Việt — Technical Lead / DATA + AI | Phân tích nhạy cảm và xếp hạng cửa sổ; kiến trúc/contract và review kỹ thuật |
+| Bích | DEM, terrain và giới hạn diễn giải |
+| Hiếu | Giao diện so sánh site/date |
+| Tiểu An | Mạch hiển thị hoặc panel thí nghiệm bàn |
+| Quang Luật | Đối chiếu góc/cửa sổ tính toán, trực quan sai số và cùng An kiểm log |
 
-Likely technical ingredients include:
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-- lunar topography / digital elevation products, potentially LRO/LOLA-derived;
-- planetary geometry/ephemerides, potentially NASA/JPL SPICE or Horizons-style data;
-- CLPS mission/site context supplied in the official challenge resources;
-- lunar coordinate/reference information.
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-These are **candidate technologies**, not confirmed required resources until the full brief is released.
+Hai site có dữ liệu, một khoảng thời gian, biểu đồ Sun/Earth và horizon được mô tả rõ. Nếu dùng chân trời cầu lý tưởng, phải ghi chưa mô hình địa hình.
 
-## Computational approach
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-At a conceptual level:
+## Cách đánh giá và bằng chứng cần có
 
-1. Convert candidate landing coordinates into a local reference frame.
-2. Obtain Sun and Earth direction vectors as a function of time.
-3. Derive local azimuth/elevation.
-4. Use local terrain/DEM to estimate horizon angle by azimuth.
-5. Mark a body as visible when its elevation is above the terrain horizon.
-6. Aggregate visible intervals into power/comms windows.
+So các timestamp với nguồn tham chiếu; kiểm đổi hệ tọa độ, wrap góc và biên visibility; đo sai khác khi thay độ phân giải DEM.
 
-For the hackathon, scientific honesty matters: if terrain-horizon modeling is simplified, say so and quantify the approximation.
+## Rủi ro và phạm vi nên cắt
 
-## Technical decomposition
+Sai frame/time tạo kết quả đẹp nhưng sai; chưa có chuyên gia lunar geometry; hardware bàn không tái hiện môi trường Moon.
 
-### Geometry service
-- date/time → Sun/Earth positions;
-- site coordinates → local frame;
-- visibility computation;
-- window aggregation.
+## Điều kiện chọn trước khi triển khai
 
-### Terrain/geospatial service
-- retrieve/preprocess local lunar DEM;
-- horizon profile calculation;
-- optional slope/terrain context.
+Lấy được geometry tham chiếu và một DEM nhỏ đúng hệ tọa độ.
 
-### Backend
-- site/date query;
-- cached time-series results;
-- comparison endpoint.
+## Đánh giá độ phù hợp
 
-### Frontend
-- lunar map / site selector;
-- horizon polar plot or sky-view diagram;
-- time-series of Sun/Earth elevation;
-- site comparison cards;
-- “good power / good comms / trade-off” explanation.
+Có phần thiết bị cho An và đánh giá thống kê cho Quang Luật; ít cần ML và có rủi ro chuyên môn cao hơn nhóm Earth data.
 
-## AI/ML opportunity
+## Bản đề người dùng cung cấp — nguyên văn
 
-Low-to-medium. This is fundamentally a geometry/mission-planning visualization problem. AI should not be forced in.
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-Potential useful additions:
+### Lunar Landing Site Navigator
 
-- natural-language query for site/date comparison;
-- ranking candidate windows under user-defined weights;
-- explanation layer generated only from computed metrics.
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Advanced
+Intermediate
+Subjects
+Human Exploration
+Moon
+Software
+Space Exploration
+Missions to the Moon’s south pole face extreme lighting and communication constraints, and planning them takes careful coordination between science and engineering teams. Tools for determining Sun and Earth positions at candidate landing sites exist, but their complicated interfaces make it difficult to evaluate critical information with efficiency. Your challenge is to create an intuitive tool or application that lets mission planners, educators, and the public compare landing sites and dates quickly, visualizing Sun and Earth positions relative to the horizon to assess power generation potential and direct-to-Earth communication windows.
 
-## 48-hour MVP
+Background
+NASA’s Commercial Lunar Payload Services (CLPS) program and other lunar missions depend on careful selection of landing sites and dates that balance the needs of both science and engineering teams. One of the most significant challenges in this process is understanding the local lighting and communication environment at a potential landing site. The position of the Sun determines power availability for solar arrays and thermal conditions for equipment, while the position of Earth determines whether direct communication is possible without relay satellites.
 
-1. Support a small predefined set of candidate sites.
-2. Use official/supplied terrain data at manageable resolution.
-3. Calculate Sun/Earth elevation over a selected interval.
-4. Implement a simplified but documented horizon model.
-5. Render one comparison dashboard.
-6. Add a “best windows” summary based on transparent thresholds.
+This challenge is particularly acute at the Moon's south pole, where many future missions are planned due to the presence of water ice and other scientifically valuable resources. The south pole's geometry creates extreme variations in solar illumination and Earth visibility across different lunar days and seasons. Small changes in landing location or date can dramatically affect both power generation potential and communication windows, making rapid site evaluation critical.
 
-Avoid building a full mission-planning suite.
+In practice, mission development rarely proceeds on a fixed timeline. Hardware development challenges, launch delays, or other factors often force mission planners to reconsider their original landing date and location. When this happens, engineers need to quickly evaluate alternative sites in the same region, or alternative dates at the same site, to understand how these changes impact mission feasibility. A tool that enables rapid, intuitive comparison of multiple scenarios would accelerate this decision-making process and help teams identify viable alternatives when constraints shift.
 
-## Evaluation
+Tools that provide this information — such as NASA's Quickmap, Moon Trek, and the JPL Horizons System — are built for detailed analysis and are often difficult for non-specialists to use effectively for rapid scenario comparison. Evaluating each site-data combination means navigating multiple interfaces and interpreting raw data. This leaves a gap between the technical data available and the accessible tools needed to support agile mission planning. An intuitive interface that translates complex ephemeris and topographic data into clear, comparable visualizations could help bridge that gap.
 
-- Compare ephemeris results with a trusted reference for sampled timestamps.
-- Test known coordinate/time cases.
-- Verify horizon calculations on synthetic terrain.
-- Unit-test visibility interval logic.
-- Show sensitivity to DEM resolution / terrain approximation.
+Objectives
+Your challenge is to create a tool or application that enables rapid evaluation of lunar landing site options. Your solution may include:
 
-## Team fit
+Interactive site selection and comparison: You may consider allowing users to choose from a curated list of notable landing sites – such as past Apollo missions, future CLPS mission targets, targets of other commercial lunar missions, or landing sites from other countries' lunar programs – as well as the ability to input custom lunar coordinates. You may also consider enabling side-by-side or sequential comparison of multiple sites to help users quickly assess trade-offs.
+Date and time flexibility: You may consider allowing users to select landing dates and times, and providing tools to explore how conditions change across different lunar days or seasons. This enables users to understand how mission schedule adjustments affect feasibility.
+Sun and Earth position visualization: Display the positions of the Sun and Earth relative to the horizon at a selected landing site on a chosen date. You may consider showing how much time remains before sunset or Earthset, as this directly impacts mission operations and power generation windows.
+Power and communication assessment: You may consider highlighting key metrics such as solar elevation angle (which affects power generation efficiency), duration of sunlight, and Earth visibility windows. These metrics help mission planners quickly assess whether a site-date combination is viable.
+Multiple visualization approaches: You may explore 2D maps, 3D surface visualizations, or other creative representations that help users understand the spatial relationships between the landing site, Sun, and Earth.
+Temporal dynamics: You may consider creating animations or timeline views that show how Sun and Earth positions change over a lunar day or across multiple days, helping users understand the duration and timing of operational windows.
+Accessibility across skill levels: Your tool could serve mission planners seeking detailed technical information for rapid decision-making, as well as educators and the general public curious about why the Moon presents such distinct engineering challenges.
+You are encouraged to be creative in how you present this information. Your solution might be a web application, a mobile app, an interactive visualization, an educational game, or another format entirely — as long as it makes rapid site evaluation clear and efficient.
 
-### Strengths
-- Hiếu: application engineering and visualization.
-- Hưng/Việt: numerical logic, ranking/optimization, validation and data processing.
-- Tiểu An: hardware/mission-system perspective and presentation flow.
+Potential Considerations
+You may (but are not required to) consider the following:
 
-### Gaps
-- Orbital/planetary geometry and lunar geodesy are not current core expertise.
-- A mistake in reference frames or horizon geometry can silently produce beautiful but wrong results.
+Technical approach:
 
-## Risks
+Ephemeris data – the positions and motions of celestial bodies – can be calculated using tools like the JPL Horizons System, or you may consider using pre-computed datasets.
+Lunar topography data from sources like the Lunar Orbiter Laser Altimeter (LOLA) can help create realistic surface visualizations and accurate horizon calculations.
+Consider how to handle the Moon's lack of atmosphere when calculating horizon positions. Without atmospheric refraction, the horizon is determined by local terrain and the edge of the lunar sphere as seen from the landing site.
+Solar elevation angle is a key metric for power generation, and you may consider calculating and displaying this prominently.
+User experience:
 
-- SPICE/ephemeris learning curve.
-- Large lunar raster/DEM handling.
-- Reference-frame mistakes.
-- 3D visualization consuming time without improving correctness.
-- Ambiguous relationship between CLPS-specific requirements and the generic navigator concept until the full brief arrives.
+Your interface could prioritize rapid scenario comparison, allowing mission planners to evaluate multiple site-date combinations efficiently.
+Consider how to clearly communicate time remaining before sunset or Earthset, as this is critical operational information.
+Think about how to make the extreme differences between lunar and terrestrial conditions apparent—they can be compelling when visualized effectively.
+You may consider features that help users understand why small location or date changes have large impacts on mission feasibility.
+Data and accuracy:
 
-## Scorecard
+Consider accounting for the Moon's actual topography, as terrain elevation can significantly affect horizon positions and visibility windows.
+Consider whether your tool will account for factors like Earth's libration (wobble) or the Moon's orbital variations.
+South pole terrain is particularly complex, and you may consider how to represent steep slopes and deep craters that create extreme shadow conditions.
+Engagement and impact:
 
-| Dimension | Score / 10 | Comment |
-|---|---:|---|
-| Team fit | 7.5 | Strong software/data ability, but domain learning is nontrivial. |
-| AI/data leverage | 6.0 | Numerical/data work is strong; ML is not central. |
-| GIS/EO leverage | 8.5 | Terrain + spatial geometry are central. |
-| 48h feasibility | 6.5 | Feasible only with tightly controlled scope/resources. |
-| Demo/story impact | 9.0 | Very visual and mission-relevant. |
-| NASA-data centrality | 9.0 | NASA lunar/geometry data should be fundamental. |
-| Differentiation ceiling | 8.5 | Excellent UX around hard geometry can stand out. |
+Your solution could support mission planners in coordinating between science and engineering teams during mission development.
+It could help teams respond quickly when schedule changes or hardware development challenges require landing date or location adjustments.
+It could also serve as an educational tool to help students and the public understand lunar exploration challenges and why mission planning is so complex.
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
 
-## Recommendation
-
-**Promising but specialist-risky.** Keep in the second shortlist. It becomes much more attractive if the 2026-10-28 resource package provides ready-to-use site coordinates, DEM subsets, geometry examples, or APIs that reduce setup cost.
+</details>

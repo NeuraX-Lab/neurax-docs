@@ -1,134 +1,110 @@
-# 01 — Abandoned but not Forgotten
+# 01 — Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars
 
-**Official title:** Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars  
-**Difficulty:** Intermediate · Beginner/Youth  
-**Subjects:** Astrophysics · Planets & Moons · Space Exploration  
-**NeuraX preliminary score:** **6.0/10 — Tier C+**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Intermediate · Beginner/Youth.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 1/14, từ dòng 1; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-## Confirmed challenge intent
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-NASA asks participants to tell the story of hardware left across the solar system—particularly equipment on the Moon and Mars, as well as hardware continuing into deep space—and introduce school-age space enthusiasts to the hardware and the science it enabled.
+## Yêu cầu cốt lõi theo bản đề
 
-The core problem is therefore **science communication and educational storytelling**, not primarily prediction, optimization, or scientific analysis.
+Kể chuyện có căn cứ về thiết bị NASA để lại trên Moon, Mars hoặc nơi khác, giúp trẻ đi học và người xem phổ thông hiểu thiết bị đã làm gì và đóng góp khoa học nào. Không mặc định mọi thiết bị đều ngừng hoạt động.
 
-Sources:
-- https://www.spaceappschallenge.org/2026/challenges/
-- https://nasaspaceapps.ae/challenges
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-## What a competitive solution probably needs — NeuraX interpretation
+Bản đồ, truyện tranh, podcast, game, sách số hoặc video đều là lựa chọn; không bắt buộc web, AI, dự báo hay phần cứng.
 
-A strong entry should be more than a static museum page. The product should make historical hardware explorable and connect four things clearly:
+## DATA — đầu vào và những gì phải xác minh
 
-1. **Where is/was the hardware?**
-2. **What mission problem did it solve?**
-3. **What science did it produce?**
-4. **What happened after the mission ended?**
+Lịch sử nhiệm vụ, ảnh, mô tả thiết bị và phát hiện khoa học. Bản đề chưa có URL Resources; phải chọn nguồn NASA cụ thể cho từng mốc và kiểm tra quyền dùng ảnh.
 
-For a school-age audience, the interaction and narrative hierarchy matter more than technical density. An effective product might use a solar-system map/timeline, short mission stories, before/after states, science discoveries, and age-appropriate explanations.
+## AI — phân tích và baseline
 
-## NeuraX product concept
+Tra cứu có dẫn nguồn, nối thiết kế thiết bị với kết quả khoa học. AI chỉ hỗ trợ tìm và diễn đạt từ hồ sơ đã kiểm chứng; baseline là nội dung biên tập thủ công.
 
-### “Space Relics Atlas”
+## AI — prediction có phù hợp không?
 
-An interactive story atlas in which users travel between Moon/Mars/deep-space artifacts. Selecting a relic opens a compact narrative:
+Không có bài toán dự báo tự nhiên. Mô phỏng giả định thiết bị còn hoạt động dễ làm sai lịch sử; không dùng chỉ để đủ block AI.
 
-`mission → hardware → location/status → key science → legacy → quiz/exploration prompt`
+## DEPLOY — demo, dashboard và hardware
 
-Possible differentiators:
+Một truyện tương tác 5 phút, 3 hiện vật và bản đồ/timeline. Nếu có mô hình vật lý, nút bấm mở đúng chương chuyện.
 
-- timeline + spatial view rather than cards only;
-- “then vs now” mission status;
-- science concepts linked to each object;
-- narrated/accessible mode;
-- a small grounded Q&A assistant restricted to curated mission records.
+## Concept NeuraX: Silent Explorers — câu chuyện từ một thiết bị đã hoàn thành sứ mệnh
 
-The AI component should remain optional. A generic chatbot would add little value unless answers are grounded in a verified mission corpus and designed for children.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-## Candidate data/resources — verify after 2026-10-28
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Kiểm soát độ chính xác câu trả lời |
+| Việt — Technical Lead / DATA + AI | Trích xuất sự kiện và nguồn; kiến trúc/contract và review kỹ thuật |
+| Bích | Giải thích bối cảnh khoa học, kiểm nội dung |
+| Hiếu | Trải nghiệm kể chuyện tương tác |
+| Tiểu An | Nút bấm hoặc âm thanh của mô hình |
+| Quang Luật | Kiểm bảng sự kiện/nguồn, trực quan timeline và báo cáo khoa học |
 
-Official resource links are not yet published in the full brief. Likely useful source families include:
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-- NASA mission pages and mission archives;
-- NASA image/video libraries;
-- Lunar/Mars mission location data where available;
-- NASA Solar System Exploration pages;
-- mission fact sheets and science-result summaries.
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-**Do not scrape arbitrary web sources into an educational knowledge base without provenance.** The product should be able to show where a fact came from.
+Chọn một nhóm tuổi và 3 thiết bị; mỗi thiết bị có nhiệm vụ, cơ chế, khám phá và trạng thái kèm nguồn. Làm một đường đi hoàn chỉnh trước khi thêm chatbot.
 
-## Technical decomposition
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-### Data/content
-- Curated catalog of 10–30 artifacts for MVP.
-- Fields: mission, object/hardware, destination, coordinates if meaningful, launch/operation/end dates, status, science contribution, media, source URL.
+## Cách đánh giá và bằng chứng cần có
 
-### Backend
-- Simple content API or static JSON/Markdown content store.
-- Optional retrieval layer for grounded Q&A.
+Rà 100% phát biểu thực tế bằng nguồn; người xem thử trả lời được thiết bị làm gì và vì sao khám phá quan trọng. Không chấm chất lượng bằng số lần chatbot trả lời.
 
-### Frontend
-- Spatial/timeline navigation.
-- Story cards with progressive disclosure.
-- Quiz or “mission detective” loop for engagement.
+## Rủi ro và phạm vi nên cắt
 
-### AI/ML opportunity
-- Low-to-medium.
-- Best use: grounded summarization at multiple reading levels, semantic search, or question answering over a curated corpus.
-- Avoid making generative AI the product's core if it cannot be evaluated for factuality.
+Thế mạnh môi trường và prediction ít được dùng; nguồn lịch sử có thể bị AI trộn với chi tiết hư cấu.
 
-## 48-hour MVP
+## Điều kiện chọn trước khi triển khai
 
-1. Select 8–12 iconic pieces of NASA hardware.
-2. Build a curated structured dataset with citations.
-3. Implement a timeline + Moon/Mars/deep-space navigation screen.
-4. Build one polished story flow per artifact.
-5. Add a small knowledge quiz and/or grounded search.
-6. Demo one artifact end-to-end and show how the same system scales.
+Có đủ 3 hồ sơ nguồn và người viết chuyện phù hợp lứa tuổi.
 
-## Evaluation
+## Đánh giá độ phù hợp
 
-Because this is an educational/storytelling challenge, evaluation should focus on:
+Ưu tiên thấp với định hướng DATA → AI → DEPLOY của team; tốt nếu team chủ động chuyển trọng tâm sang giáo dục.
 
-- factual accuracy;
-- source provenance;
-- reading-level suitability;
-- completion/engagement of the story flow;
-- usability with the intended age group;
-- accessibility.
+## Bản đề người dùng cung cấp — nguyên văn
 
-If AI Q&A is included, create a small question set and measure answer correctness/source support.
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-## Team fit
+### Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars
 
-### Strengths
-- Hưng/Việt can build retrieval, semantic search, content transformation or data tooling if needed.
-- Hiếu can own the product/web implementation.
-- Tiểu An's product/business/communication perspective is especially useful for audience and story design.
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Intermediate
+Beginner/Youth
+Subjects
+Astrophysics
+Planets & Moons
+Space Exploration
+Since the 1960s, NASA has left hardware across the solar system–on the Moon, on Mars, and in deep space. From rovers and instruments that completed their science missions to probes still traveling away from Earth this hardware varies widely in both its purpose and current level of functionality. Your challenge is to tell the story of some or all of this equipment that introduces school-age space enthusiasts to the hardware and the science it made possible.
 
-### Weaknesses
-- The challenge underuses NeuraX's strongest AI/data/geospatial capabilities.
-- Winning quality may depend heavily on UX, illustration, storytelling and educational design—areas where a dedicated designer/educator would help more than another ML engineer.
+Background
+For over half a century, humanity has sent incredible machines to the Moon, Mars, and other celestial bodies. When their missions end, probes, rovers, landers, descent stages, and scientific instruments are left behind, standing—or flying—silently as monuments to human exploration. While space agencies know the histories of these machines, school-age space enthusiasts often hear only about active, ongoing missions. There is a real opportunity here to inspire the next generation using the rich, untold histories of these off-world artifacts and the groundbreaking science that paved the way for today's achievements and tomorrow’s exploration.
 
-## Main risks
+To respond to this challenge, participants will want to know what types of equipment currently reside on the Moon, on Mars, and elsewhere—old rovers, descent stages, scientific payloads—and the specific missions they facilitated. The priority is to translate complex historical and scientific data into an engaging narrative.
 
-- Producing a technically impressive system that is less engaging than a simpler, better-designed story experience.
-- Hallucinated mission facts from an LLM.
-- Spending time on 3D/animation instead of narrative quality.
-- Weak differentiation: many teams may build timeline/map/gallery experiences.
+People looking to learn about past space missions often work through dense technical websites or historical textbooks that lack the spark of imagination and storytelling needed to capture a younger or more casual audience's attention. Potential projects could include an interactive map of the Moon with clickable "ghost rovers," a digital graphic novel told from the perspective of a dormant Mars lander, or an audio podcast series chronicling the final days of a deep space instrument. We encourage you to think outside the box and develop your own creative alternatives!
 
-## Scorecard
+Objectives
+The goal of this challenge is to create an engaging, story-driven educational tool or narrative that teaches school-age and casual space enthusiasts about the hardware left on the Moon, Mars, and elsewhere. Your project might bring these silent or active artifacts (back) to life, explaining what they are, why they were originally sent into space, and the scientific discoveries they made and continue to make.
 
-| Dimension | Score / 10 | Comment |
-|---|---:|---|
-| Team fit | 6.0 | Buildable, but not the team's natural specialty. |
-| AI/data leverage | 3.0 | AI is optional rather than intrinsic. |
-| GIS/EO leverage | 2.0 | Spatial display helps, but geospatial science is not central. |
-| 48h feasibility | 9.0 | A polished MVP is realistic. |
-| Demo/story impact | 8.5 | Strong if UX/content is excellent. |
-| NASA-data centrality | 7.0 | NASA archives are central to factual storytelling. |
-| Differentiation ceiling | 6.0 | Differentiation is mainly design/story quality. |
+Your final project can take many forms, and we welcome a variety of formats and technologies. For example, you might develop an interactive web-based experience using HTML, CSS, or JavaScript; prototype an educational video game using a game engine of your choice; write and illustrate a digital children's book; produce a short animated video; design an interactive 3D timeline; or take another approach entirely!
 
-## Recommendation
+Potential Considerations
+Regardless of the medium or technology you choose, a strong narrative focus will serve your project well. Consider weaving real historical facts and mission data into your story, and showing your audience how these missions operated rather than listing facts about them. The aim is to draw a clear, exciting connection between the engineering of the hardware and the scientific knowledge humanity gained from it. By the end of your story, your audience might walk away feeling a personal connection to these forgotten robotic explorers and inspired by the science they conducted. Accuracy is important throughout!
 
-**Do not prioritize for NeuraX unless the team explicitly wants an education/storytelling project.** It is safe and feasible, but it gives up much of the team's technical advantage. Keep it as a fallback if the full technical challenges turn out to have unusable data or excessive setup requirements.
+You may (but are not required to) consider the following:
+
+What age group is your story designed for?
+How accessible is the format you chose to use?
+Do you want to focus on specific missions and pieces of equipment, or tell a broader story about NASA’s exploration?
+What perspective(s) do you want to highlight?
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
+
+</details>

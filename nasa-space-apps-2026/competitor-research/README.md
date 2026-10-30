@@ -12,6 +12,8 @@ Use this folder to track **publicly available** concepts from other 2026 teams w
 
 ## Current implications for NeuraX
 
+> Audit note, 2026-10-30: the overlap statements below are inherited hypotheses from v2. No project-level URLs or access dates were recorded. Do not present them as verified competitor findings or use them to penalize v3 scores until an evidence-backed comparison exists.
+
 The MODIS/VIIRS challenge already has public concepts combining some of the following:
 
 - MODIS/VIIRS reconciliation;
@@ -21,4 +23,4 @@ The MODIS/VIIRS challenge already has public concepts combining some of the foll
 
 Therefore `harmonization + prediction + dashboard` alone should not be considered a strong differentiator for NeuraX FireSense.
 
-Detailed source-by-source notes can be added here during the 2026-10-28 challenge audit.
+Add source-by-source project notes during the next evidence audit; record actual access dates rather than the earlier planned 2026-10-28 checkpoint.

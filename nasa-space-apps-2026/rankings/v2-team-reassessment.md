@@ -1,5 +1,7 @@
 # NASA Space Apps 2026 — NeuraX Challenge Reassessment v2
 
+> Historical snapshot. Current decision guidance: [v3 — full briefs and six members](v3-full-brief-six-members.md). Five-member assumptions and release expectations below are preserved as history, not current status. Competitor/winner claims below lack source-by-source records and are not used as verified evidence in v3.
+
 > **Date:** 2026-10-26  
 > **Status:** Pre-release reassessment before the complete 2026 challenge statements/resources scheduled for 2026-10-28.  
 > **Supersedes for decision-making:** the original preliminary ranking; the original ranking remains valuable as a historical snapshot.

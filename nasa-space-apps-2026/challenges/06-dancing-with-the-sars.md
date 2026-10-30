@@ -1,176 +1,109 @@
 # 06 — Dancing with the SARs
 
-**Difficulty:** Advanced · Intermediate  
-**Subjects:** Earth Science  
-**NeuraX preliminary score:** **9.0/10 — Tier S-**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Advanced · Intermediate.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 5/14, từ dòng 181; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-## Confirmed challenge intent
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-Earth's surface changes through natural processes and human activity: wetland loss, wildfire, earthquakes, agriculture, glacier motion and more. NASA asks teams to build an **interactive application using radar remote-sensing data from the NASA–ISRO Synthetic Aperture Radar (NISAR) mission** to track and visualize one or more types of surface change at locations around the world.
+## Yêu cầu cốt lõi theo bản đề
 
-Sources:
-- https://www.spaceappschallenge.org/2026/challenges/
-- https://nasaspaceapps.ae/challenges
+Dùng NISAR để theo dõi và trực quan hóa biến đổi bề mặt qua thời gian, giúp người dùng hiểu quan sát radar. Objectives nhấn mạnh giải pháp tương tác, dễ dùng, open-source.
 
-## Why this is a top NeuraX candidate
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-The challenge naturally combines:
+Đề cũng mở hình thức báo cáo/video/story map ở phần hướng dẫn. NeuraX ưu tiên app tương tác để bám mục tiêu chính; ảnh quang học bổ sung không thay thế NISAR.
 
-- Earth observation;
-- geospatial data processing;
-- change detection;
-- AI/ML if useful;
-- interactive maps;
-- a highly visible real-world impact story.
+## DATA — đầu vào và những gì phải xác minh
 
-It gives NeuraX room to show real technical depth while still producing a visual demo judges can understand immediately.
+NISAR là nguồn trung tâm theo đề. Cần ít nhất 2 acquisitions phù hợp vùng/thời gian, product level, polarization, geometry, QA và quyền truy cập; chưa kiểm chứng được gói Resources.
 
-The main issue is **SAR expertise**. Radar imagery behaves very differently from optical imagery; a naive “subtract two pictures” system can be misleading.
+## AI — phân tích và baseline
 
-## NeuraX product concept: “SARShift”
+Baseline change detection sau đồng nhất lưới và geometry; phân biệt backscatter với thay đổi mặt đất. Speckle, góc tới và mưa có thể gây biến đổi tín hiệu. Không suy ra độ lún cm từ ảnh cường độ.
 
-A focused change-monitoring application for **one change type** rather than a generic global SAR viewer.
+## AI — prediction có phù hợp không?
 
-Potential focus areas:
+Forecast mặt đất là extension chỉ làm khi đủ chuỗi/nhãn; MVP chỉ phân tích biến đổi đã quan sát, kèm giả thuyết nguyên nhân.
 
-- flood/wetland extent change;
-- wildfire/burn-area structural change;
-- agricultural activity;
-- glacier/ice movement;
-- earthquake/deformation-related change if the supplied data products support it.
+## DEPLOY — demo, dashboard và hardware
 
-User flow:
+Bản đồ trước/sau, biểu đồ chuỗi, ghi chú độ tin cậy. Node nước/ẩm tại bàn là minh họa bổ sung, không ground truth cho vùng vệ tinh xa.
 
-`choose event/region → select before/after dates → compute/display change layer → inspect hotspots → quantify changed area → explain signal and confidence`
+## Concept NeuraX: Wetland Pulse — diễn giải biến đổi một vùng ngập nước
 
-For a hackathon, choosing one phenomenon with strong sample data is much stronger than trying to support every type named in the summary.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-## Candidate NISAR data path — verify on 2026-10-28
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Phát hiện thay đổi và đánh giá |
+| Việt — Technical Lead / DATA + AI | Tiền xử lý SAR và QA; kiến trúc/contract và review kỹ thuật |
+| Bích | Chọn vùng và kiểm giải thích môi trường |
+| Hiếu | Bản đồ tương tác và provenance |
+| Tiểu An | Quy trình cảm biến nước/ẩm bổ trợ |
+| Quang Luật | EDA, mask/coverage, biểu đồ phân bố biến đổi và rà thống kê độc lập |
 
-The full NASA resource list is critical here. Candidate data/product considerations may include:
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-- NISAR L-band and/or S-band SAR products;
-- calibrated/backscatter products rather than raw radar data where possible;
-- geocoded products suitable for rapid web mapping;
-- event/reference regions supplied by the challenge;
-- NASA Earthdata / DAAC access path specified in the official resources.
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-**Key decision gate:** if the official challenge expects teams to start from complex low-level SAR products, hackathon preprocessing risk increases sharply. If analysis-ready/geocoded samples are provided, this becomes one of NeuraX's strongest choices.
+Một AOI, một loại thay đổi, 2–3 thời điểm NISAR; một lớp bối cảnh; báo cáo vùng có tín hiệu thay đổi và chỗ chưa chắc.
 
-## SAR-specific technical considerations
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-A credible solution should understand at least these concepts:
+## Cách đánh giá và bằng chứng cần có
 
-- radar backscatter is sensitive to geometry, roughness, moisture and structure;
-- speckle/noise affects pixel-wise comparisons;
-- incidence angle / acquisition geometry can confound change;
-- different polarizations/bands may respond differently;
-- preprocessing and co-registration matter;
-- “change” in radar intensity is not automatically the physical phenomenon of interest.
+Đồng đăng ký, mask chất lượng và vùng ổn định; đối chiếu ảnh/tài liệu độc lập phù hợp thời gian; precision/recall chỉ khi có nhãn độc lập.
 
-Do not claim semantic causes from a backscatter difference alone unless supported by additional evidence.
+## Rủi ro và phạm vi nên cắt
 
-## Analytical approaches
+Tải và xử lý SAR có thể tiêu hết thời gian; đổi sang Sentinel-1 hoàn toàn sẽ lệch nguồn trung tâm của đề.
 
-Depending on the official products and selected phenomenon:
+## Điều kiện chọn trước khi triển khai
 
-### Simple baseline
-- normalize comparable acquisitions;
-- calculate log-ratio / difference;
-- threshold robustly;
-- clean regions morphologically;
-- summarize area and spatial distribution.
+Có cặp NISAR dùng được và quy trình preprocessing nhỏ; không có thì chuyển bài.
 
-### More advanced options
-- time-series change metrics;
-- unsupervised clustering of change signatures;
-- supervised change classification if labels exist;
-- segmentation model if training data is realistic;
-- multi-source fusion with optical/land-cover/context data as supporting evidence.
+## Đánh giá độ phù hợp
 
-A transparent baseline + good evaluation is preferable to an unvalidated deep-learning model.
+Mạnh về môi trường và AI, nhưng xếp sau phương án ít rủi ro dữ liệu; hardware bổ trợ; Quang Luật ưu tiên QC và đánh giá dữ liệu.
 
-## Technical decomposition
+## Bản đề người dùng cung cấp — nguyên văn
 
-### Preprocessing/data
-- region/date query;
-- product download/subsetting;
-- CRS/reprojection if required;
-- normalization/filtering;
-- tiled or cloud-optimized output for web display.
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-### Analytics
-- before/after or time-series comparison;
-- change score;
-- threshold/classification;
-- region statistics;
-- confidence/quality flags.
+### Dancing with the SARs
 
-### Backend
-- AOI/date request;
-- cached processed layers;
-- statistics API;
-- event metadata.
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Advanced
+Intermediate
+Subjects
+Earth Science
+Earth's surface is an endless dance of natural processes and human activities, but these changes are often difficult to visualize, understand, and communicate. From wetland loss to forest wildfires, earthquakes, farming activities, glacier movement, and more, Earth is in a constant waltz of surface changes. Your challenge is to build an interactive application that uses radar remote sensing data from the NASA-ISRO Synthetic Aperture Radar (NISAR) mission to track and visualize one or more types of surface change at locations around the world.
 
-### Frontend
-- interactive map;
-- swipe/before-after viewer;
-- change overlay;
-- timeline;
-- area/statistics cards;
-- click-to-inspect radar signal/time series.
+Background
+Earth remote sensing helps us acquire information from a bird’s eye view. Space-borne and airborne instruments image the planet and contribute to Earth observations that help decision makers in lieu of or supplement their field surveys. The most common source of energy that these instruments use is from the Sun, which reflects from objects and surfaces on the ground back to the instrument. The amount of this energy varies by the wavelength within the electromagnetic spectrum, and we can use this spectral fingerprint to identify water, rocks/minerals, vegetation, etc. These instruments that utilize the Sun’s energy conduct passive remote sensing while radar instruments, such as those we’ll use in this challenge, conduct active remote sensing.
 
-## 48-hour MVP
+Active instruments emit and receive their own source of energy, and in the case of radar, operate in the microwave band of the electromagnetic spectrum. Radar instruments can be used to study forest structure, soil moisture, wetlands, ocean topography, sea ice, and more. In this challenge, we will download data from SAR (synthetic aperture radar) satellites. SAR “synthesizes” a long antenna by combining a sequence of acquisitions from its actual, shorter antenna to provide higher spatial resolution data. SAR instruments send out a pulse of energy which reacts with the Earth’s surface and is reflected back to the instrument. This collection can be done day or night and even in cloudy weather, which allows for critical data collection during disaster events like oil spills, wildfires, hurricanes, etc.
 
-1. Choose **one phenomenon and 1–3 regions** with verified NISAR data.
-2. Preprocess a small set before the main UI work.
-3. Implement a simple, scientifically defensible change metric.
-4. Produce a web-ready change raster/vector layer.
-5. Build a map with before/after swipe + highlighted changes.
-6. Add changed-area statistics and a short explanation.
-7. Validate against an independent event/known map if possible.
+Radar data is most sensitive to two things: roughness and the dielectric constant. In other words, the radar images are more than just typical satellite images that you may see with your GPS app. This roughness information characterizes the backscatter from Earth’s surface and different polarizations and can tell us something about structure, geometry, and material properties. Since water has a high dielectric constant, SAR data also highlights water bodies, flood inundation, and soil moisture. SAR can also measure fine surface movement on the centimeter scale, such as for earthquakes and land subsidence.
 
-## Evaluation
+Objectives
+On Earth's surface there is an endless dance of natural processes and human activities in constant motion, but these changes are often difficult to visualize, understand and communicate. Wetlands and floodplains are constantly extending and retracting; forest footprints are shrinking from deforestation and wildfires; agricultural lands transform their crop types and health, moisture is swelling and shrinking in soils; glaciers and sea ice are in a constant waltz; and land surfaces are deforming from earthquakes and coastal subsidence. All of these changes have important implications for ecosystems, water resources, agriculture and infrastructures, ultimately impacting local communities.
 
-Potential evaluation approaches:
+In this challenge, participants will build an interactive application that leverages radar remote sensing data from NISAR to track and visualize one or more types of surface changes, at locations around the world. Participants are encouraged to design intuitive tools and innovative visualizations, such as interactive change-detection maps, time-series animations, or dashboards, that make NISAR data accessible to a broad audience. The desired outcome is an open-source, user-friendly solution that translates complex radar observations into actionable insights, helping scientists, resource managers, educators, decision-makers, and the public better understand the patterns and rhythms of Earth’s surface at different time steps.
 
-- compare detected regions with known event footprints or independent data;
-- manually inspect representative changed/unchanged samples;
-- report precision/recall/IoU only if credible ground truth exists;
-- sensitivity analysis for threshold choices;
-- compare simple baseline versus ML method;
-- clearly distinguish radar-signal change from confirmed land-cover/process change.
+First, pick an interesting study area – this can be your hometown, a tropical wetland, ice sheet, forest wildfire, flooded neighborhood, volcano eruption, etc. - wherever the music calls you! Second, download freely available NISAR data using the list of resources provided. You may want to download supplemental data such as optical images or GIS (geographic information systems) layers to contextualize the SAR imagery. And lastly, present your findings in an interactive digital medium you prefer: a final report, video, presentation slides, story map - even an interpretive dance? Hypothesize the physical drivers behind what you see (or don’t see) in the SAR data. For example, if you are looking at the Amazon Rainforest, why might the vegetation change over time? Which polarizations highlight these changes on land and ice? What future applications of NISAR are possible?
 
-## Team fit
+Potential Considerations
+You may (but are not required to) consider the following:
 
-- **Hưng:** change-detection method, evaluation, ML/representation options, scientific framing.
-- **Việt:** data processing, modeling/visual analytics, demo narrative.
-- **Hiếu:** map application, backend processing orchestration and deployment.
-- **Bích:** environmental/GIS interpretation and validation.
-- **Tiểu An:** hardware/sensing perspective and impact story where relevant.
+Analyze NISAR data with different polarizations and/or different frequencies (from other sensors). Download data from different dates to show a time series and ancillary datasets (population, vegetation type, etc.) to contextualize the study area.
+Show how human drivers (agriculture, industry, etc.) are impacting Earth’s natural resources.
+Focus on compelling storytelling through data visualizations. Your project summary can be in any digital medium you prefer: a final report, video, presentation slides, story map, etc.
+If you are familiar with your study area (e.g., it’s your hometown), you can provide personal context and stories for the SAR imagery.
+Consider making your summary interactive (e.g., image sliders, web maps, etc.).
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
 
-## Risks
-
-- SAR learning curve and terminology.
-- Large files / slow downloads.
-- Data-access/authentication friction.
-- Wrong preprocessing invalidates analysis.
-- Visually impressive but scientifically weak change maps.
-- Trying to solve multiple phenomena simultaneously.
-
-## Scorecard
-
-| Dimension | Score / 10 | Comment |
-|---|---:|---|
-| Team fit | 9.0 | Excellent overall, with SAR expertise as the one major gap. |
-| AI/data leverage | 8.5 | Strong change-detection opportunity without forcing AI. |
-| GIS/EO leverage | 10.0 | Core of the problem. |
-| 48h feasibility | 7.5 | Highly dependent on product level/data accessibility. |
-| Demo/story impact | 9.5 | Before/after surface change is immediately understandable. |
-| NASA-data centrality | 10.0 | NISAR is explicitly central. |
-| Differentiation ceiling | 9.5 | Strong research + visual + impact ceiling. |
-
-## Recommendation
-
-**Strong candidate.** If the 2026-10-28 full brief provides analysis-ready NISAR products or manageable samples, NeuraX should seriously reconsider its position in the Top 3. If the data pipeline is too low-level/heavy for a 48-hour build, Field Shift, Earth Analog or MODIS/VIIRS remain safer.
+</details>
