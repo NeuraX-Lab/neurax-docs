@@ -4,6 +4,8 @@ This folder captures patterns from previous NASA Space Apps Global Winners, Glob
 
 ## Working pattern observed
 
+> Audit note, 2026-10-30: no winner-by-winner source records are present yet. Treat the pattern below as a design hypothesis, not an established empirical result or official judging criterion. V3 does not assign points for unverified winner patterns.
+
 A recurring structure in strong projects is:
 
 `real user problem → NASA data → scientific/modeling layer → prediction/optimization/simulation → decision → action → visual proof/demo`

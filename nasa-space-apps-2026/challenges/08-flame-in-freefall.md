@@ -1,123 +1,139 @@
-# 08 — Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data
+# 08 — Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data
 
-**Difficulty:** Advanced · Intermediate  
-**Subjects:** Space Exploration  
-**NeuraX preliminary score:** **8.0/10 — Tier A-**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Advanced · Intermediate.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 7/14, từ dòng 274; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-## Confirmed challenge intent
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-NASA has accumulated decades of microgravity combustion experiments. The challenge asks for an **interactive AI-powered dashboard** that helps users find, summarize, rank, interpret, and turn these results into fire-safety insights for human space exploration.
+## Yêu cầu cốt lõi theo bản đề
 
-Official page:
-- https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/
+Dashboard web có SI như cách gọi trong bản nguồn, tóm tắt, xếp hạng và diễn giải thí nghiệm cháy vi trọng lực nhằm tạo insight cho an toàn cháy trong môi trường có người ở.
 
-## Why this is attractive for NeuraX
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-Among all 14 challenges, this is probably the most explicit **AI knowledge-system** challenge. It naturally supports:
+Trích dữ liệu cho mô hình dự báo, ứng dụng trên Earth và so nhiều nghiên cứu là hướng gợi ý. Động cơ tên lửa/propellant nằm ngoài phạm vi nghiên cứu PSI được đề mô tả.
 
-- document/data ingestion;
-- structured extraction;
-- semantic search;
-- ranking;
-- retrieval-augmented generation;
-- evidence-grounded summarization;
-- dashboard visualization.
+## DATA — đầu vào và những gì phải xác minh
 
-However, a generic “upload PDFs → chatbot” submission would be weak. The challenge specifically asks for **fire-safety insight**, so the system needs domain-aware structure and trustworthy provenance.
+PSI; BASS/BASS-II, Saffire, SAME/SAME-R, FLEX và ACME. Lưu vật liệu, fuel, O2, áp suất, vận tốc dòng, gravity regime, apparatus, đơn vị và nguồn. Bản đề ghi chưa có partial-gravity combustion data trong PSI; không tự bù bằng dữ liệu bịa.
 
-## NeuraX concept: “MicroFlame Insight Engine”
+## AI — phân tích và baseline
 
-An evidence-grounded research dashboard that transforms experiment records into comparable “evidence cards.”
+Truy xuất + ranking + bảng so sánh điều kiện là core; AI trả lời phải gắn với record/thí nghiệm. Baseline keyword/filter để đo thêm giá trị của semantic retrieval.
 
-### User flow
+## AI — prediction có phù hợp không?
 
-`ask a fire-safety question → retrieve relevant experiments → rank evidence → compare conditions/results → synthesize insight → show sources and uncertainty`
+Chỉ fit mô hình flammability nếu có bảng thực nghiệm cùng định nghĩa target và chia tập theo experiment. Nội suy microgravity không tự là dự báo Moon/Mars; giữ trạng thái chưa kiểm chứng nếu thiếu.
 
-The answer should contain **source-linked experimental evidence**, not only prose.
+## DEPLOY — demo, dashboard và hardware
 
-## Candidate data/resources — verify on 2026-10-28
+Dashboard 10–20 records được chọn, tìm theo câu hỏi và dẫn chứng. An có thể làm bảng hiển thị điều kiện; Quang Luật ưu tiên bảng thống kê thí nghiệm và evidence, không cần tạo ngọn lửa.
 
-The full resource package is crucial. Potential resource types may include:
+## Concept NeuraX: MicroFlame Evidence — tìm thí nghiệm theo điều kiện và bằng chứng
 
-- experiment descriptions and metadata;
-- technical reports/publications;
-- tabular experimental measurements;
-- images/video;
-- mission/experiment identifiers;
-- NASA fire-safety or combustion knowledge resources.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-Do not build an ingestion pipeline around assumed sources until the official corpus is known.
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Retrieval, trích dẫn và đánh giá câu trả lời |
+| Việt — Technical Lead / DATA + AI | Chuẩn hóa bảng thí nghiệm, mô hình có điều kiện; kiến trúc/contract và review kỹ thuật |
+| Bích | Bảng giới hạn môi trường, hỗ trợ rà nguồn |
+| Hiếu | Dashboard tìm/so thí nghiệm |
+| Tiểu An | Sơ đồ measurement chain và interface |
+| Quang Luật | Chuẩn hóa đơn vị, thống kê bảng thí nghiệm và báo cáo evidence |
 
-## Recommended AI architecture
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-### 1. Ingestion and normalization
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-Convert supplied resources into a common schema including experiment, conditions, measured outputs, findings, limitations and source citation.
+Một nhóm vật liệu, ít nghiên cứu đủ record; truy vấn → xếp hạng → so điều kiện → dẫn nguồn. Hiển thị không đủ bằng chứng cho câu ngoài dữ liệu.
 
-### 2. Retrieval
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-Use hybrid retrieval if feasible:
+## Cách đánh giá và bằng chứng cần có
 
-- keyword/BM25-style search for exact technical terms;
-- embedding retrieval for semantic similarity;
-- metadata filters for experiment conditions.
+Bộ câu hỏi có nguồn chuẩn, kiểm ranking và độ đúng trích dẫn; kiểm unit/condition mismatch; đo tỷ lệ phát biểu không có nguồn.
 
-### 3. Ranking
+## Rủi ro và phạm vi nên cắt
 
-Rank experiments by query relevance and transparent metadata/evidence criteria.
+Quang Luật học cơ khí không đồng nghĩa có chuyên môn combustion; LLM dễ gộp thí nghiệm khác điều kiện. SI là thuật ngữ của bản nguồn, không là chứng nhận năng lực mô hình.
 
-### 4. Grounded synthesis
+## Điều kiện chọn trước khi triển khai
 
-LLM output should be generated from retrieved evidence and include citations/experiment IDs. The model should explicitly say when evidence is insufficient or conflicting.
+PSI tải/đọc được, có records đủ điều kiện và người rà giải thích.
 
-### 5. Comparison view
+## Đánh giá độ phù hợp
 
-A side-by-side table of experiment conditions and outcomes may be more valuable than another chatbot pane.
+Ứng viên AI tri thức tốt, được lợi từ góc cơ khí nhưng chưa tận dụng Bích và đo thực địa bằng Field Shift.
 
-## 48-hour MVP
+## Bản đề người dùng cung cấp — nguyên văn
 
-1. Ingest a **small, high-quality subset** of the official corpus.
-2. Define the experiment schema manually before automating extraction.
-3. Build hybrid or semantic retrieval.
-4. Create 15–30 benchmark questions with known relevant sources.
-5. Add evidence-grounded synthesis with citations.
-6. Build a comparison screen for 2–4 experiments.
-7. Demo one safety question from query → evidence → synthesis.
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-## Evaluation
+### Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data
 
-A serious AI submission should measure more than “the chatbot looks good.”
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Advanced
+Intermediate
+Subjects
+Space Exploration
+For decades, NASA has studied how flames and fire behave in microgravity, gathering a trove of experimental data along the way. That knowledge matters more than ever as humans gear up to return to the Moon and press on to Mars, yet the volume of results makes them hard to find, compare, and understand. Your challenge is to create an interactive, super intelligence (SI) powered dashboard that summarizes, ranks, and interprets those findings to deliver fire safety insights for human space exploration.
 
-Suggested checks:
+Background
+Fire hazards are extremely dangerous in space exploration! In describing a smoke alarm that went off during the recent Artemis II mission, the commander commented, “[If] you want to get somebody’s attention really quick, make the fire alarm go off in your spacecraft when you’re still about 80,000 miles from home.” Decades earlier, the Apollo 13 crew endured the life-threatening results of an oxygen tank explosion on their way to the Moon. Similarly, a multinational crew survived a fire aboard the Mir space station caused by an oxygen generator failure. In 1967, the Apollo 1 crew died in a pre-launch test when fire erupted in their oxygen-filled spacecraft.
 
-- retrieval recall@k / hit rate;
-- citation correctness;
-- faithfulness of generated claims to retrieved sources;
-- metadata extraction accuracy;
-- manual review of ranking;
-- explicit abstention when sources do not support an answer.
+Compared to Earth, flames in free fall (i.e., in microgravity) are often dramatically different because of the absence of buoyancy and thus rising hot gases. Instead of a flickering teardrop, a candle flame becomes a ghostly blue sphere reliant on diffusion for its oxygen.
 
-## Team fit
+NASA’s spacecraft fire safety work is focused on prevention, detection, and suppression. Prevention is achieved by controlling ignition sources and through material selection, which depends on understanding flammability limits. To facilitate spacesuit use, an atmosphere with increased oxygen and reduced pressure compared to Earth’s is expected within the planned Moon Base and pressurized rovers. Flammability is highly dependent on oxygen concentration, and air flow is also important in microgravity. Flammability studies focus on solid materials such as fabrics and plastics, as studied in the Burning and Suppression of Solids (BASS and BASS-II) and Spacecraft Fire Safety Demonstration (Saffire-I, -II, and -III) investigations.
 
-- **Hưng/Việt:** RAG/retrieval, ranking, structured extraction, evaluation.
-- **Hiếu:** dashboard/search application and deployment.
-- **Bích:** limited direct domain overlap; can support scientific-evidence discipline but not combustion expertise.
-- **Tiểu An:** hardware/fire-safety systems perspective may help framing, but the core remains knowledge software.
+Fire detection was tested in microgravity through the Smoke and Aerosol Measurement Experiment studies (SAME and SAME-R). Suppression was studied in the Flame Extinguishment Experiment (FLEX) through dilution of the chamber atmosphere with carbon dioxide and helium, both of which suppress fire.
 
-## Domain gap
+Objectives
+Results from low-gravity combustion experiments, conducted for example on the International Space Station (ISS), are being made publicly available through NASA's Physical Science Informatics (PSI) database, but the amount of data can be overwhelming. It can be hard to find, harder to compare, and harder yet to interpret.
 
-Combustion/fire science is a meaningful gap. The team can build the information system, but deciding which experimental variables/findings matter requires careful reading or a mentor.
+Your challenge is to build an SI-powered, web-based dashboard that summarizes, ranks, and interprets combustion science investigations to deliver critical foundational insights for fire safety. You may consider enabling users to:
 
-## Risks
+Identify investigations most relevant to the fire safety needs of habitable crew environments, including spacecraft, space stations, bases on the lunar and Martian surfaces, and pressurized rovers.\*
+Extract data that supports predictive modeling of flammability and fire scenarios in space exploration.
+Highlight research that informs the development of next-generation fire safety controls and equipment.
+In this challenge, you’ll help turn complex data into clear answers and make the next giant leap a safer one.
 
-- Building a generic RAG chatbot with little domain structure.
-- Hallucinated safety claims.
-- Poorly parsed tables/figures/PDFs.
-- No objective retrieval/evaluation benchmark.
-- Attempting to ingest the entire corpus instead of curating a demonstrable slice.
-- “Ranking” evidence using an opaque LLM score with no defensible meaning.
+Your dashboard could also address potential applications of the PSI data to fire safety on Earth. Fine-water-mist extinguishers developed for use on the ISS have practical applications here on Earth, and NASA technology has similarly led to improvements in terrestrial smoke detection and firefighter gear, including protective clothing and air tanks.
 
-## Recommendation
+\*Fire safety involving rockets and propellants is generally beyond the scope of the research available in the PSI database. The high velocities within rocket engines render the combustion effectively independent of gravity — although a rocket’s launch is of course strongly dependent on gravity.
 
-**Best AI-first option, but not the strongest overall five-person team fit.** Keep it in the shortlist if the official corpus is unusually clean or if NeuraX decides to prioritize AI research over environmental/GIS/simulation breadth.
+Potential Considerations
+You may (but are not required to) consider the following:
+
+Your target audience can include professors, graduate students, undergraduate students, aerospace researchers, and aerospace engineers.
+Consider how you might summarize and display attributes such as:
+Experimental objectives
+Fuels, including shape and size of the samples or burners
+Other test conditions, such as oxygen concentration and airflow speed
+Variables: how did tests from the same investigation differ and how were they the same?
+Sensors or types of measurements
+Consider how to summarize and display similarities and differences between different investigations.
+Other investigations in PSI
+One of the instruments used for smoke detection in the SAME and SAME-R studies was instead used to detect dust in the Dust and Aerosol Measurement Feasibility Test (DAFT and DAFT-2) studies.
+While it burned gaseous fuels, the Burning Rate Emulator (BRE) experiment of the Advanced Combustion via Microgravity Experiments (ACME) project was a study of materials flammability in still atmospheres as a function of material properties.
+Other combustion investigations within the PSI database (but not explicitly referenced above) are still relevant to fire safety, just not as strongly or directly.
+Hardware
+The six experiments in the ACME project featured flames of gaseous fuels and were all conducted with the same modular set of ACME hardware in the Combustion Integrated Rack (CIR).
+FLEX, FLEX-2, and the Cool Flames Investigation (CFI) each featured burning droplets of liquid fuel and were conducted with the Multi-user Droplet Combustion Apparatus (MDCA) in the CIR.
+BASS, BASS-II, the Smoke Point In Co-flow Experiment (SPICE), and the Structure & Liftoff In Combustion Experiment (SLICE) collectively featured both solid and gaseous fuels. Each of these investigations was conducted within the Microgravity Science Glovebox (MSG) using the modular fan-driven flow duct built for SPICE.
+Spacesuits and oxygen concentration
+To enable flexibility, spacesuits are filled with 100% oxygen to only 4.3 psi (pounds per square inch), where the Earth’s pressure at sea level is 14.7 psi.
+To avoid the bends (decompression sickness), the astronauts pre-breathe 100% oxygen to expel absorbed nitrogen.
+To reduce the pre-breathing duration and thus facilitate lunar excursions, it is expected that the Moon Base and pressurized rover(s) will be at a pressure and oxygen concentration between those in a spacesuit and the Earth’s atmosphere.
+The intermediate oxygen concentration used on the Moon will likely be 30% or greater, with a corresponding pressure of 10.2 psi or less. Compared to Earth’s atmosphere, that’s more than a 40% increase in the oxygen concentration making materials much more flammable.
+Microgravity tests with the highest oxygen concentrations were conducted as part of the ACME’s Cool Flames Investigation with Gases (CFI-G). In those tests, the combustion chamber was filled with a mixture of nitrogen and a flammable gas (e.g., propane), while an oxygen-nitrogen mixture of up to 85% oxygen flowed from the spherical burner creating an inside-out flame.
+Partial-gravity data
+Although NASA is heavily focused on the return of astronauts to the Moon’s surface and the establishment of a Moon Base in preparation for the future human exploration of Mars, there is currently no partial-gravity combustion data available in PSI. We expect such data will be added in the future, for example from the Lunar-g Combustion Investigation (LUCI) and the Flammability of Materials on the Moon (FM2) experiment.
+Partial gravity was mimicked in ACME’s Electric-Field Effects on Laminar Diffusion Flames (E-FIELD Flames) experiment through the effect of the electric field on the ions that naturally occur in flames.
+Microgravity and normal-gravity results could bound what occurs at intermediate gravity levels.
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
+
+</details>

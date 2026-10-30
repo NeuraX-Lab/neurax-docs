@@ -1,149 +1,130 @@
 # 03 — Build a Junior Astronaut Mission Trainer
 
-**Difficulty:** Intermediate · Beginner/Youth  
-**Subjects:** Games · Planets & Moons · Software · Space Exploration · Sun  
-**NeuraX preliminary score:** **6.7/10 — Tier B-**  
-**Status:** Summary available; full 2026 brief/resources expected 2026-10-28.
+> Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Intermediate · Beginner/Youth.
+> Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 3/14, từ dòng 89; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 
-## Confirmed challenge intent
+Phân tích tiếng Việt bên dưới là **đề xuất NeuraX**. “Theo bản đề” chỉ xác nhận nội dung trong tài liệu đầu vào; không chứng minh đã tải dataset hay kiểm chứng khoa học. [Quy ước nguồn](../sources/challenge-intake.md) · [Shortlist hiện hành](../rankings/v4-data-qa-shortlist.md) · [Phân công chung](../planning/team-workstreams.md).
 
-NASA wants an interactive game or application for students that makes the engineering trade-offs of running a lunar or Martian outpost tangible and fun. The published summary specifically mentions competing demands such as **life support, radiation shielding, power, and food production**, with choices affecting whether the mission succeeds or fails.
+## Yêu cầu cốt lõi theo bản đề
 
-Sources:
-- https://www.spaceappschallenge.org/2026/challenges/
-- https://nasaspaceapps.ae/challenges
+Game/app tương tác cho trẻ 7–12 tuổi, dạy đánh đổi khi vận hành căn cứ: hỗ trợ sự sống, che chắn, năng lượng, thực phẩm và độ trễ liên lạc. Quyết định phải có hệ quả nhìn thấy.
 
-## Product interpretation
+## Gợi ý, lựa chọn và điều không nên hiểu thành bắt buộc
 
-This should not become a spreadsheet with space graphics. The learning outcome is understanding **trade-offs and coupled systems**. A strong game should make the player feel that improving one subsystem consumes resources or creates consequences elsewhere.
+Đề khuyến khích dùng NASA data thật và cho phép dữ liệu lưu sẵn ghi nhãn. DONKI, OSDR, Artemis/Mars là ví dụ; không bắt buộc API live hoặc tái hiện tất cả hệ thống.
 
-A useful design loop is:
+## DATA — đầu vào và những gì phải xác minh
 
-`observe state → choose action → spend scarce resource → simulate consequences → explain why → adapt`
+Chọn sự kiện DONKI đã lưu và tài liệu OSDR/môi trường làm căn cứ. Không biến sự kiện Mặt Trời trực tiếp thành liều bức xạ của phi hành gia nếu thiếu mô hình vận chuyển và che chắn.
 
-## NeuraX concept: “Outpost Control”
+## AI — phân tích và baseline
 
-The player manages a small Moon or Mars base across a sequence of mission days/sols.
+Mô hình tài nguyên có quy tắc kiểm được là baseline. AI có thể giải thích hậu quả hoặc gợi ý nước đi từ trạng thái; tránh LLM tự phát minh số liệu vật lý.
 
-### State variables
+## AI — prediction có phù hợp không?
 
-- crew health/safety;
-- oxygen/water/food;
-- stored electrical energy;
-- solar generation;
-- radiation exposure;
-- habitat integrity;
-- spare mass/materials;
-- science/productivity score.
+Dự đoán trạng thái bước tiếp theo là mô phỏng theo luật trò chơi, không phải dự báo sức khỏe hoặc không gian thực tế.
 
-### Player decisions
+## DEPLOY — demo, dashboard và hardware
 
-Examples:
+Game trình duyệt một căn cứ, vài lượt và bàn điều khiển nút vật lý dùng chung logic.
 
-- allocate energy between life support, science and food production;
-- schedule EVAs around environmental hazards;
-- spend mass/resources on shielding versus equipment;
-- expand crew capacity versus conserve reserves;
-- respond to a dust/radiation/power event.
+## Concept NeuraX: Outpost Control — điều hành căn cứ với ba tài nguyên
 
-The educational layer should explain **why** a decision succeeded or failed using NASA-backed facts rather than arbitrary game rules.
+### Đất diễn cho sáu thành viên — phân công đề xuất
 
-## Candidate data/content — verify 2026-10-28
+| Thành viên | Đầu ra phụ trách |
+| --- | --- |
+| Hưng | Mô hình tài nguyên và trade-off |
+| Việt — Technical Lead / DATA + AI | Sinh kịch bản và đánh giá luật; kiến trúc/contract và review kỹ thuật |
+| Bích | Giải thích vòng tuần hoàn tài nguyên |
+| Hiếu | Game UI và lưu trạng thái |
+| Tiểu An | Bảng điều khiển nút/LED |
+| Quang Luật | Thống kê lượt chơi, kiểm luật tài nguyên và biểu đồ học tập |
 
-Potential resource categories include:
+Quang Luật tự báo cáo thế mạnh phân tích thống kê, trực quan hóa bằng RStudio/MATLAB, AutoCAD và báo cáo LaTeX/Overleaf (người dùng chuyển lời ngày 2026-10-30). Vai trò chính là DATA QA, đánh giá và báo cáo; hỗ trợ An kiểm thiết bị. AutoCAD là năng lực bổ trợ, không mặc định giao chế tạo vỏ/cọc/gá; chuyên môn robotics/combustion chưa được xác nhận.
 
-- lunar/Martian environment conditions;
-- solar illumination / power assumptions;
-- radiation information;
-- life-support concepts;
-- mission architecture / habitat trade-off references.
+## MVP đề xuất cho sự kiện 14–15/11/2026
 
-The official full brief may supply simplified values or specific NASA educational resources. Use those instead of inventing realism that cannot be defended.
+Ba tài nguyên: năng lượng, hỗ trợ sự sống, che chắn; một sự kiện có nguồn; mỗi lựa chọn phải tốn ít nhất một tài nguyên. Mỗi ván kết thúc bằng lý do thành/bại.
 
-## Technical approach
+Lịch triển khai và thời gian dự phòng theo [kế hoạch sự kiện](../planning/event-timeline.md); giờ cụ thể của HCMC 2026 chưa xác nhận.
 
-### Simulation engine
+## Cách đánh giá và bằng chứng cần có
 
-Keep it deterministic and explainable:
+Không có lựa chọn thắng vô hạn; tài nguyên không tự sinh; người thử hiểu được một đánh đổi sau khi chơi; thử khả năng đọc và điều khiển.
 
-- state vector;
-- action costs/effects;
-- event system;
-- success/failure conditions;
-- difficulty tuning through parameters.
+## Rủi ro và phạm vi nên cắt
 
-A lightweight rules engine is better than an ML model for the core simulation.
+Cân bằng game và nội dung trẻ em tốn thời gian; không dùng dữ liệu NASA làm hình nền trang trí.
 
-### Frontend
+## Điều kiện chọn trước khi triển khai
 
-- control-room style dashboard;
-- clear resource meters;
-- event cards;
-- decision modal with predicted trade-offs;
-- post-decision explanation;
-- end-of-mission debrief showing which systems caused success/failure.
+Có luật đơn giản, nguồn cho giả định và cách kiểm người chơi học được gì.
 
-### AI opportunity
+## Đánh giá độ phù hợp
 
-Optional rather than central:
+Có đất diễn hardware/cơ khí nhưng AI dự báo khoa học và môi trường không mạnh bằng Field Shift.
 
-- adaptive tutor explaining trade-offs;
-- difficulty adaptation based on player behavior;
-- natural-language debrief grounded in simulation logs;
-- NPC mission-control assistant.
+## Bản đề người dùng cung cấp — nguyên văn
 
-Avoid AI making authoritative engineering calculations unless those calculations are defined and testable.
+<details>
+<summary>Mở nội dung tiếng Anh để đối chiếu</summary>
 
-## 48-hour MVP
+### Build a Junior Astronaut Mission Trainer
 
-1. Choose **one destination** (Moon *or* Mars).
-2. Implement 4 coupled systems: power, life support, food, radiation.
-3. Build 6–10 mission events.
-4. Create a 10-turn mission loop with clear win/loss criteria.
-5. Add educational explanations after each decision.
-6. Test balance with scripted play-throughs.
+Event
+2026 NASA Space Apps Challenge
+Difficulty
+Intermediate
+Beginner/Youth
+Subjects
+Games
+Planets & Moons
+Software
+Space Exploration
+Sun
+Space-themed STEM content often oversimplifies the engineering trade-offs that define a real mission or presents them at a level too complex to hold a young learner's attention. Few tools make those trade-offs both tangible and fun. Your challenge is to design and build an interactive game or app that lets students run a lunar or Martian outpost, balancing competing demands like life support, radiation shielding, power, and food production, so they experience firsthand the decisions that determine whether a mission fails or succeeds.
 
-## Evaluation
+Background
+As NASA works to establish a sustained presence on the Moon and extend human exploration toward Mars, one of the most persistent challenges isn't just engineering hardware — it's building public understanding of what survival actually requires in these environments. Astronauts on a lunar or Martian outpost must balance competing demands: limited power has to be split between life support, communications, and science; radiation exposure has to be weighed against mission objectives; and every decision carries a resource cost that compounds over time. These are the same kinds of trade-offs NASA's own mission planners navigate daily, informed by real data — solar activity and radiation risk from the Space Weather Database (DONKI), astronaut radiation dosimetry and biological research from the Open Science Data Repository (OSDR), and environmental data from Artemis and Mars surface missions.
 
-For a game, success is not only correctness of code. Test:
+The gap is in translation. Space education content for kids often stays too abstract (e.g., posters and general facts) to convey real trade-offs or assumes a technical background too advanced for a young audience to engage with meaningfully. As a result, many students never encounter the actual decision-making logic behind a mission—only its outcomes. Content that leans purely educational often struggles to hold attention; content that leans purely toward entertainment can lose accuracy.
 
-- Is there more than one viable strategy?
-- Do decisions produce understandable consequences?
-- Are the scientific explanations accurate?
-- Can a new player understand the system in <2 minutes?
-- Does the player learn at least 2–3 real mission trade-offs?
+Participants might prioritize designing mechanics—not just visuals—that mirror real constraints: a choice that saves power today might cost oxygen tomorrow. Grounding gameplay in real NASA open data, rather than invented statistics, is encouraged. Possible approaches include survival-style resource management, narrative decision trees, or dashboard-style mission control simulators—but participants are encouraged to explore whatever format best teaches the underlying trade-off rather than conforming to any single template.
 
-## Team fit
+Objectives
+Your challenge is to design and build an interactive game or app that lets kids ages 7–12 manage a lunar or Martian outpost, making real decisions about life support, radiation shielding, power budgeting, food production, and communication delay, and experiencing how those choices play out over the course of a simulated mission.
 
-### Strengths
-- Hiếu can implement the state engine and polished web interface.
-- Hưng/Việt can help model constraints, testing and adaptive tutor features.
-- Tiểu An can contribute strongly to physical-system thinking, game flow and user testing.
+Think about how your tool can turn genuine mission constraints into gameplay: what does it feel like to trade oxygen reserves for an extra research opportunity, or to reinforce shielding against a radiation event at the cost of tonight's power supply? How will you represent competing resources so that no choice is free, and every decision teaches something true about what astronauts and mission planners actually navigate?
 
-### Gap
+You're encouraged to ground your simulation in real NASA open data wherever possible — for example, using DONKI to reflect actual solar activity and radiation risk, the OSDR for real astronaut health and biological research findings, or Artemis and Mars surface mission data to inform environmental conditions at your chosen site. Incorporating live or archived NASA datasets, rather than fabricated numbers, will make the experience more authentic and give players a genuine window into how mission-critical decisions are made.
 
-The team does not currently have a dedicated game designer or space-systems engineer. Balance and educational UX can take more time than expected, and AI/ML expertise is not required for the core solution.
+Format is open: you could build a resource-management survival game, a narrative-driven decision simulator, a mission-control-style dashboard experience, or something else entirely — browser-based, mobile, or desktop. The goal is a working prototype that demonstrates the trade-off mechanic clearly enough that a young player walks away understanding a real constraint of deep space survival, not just having played a fun game. Creative interpretations of "outpost," "site," or "mission" beyond the Moon and Mars are welcome, provided the underlying educational goal — teaching real engineering trade-offs through play — stays central.
 
-## Risks
+Potential Considerations
+You may (but are not required to) consider the following:
 
-- Building too many systems and ending with an unbalanced prototype.
-- Scientific numbers that look realistic but are arbitrary.
-- “Game” becomes a dashboard with buttons and no meaningful decision strategy.
-- Excessive 3D/graphics work.
-- Similarity to many other resource-management games.
+Audience and Accessibility
 
-## Scorecard
+Your target audience is kids ages 7–12, but consider whether your tool can flex to engage older siblings, parents, or classroom settings too.
+Favor plain language over jargon; where a scientific term is unavoidable — radiation dose, microgravity, sol — briefly explain it in-context rather than assuming prior knowledge.
+Low barrier to entry matters — a browser-playable experience with no download or account required will reach more participants during judging and more students afterward.
+Grounding in Real Data
 
-| Dimension | Score / 10 | Comment |
-|---|---:|---|
-| Team fit | 7.0 | Technically feasible; game design is the main gap. |
-| AI/data leverage | 5.0 | Useful only as a secondary layer. |
-| GIS/EO leverage | 2.0 | Little opportunity. |
-| 48h feasibility | 8.0 | Strong if simulation scope is aggressively limited. |
-| Demo/story impact | 8.5 | Interactive game is easy to present. |
-| NASA-data centrality | 6.5 | Depends on how strongly rules are grounded in NASA resources. |
-| Differentiation ceiling | 6.5 | Strong UX/design needed to stand out. |
+Wherever possible, pull from NASA's public APIs and open datasets rather than inventing plausible-sounding numbers—even a small amount of real data—a real radiation reading, a real Mars photo, a real astronaut health finding—makes the experience meaningfully more credible than an entirely simulated one.
+Clearly attribute your data sources within the tool itself, so players understand they're engaging with real NASA science, not just a themed game.
+If live API calls aren't feasible during your build window, a curated real dataset embedded directly into your tool is a reasonable and honest alternative—just don't present static data as live.
+Gameplay and Design Pitfalls to Avoid
 
-## Recommendation
+Avoid designing a "safe" choice that has no cost—the educational value comes from every decision involving a genuine trade-off, mirroring real mission planning.
+Don't let visual polish substitute for mechanical accuracy—a simple game that teaches a real constraint beats a beautiful one that doesn't.
+Avoid overwhelming young players with too many simultaneous systems to track; two or three core resources—life support, power, shielding—are usually more effective than five or six.
+What Would Make a Solution Stand Out
 
-**Good fallback, not a primary NeuraX target.** Choose it if the team wants a fun education/product challenge with low data-engineering risk. For NeuraX's current ambitions, Earth-observation/data-analysis challenges make better use of the team's technical strengths.
+Tools that let players see the real-world consequences of their in-game choice—linking a radiation-shielding decision to actual current space weather data.
+Replayability—mechanics or events that vary between playthroughs encourage kids to try different strategies and learn from failure without it feeling punitive.
+Accompanying a working prototype with a short explanation of which NASA datasets were used and why, making the science traceable and verifiable by judges.
+For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
+
+</details>
