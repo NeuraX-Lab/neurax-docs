@@ -9,7 +9,7 @@ Nông dân hoặc người tư vấn cần so luân canh khi điều kiện nư�
 
 Địa phương/cây mục tiêu chưa chốt: Bích chọn một vùng và bảng đất/cây có nguồn trước khi team tuyên bố phương án phù hợp thực tế. Người dùng mục tiêu là giả thuyết cần kiểm, chưa có phỏng vấn nông dân.
 
-[Link challenge ứng viên](https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/) đã được thử truy cập nhưng trả lỗi; nội dung đánh giá dựa trên bản người dùng cung cấp.
+[Trang challenge Field Shift](https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/) đã được thử truy cập nhưng trả lỗi; nội dung đánh giá dựa trên bản người dùng cung cấp.
 
 ## Lý do chọn
 
