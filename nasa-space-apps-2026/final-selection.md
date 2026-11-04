@@ -59,7 +59,7 @@ Một vùng, ít cây/mùa, dashboard và một node. Chưa có autonomous irrig
 
 [Phân công sáu thành viên](planning/team-workstreams.md) chứa owner, reviewer, dependency và onboarding. [Kiến trúc](planning/architecture.md) chứa Mermaid, contract và fallback. [Hardware preparation](planning/hardware-preparation.md) là danh sách An–Quang Luật kiểm/mượn/mua sau khi biết inventory/ngân sách.
 
-## Quyết định còn mở
+## Quyết định và các gate còn mở
 
 | Trường | Trạng thái |
 | --- | --- |
