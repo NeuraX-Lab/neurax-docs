@@ -1,6 +1,6 @@
-# Đề xuất chọn challenge — Field Shift / NeuraX AgroTwin
+# Challenge đã chọn — Field Shift / NeuraX AgroTwin
 
-> 2026-10-30 · **Khuyến nghị, chưa phải team đã chốt.**
+> 2026-11-04 · **Team đã chọn Field Shift theo xác nhận của người dùng.**
 > Căn cứ: [brief chi tiết](challenges/07-field-shift.md), [đội hình sáu người](../team/team-profile.md) và [shortlist v4](rankings/v4-data-qa-shortlist.md).
 
 ## Vấn đề và người dùng
@@ -11,7 +11,7 @@ Nông dân hoặc người tư vấn cần so luân canh khi điều kiện nư�
 
 [Link challenge ứng viên](https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/) đã được thử truy cập nhưng trả lỗi; nội dung đánh giá dựa trên bản người dùng cung cấp.
 
-## Vì sao nên chọn
+## Lý do chọn
 
 - NASA EO là căn cứ lịch sử điều kiện môi trường, không chỉ là ảnh nền.
 - Việt là Technical Lead, làm DATA và AI: kiến trúc/contract, EO features và baseline forecast có điều kiện. Hưng phụ trách ranking/ràng buộc và scope; Quang Luật kiểm QA/metrics độc lập và báo cáo.
@@ -63,14 +63,13 @@ Một vùng, ít cây/mùa, dashboard và một node. Chưa có autonomous irrig
 
 | Trường | Trạng thái |
 | --- | --- |
-| Challenge được khuyến nghị | Field Shift |
-| Ngày đề xuất | 2026-10-30 |
-| Người quyết định cuối | Team NeuraX, Hưng tổng hợp |
-| Challenge team đã chốt | Chưa xác nhận |
-| Ngày chốt | Chưa xác nhận |
+| Challenge được chọn | Field Shift |
+| Ngày xác nhận lựa chọn | 2026-11-04 |
+| Nguồn xác nhận | Người dùng xác nhận team đã chọn; chưa có biên bản biểu quyết từng thành viên |
+| Challenge team đã chốt | Field Shift |
 | Gate trước khi build | G1–G6 trong v3 còn là checklist tham chiếu; lịch ngày thi đã xác nhận, giờ local và gate dữ liệu chưa hoàn tất; xem v4/timeline |
 | Điểm khác biệt đề xuất | So luân canh có evidence/uncertainty và context điểm đo; chưa xác minh khác biệt so đối thủ |
 | Rủi ro chính | Dữ liệu nông học và diễn giải sai scale |
 | Fallback ưu tiên | Earth Analog nếu dữ liệu so sánh/mục tiêu test tốt; MODIS/VIIRS nếu overlap khả dụng |
 
-Không chuyển trạng thái thành “approved/selected” chỉ vì đã có tài liệu. Cập nhật bảng này và decision-log khi team thực sự chọn; sau đó triển khai trong repo sản phẩm theo scope được giao.
+Quyết định chọn challenge không đồng nghĩa các gate dữ liệu và triển khai đã đạt. Trước khi đưa ra phương án luân canh thực, cần chọn vùng/cây, xác minh NASA sample, nguồn nông học và kiểm định Q1/K1; giữ `unavailable` hoặc `needs_review` khi thiếu bằng chứng.
