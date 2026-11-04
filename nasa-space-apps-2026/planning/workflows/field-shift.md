@@ -1,6 +1,6 @@
 # Field Shift — workflow AgroTwin
 
-> Đề xuất 2026-10-30; chưa có data/model chạy. [Brief](../../challenges/07-field-shift.md) · [Contract chung](../architecture.md) · [Lịch](../event-timeline.md).
+> Field Shift được team chọn theo xác nhận 2026-11-04; workflow vẫn là đặc tả, chưa có data/model chạy. [Brief](../../challenges/07-field-shift.md) · [Contract chung](../architecture.md) · [Lịch](../event-timeline.md).
 > Mục tiêu: người dùng so luân canh hiện tại với hai phương án theo nước/đất/khí hậu và ưu tiên; không hứa tăng năng suất.
 
 ## Kiến trúc và owner
