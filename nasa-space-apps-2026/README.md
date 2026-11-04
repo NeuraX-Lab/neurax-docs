@@ -1,6 +1,6 @@
 # NASA Space Apps 2026 — NeuraX Research
 
-> Trạng thái 2026-10-30: đã phân tích đủ 14 đề chi tiết từ bản người dùng cung cấp; đội hình sáu người; đề xuất Field Shift, chưa khóa lựa chọn.
+> Trạng thái 2026-11-04: team đã chọn Field Shift theo xác nhận của người dùng. Dữ liệu, vùng và quy tắc nông học vẫn cần kiểm trước khi triển khai.
 
 ## Bắt đầu từ đây
 
