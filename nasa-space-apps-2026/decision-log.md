@@ -1,5 +1,11 @@
 # NASA Space Apps 2026 — Decision Log
 
+## 2026-11-04 — team chọn Field Shift
+
+Người dùng xác nhận team NeuraX đã chọn **Field Shift: Adapting Farms with NASA Data**. Ghi nhận quyết định này thay trạng thái “khuyến nghị, chưa chốt” trong [final-selection](final-selection.md). Chưa có biên bản biểu quyết từng thành viên trong repo; không suy ra dữ liệu, vùng/cây, product NASA hoặc quy tắc nông học đã được xác minh.
+
+Bước tiếp theo: chốt một vùng và phạm vi cây/đất có nguồn; kiểm NASA POWER hoặc nguồn EO phù hợp bằng sample, unit, coverage và provenance; chỉ sau đó khóa D1/K1/A1 trong repo sản phẩm. Forecast, sensor và phương án luân canh thực tiếp tục qua các gate riêng.
+
 ## 2026-10-30 — Việt là Technical Lead, làm DATA và AI
 
 Người dùng xác nhận Việt biết xử lý DATA và làm AI, có thể đảm nhiệm Technical Lead. Kế hoạch hiện hành giao Việt kiến trúc/contract, pipeline và module AI cụ thể: Field Shift — forecast có gate và inference integration; Earth Analog — similarity implementation; MODIS/VIIRS — anomaly baseline. Hưng giữ hướng bài toán/scope và module AI còn lại, cùng review. Quang Luật giữ QA/E1 độc lập; Hiếu/An tự chủ trong contract để Việt không thành điểm nghẽn. Phân công chỉ coi Việt là người chuẩn hóa dữ liệu trong bản nháp trước đã được sửa.
