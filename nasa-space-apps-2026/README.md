@@ -1,6 +1,6 @@
 # NASA Space Apps 2026 — NeuraX Research
 
-> Trạng thái 2026-10-30: đã phân tích đủ 14 đề chi tiết từ bản người dùng cung cấp; đội hình sáu người; đề xuất Field Shift, chưa khóa lựa chọn.
+> Trạng thái 2026-11-04: team đã chọn Field Shift theo xác nhận của người dùng. Dữ liệu, vùng và quy tắc nông học vẫn cần kiểm trước khi triển khai.
 
 ## Bắt đầu từ đây
 
@@ -15,7 +15,7 @@ Việt làm **Technical Lead / DATA + AI**, chia module AI với Hưng; Quang Lu
 - [Phân công DATA → AI → DEPLOY](planning/team-workstreams.md): six-owner matrix, Mermaid, task và onboarding Quang Luật.
 - [Kiến trúc đề xuất](planning/architecture.md): gói D1/Q1/A1/E1/H1, metadata, QA, version và cách làm khi thiếu data.
 - [Hardware của An–Quang Luật](planning/hardware-preparation.md): BOM, chức năng, phép thử, thiết bị cần xác minh.
-- [Đề xuất chọn bài](final-selection.md): problem framing và điều kiện chốt của team.
+- [Challenge đã chọn](final-selection.md): problem framing, phạm vi và các gate dữ liệu còn mở.
 
 ## 14 hồ sơ
 
