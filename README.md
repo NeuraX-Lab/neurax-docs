@@ -4,12 +4,12 @@
 
 Hiện tại chỉ làm **Markdown + Mermaid**, gồm cả kiến trúc đề xuất và chuẩn bị hardware. Code sản phẩm và tài liệu hệ thống đã triển khai thuộc [nasasac26-neurax](https://github.com/NeuraX-Lab/nasasac26-neurax).
 
-## NASA Space Apps 2026 — cập nhật 2026-10-30
+## NASA Space Apps 2026 — cập nhật 2026-11-04
 
 - Đã phân tích **14 đề chi tiết** từ bản `docs/challenges.md` do người dùng cung cấp; nguyên văn từng đề ở cuối mỗi dossier.
 - Đội hình **6 người**: AI ×2, Khoa học Môi trường, Software Engineering, Hardware và Quang Luật — sinh viên Cơ khí năm 2, thế mạnh thống kê/trực quan hóa (RStudio, MATLAB), AutoCAD và báo cáo LaTeX/Overleaf.
 - Khuyến nghị v4 (định tính, vai trò DATA QA): **Field Shift → Earth Analog → MODIS/VIIRS Hot Spots**.
-- **Chưa khóa lựa chọn của team**; chưa audit đầy đủ Resources/dataset, chưa build, huấn luyện hay thử phần cứng.
+- **Team đã chọn Field Shift**, theo xác nhận ngày 2026-11-04 được ghi trong [decision log](nasa-space-apps-2026/decision-log.md). Chưa audit đầy đủ Resources/dataset, chưa build, huấn luyện hay thử phần cứng.
 - Luồng sản phẩm mong muốn: **DATA → AI (analysis/prediction có kiểm chứng) → DEPLOY (dashboard/demo/hardware)**. Prediction và phần cứng phải phục vụ bài toán, có giới hạn rõ.
 
 ## Đọc theo thứ tự
@@ -22,7 +22,7 @@ Hiện tại chỉ làm **Markdown + Mermaid**, gồm cả kiến trúc đề xu
 6. [BOM và đầu việc hardware của An–Quang Luật](nasa-space-apps-2026/planning/hardware-preparation.md).
 7. [Ba workflow: input/output, baseline và owner](nasa-space-apps-2026/planning/workflows/README.md).
 8. [Lịch HCMC 14–15/11 và mốc bàn giao](nasa-space-apps-2026/planning/event-timeline.md).
-9. [Bản đề xuất chọn challenge](nasa-space-apps-2026/final-selection.md).
+9. [Challenge đã chọn và các gate còn mở](nasa-space-apps-2026/final-selection.md).
 
 Team xác nhận thi tại **NOVAWORLD, local event Ho Chi Minh City**, ngày **14–15/11/2026**; giờ cụ thể chưa có. Quang Luật ưu tiên DATA QA/thống kê và cùng An kiểm thiết bị; không mặc định phụ trách vỏ/cọc/gá.
 
