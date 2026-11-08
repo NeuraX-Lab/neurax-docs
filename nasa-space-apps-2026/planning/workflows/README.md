@@ -1,6 +1,7 @@
-# Ba workflow để chọn một idea
+# Workflow chính Field Shift và hai phương án dự phòng
 
 > 2026-10-30 · Spec dự kiến cho sự kiện HCMC 14–15/11/2026. Không triển khai ba sản phẩm song song.
+> Trạng thái 2026-11-06: Field Shift đã chọn ngày 04/11; Earth Analog và MODIS/VIIRS giữ làm dự phòng. Các spec chưa phải kết quả triển khai.
 > Điểm bắt đầu: [team](../team-workstreams.md), [contract D1/Q1/A1/E1/H1](../architecture.md), [lịch và mốc cắt](../event-timeline.md).
 
 ## Đầu vào → đầu ra từng block

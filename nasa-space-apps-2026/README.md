@@ -1,21 +1,26 @@
-# NASA Space Apps 2026 — NeuraX Research
+# NASA Space Apps 2026 — nghiên cứu NeuraX
 
 > Trạng thái 2026-11-04: team đã chọn Field Shift theo xác nhận của người dùng. Dữ liệu, vùng và quy tắc nông học vẫn cần kiểm trước khi triển khai.
 
 ## Bắt đầu từ đây
 
+- [Proposal sơ bộ toàn dự án](planning/project-brief.md) / [PDF A4 cho cả team](../output/pdf/NeuraX-AgroTwin-Preliminary-Proposal.pdf): người dùng/giả thuyết, scope, DATA/K1, baseline, UX, architecture, đánh giá, phase, nguồn lực, rủi ro và gate; bản 0.3 ngày 07/11/2026.
+- [Paper kỹ thuật gửi An](planning/hardware-design-paper.md) và [PDF A4 đầy đủ](../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf): lý do chọn, alternatives, measurement/test plan, backup, phase và nguồn. [Brief cũ](planning/hardware-demo-brief.md) chỉ là tóm tắt phụ trợ.
+
 Việt làm **Technical Lead / DATA + AI**, chia module AI với Hưng; Quang Luật kiểm QA/thống kê độc lập và hỗ trợ An kiểm thiết bị. Quyền sở hữu chi tiết nằm trong team-workstreams và từng workflow.
 
-- [14 challenge dossiers](challenges/README.md): mỗi đề một file, phân tích + nguyên văn.
+- [14 hồ sơ challenge](challenges/README.md): mỗi đề một file, phân tích + nguyên văn.
 - [Nguồn đầu vào và mức xác nhận](sources/challenge-intake.md): Resources còn thiếu, truy cập trang challenge live trả lỗi.
 - [Kết quả kiểm tra tài liệu](sources/review-record.md): coverage, links, score, skill và giới hạn kiểm Mermaid.
 - [Shortlist v4](rankings/v4-data-qa-shortlist.md): cập nhật thế mạnh thống kê của Quang Luật; Field Shift, Earth Analog, MODIS/VIIRS được so theo điều kiện dữ liệu.
 - [Ba workflow cụ thể](planning/workflows/README.md): DATA input/output, baseline AI, payload DEPLOY, owner và tiêu chí bàn giao.
 - [Timeline HCMC](planning/event-timeline.md): 14–15/11/2026, NOVAWORLD theo team; baseline giờ có nghỉ và buffer, chưa là lịch BTC.
-- [Phân công DATA → AI → DEPLOY](planning/team-workstreams.md): six-owner matrix, Mermaid, task và onboarding Quang Luật.
+- [Phân công DATA → AI → DEPLOY](planning/team-workstreams.md): bảng sáu người, Mermaid, task và onboarding Quang Luật.
 - [Kiến trúc đề xuất](planning/architecture.md): gói D1/Q1/A1/E1/H1, metadata, QA, version và cách làm khi thiếu data.
 - [Hardware của An–Quang Luật](planning/hardware-preparation.md): BOM, chức năng, phép thử, thiết bị cần xác minh.
 - [Challenge đã chọn](final-selection.md): problem framing, phạm vi và các gate dữ liệu còn mở.
+
+- [Playbook cuộc thi](planning/competition-playbook.md): tiêu chí tham chiếu, evidence và ngôn ngữ bài nộp; cập nhật 06/11, chưa xác nhận đủ luật 2026/HCMC.
 
 ## 14 hồ sơ
 

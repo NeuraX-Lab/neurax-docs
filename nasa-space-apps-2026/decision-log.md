@@ -1,5 +1,19 @@
 # NASA Space Apps 2026 — Decision Log
 
+## 2026-11-07 — proposal sơ bộ toàn dự án
+
+Theo yêu cầu người dùng, mở rộng [project-brief.md](planning/project-brief.md) thành proposal 0.3 của toàn AgroTwin và xuất [PDF A4](../output/pdf/NeuraX-AgroTwin-Preliminary-Proposal.pdf) từ cùng nguồn. Nội dung gồm người dùng/giả định, phạm vi, DATA/K1, baseline và ví dụ synthetic, UX, architecture, evaluation, ownership, phase, nguồn lực, rủi ro và acceptance. Paper hardware của An giữ vai trò tài liệu subsystem riêng.
+
+Đây là baseline để review, chưa xác nhận team approve toàn bộ scope hoặc có dữ liệu/model chạy. Không đổi quyết định chọn Field Shift; chưa chốt vùng/cây, NASA sample, nông học, inventory, availability hay giờ/luật local. Kế hoạch còn lại tính từ 07/11, không coi các mốc trước đó đã hoàn thành. Bước tiếp theo giải các gate người dùng/vùng/cây, K1, NASA sample và evaluation trước build theo thời gian được phép.
+
+## 2026-11-06 — bộ skill dùng lại và thống nhất tài liệu nội bộ
+
+Người dùng xác nhận repo này dùng nội bộ, yêu cầu search/cài skill phục vụ mục tiêu thi tốt. Đã cài jupyter-notebook từ openai/skills và geomaster, statistical-analysis, scientific-critical-thinking từ K-Dense ở revision pin trong [catalog](../governance/skills-catalog.md). Không cài scientific runtime, không build sản phẩm.
+
+Sáu skill được mô tả trước đây không có trong checkout do `.agents` bị ignore. Tạo lại sáu workflow theo tài liệu hiện hành và thêm pitch-review; theo dõi cả bảy trong Git. Tài liệu nội bộ dùng tiếng Việt, giữ nguyên nguồn tiếng Anh và lịch sử; bản đối ngoại chuẩn bị riêng. Không đổi visibility GitHub.
+
+Bản Field Shift gửi lại trùng bản đã lưu sau chuẩn hóa khoảng trắng, không có Resources mới; xem [intake](sources/challenge-intake.md). Giữ quyết định chọn Field Shift; đồng bộ v4/workflow index, thêm [playbook](planning/competition-playbook.md) và ghi rõ giới hạn xác minh luật 2026. Không xem skill như bảo đảm thắng giải.
+
 ## 2026-11-04 — team chọn Field Shift
 
 Người dùng xác nhận team NeuraX đã chọn **Field Shift: Adapting Farms with NASA Data**. Ghi nhận quyết định này thay trạng thái “khuyến nghị, chưa chốt” trong [final-selection](final-selection.md). Chưa có biên bản biểu quyết từng thành viên trong repo; không suy ra dữ liệu, vùng/cây, product NASA hoặc quy tắc nông học đã được xác minh.

@@ -1,5 +1,7 @@
 # Challenge đã chọn — Field Shift / NeuraX AgroTwin
 
+> Proposal tổng thể hiện hành: [project-brief.md](planning/project-brief.md) / [PDF proposal](../output/pdf/NeuraX-AgroTwin-Preliminary-Proposal.pdf), bản 0.3 ngày 07/11/2026. Quyết định chọn challenge ở đây không đồng nghĩa mọi scope/giả định trong proposal đã được team phê duyệt hoặc kiểm nghiệm.
+
 > 2026-11-04 · **Team đã chọn Field Shift theo xác nhận của người dùng.**
 > Căn cứ: [brief chi tiết](challenges/07-field-shift.md), [đội hình sáu người](../team/team-profile.md) và [shortlist v4](rankings/v4-data-qa-shortlist.md).
 

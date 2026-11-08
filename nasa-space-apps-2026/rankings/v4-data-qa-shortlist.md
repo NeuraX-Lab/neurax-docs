@@ -1,6 +1,7 @@
 # V4 — reassessment shortlist khi Quang Luật có vai trò DATA QA
 
 > 2026-10-30 · Cập nhật sau khi người dùng cung cấp thế mạnh thật của Quang Luật.
+> Cập nhật trạng thái 2026-11-06: team đã chọn Field Shift ngày 04/11; v4 giữ căn cứ trước quyết định. Trạng thái hiện hành ở [final-selection](../final-selection.md).
 > Bản này điều chỉnh **ba idea** và workflow, không chấm lại cả 14 bằng điểm số. [V3](v3-full-brief-six-members.md) giữ lịch sử rubric/đội hình trước thông tin mới; điểm v3 không phải điểm đã tái đánh giá hôm nay.
 
 ## Điều cần sửa trong lập luận cũ
@@ -34,7 +35,7 @@ Không tuyên bố điểm/chênh lệch số khi chưa có sample và thực ng
 - Bích kiểm domain; Việt dẫn kỹ thuật DATA + AI và source mapping; Quang Luật sở hữu Q1/E1 thay vì phụ trách gá.
 - Hiếu và An dùng cùng A1 schema từ sớm; thiết bị không là dependency để AI chạy.
 - Hưng dùng [lịch HCMC](../planning/event-timeline.md): mốc baseline, integration, nghỉ, local pitch và nộp sớm.
-- Quyết định cuối vẫn chưa khóa; ghi vào final-selection khi team thực sự chọn.
+- Tại thời điểm v4 ngày 30/10, quyết định chưa khóa; xác nhận 04/11 đã được ghi vào final-selection và decision-log.
 
 Hồ sơ [team](../../team/team-profile.md), [phân công](../planning/team-workstreams.md) và [kiến trúc](../planning/architecture.md) là nguồn hiện hành cho vai trò và handoff.
 

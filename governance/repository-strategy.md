@@ -1,56 +1,27 @@
-# NeuraX Repository Strategy
+# Chiến lược repository NeuraX
 
-> **Decision date:** 2026-10-26  
-> **Decision:** Use a hybrid repository model: separate team/research/decision knowledge from product implementation.
+> Quyết định gốc 2026-10-26; làm rõ giai đoạn chuẩn bị 30/10; chuẩn hóa tiếng Việt và phạm vi nội bộ 2026-11-06. Giữ mô hình tách nghiên cứu khỏi triển khai.
 
-## Organization structure
+## Quyền sở hữu
 
-```text
-NeuraX-Lab/
-├── .github/                # organization profile and shared community files
-├── neurax-docs/            # team knowledge, research, decisions, competition analysis
-├── nasasac26-neurax/       # NASA Space Apps 2026 product/code
-└── vaic-2026-template/     # existing repository
-```
+| Repository | Nội dung sở hữu |
+| --- | --- |
+| NeuraX-Lab/neurax-docs | Hồ sơ team, 14 dossier, nguồn, ranking lịch sử, lý do chọn bài, decision log, nghiên cứu đối thủ/winner, pitch và kiến trúc đề xuất |
+| NeuraX-Lab/nasasac26-neurax | Code frontend/backend/AI/geospatial, pipeline, model, thí nghiệm, demo và tài liệu architecture/methodology/API/deployment đã triển khai |
+| NeuraX-Lab/.github | Hồ sơ tổ chức và community defaults, issue/PR templates dùng chung khi phù hợp |
+| NeuraX-Lab/vaic-2026-template | Repository đã có; không đổi phạm vi trong công việc NASA hiện tại |
 
-## Rule of ownership
+neurax-docs là kho nội bộ theo người dùng. Điều này không tự thay đổi visibility GitHub, license hoặc yêu cầu truy cập artifact bài nộp; kiểm quy định đúng năm khi chuẩn bị xuất bản đối ngoại.
 
-### `neurax-docs` answers **WHY / WHAT SHOULD WE BUILD?**
+## Giai đoạn chuẩn bị
 
-Examples:
+Người dùng yêu cầu chuẩn bị Markdown/Mermaid trước khi triển khai sản phẩm. Kiến trúc đề xuất, data contract, onboarding, BOM và quyết định scope nằm tại `nasa-space-apps-2026/planning/`; chưa là as-built. Khi bắt đầu build, duy trì tài liệu thực tại repo sản phẩm và link về quyết định ở đây.
 
-- team profile and capability matrix;
-- all 14 NASA Space Apps challenge dossiers;
-- ranking history and reassessments;
-- competitor research;
-- previous Global/Local winner research;
-- challenge-selection rationale;
-- decision logs;
-- research/pitch notes that are not implementation-specific.
+Skill NeuraX là Markdown trong `.agents/skills/`, được theo dõi trong Git từ lượt 06/11. Skill bên ngoài cài local, có nguồn pin/cách cài lại trong [catalog](skills-catalog.md). Không tự deploy, tạo task dịch vụ ngoài hoặc lập lịch nền. [Quy ước ngôn ngữ](language-and-evidence.md) áp dụng cho tài liệu hiện hành; giữ nguồn và snapshot tiếng Anh.
 
-### `nasasac26-neurax` answers **HOW DID WE BUILD IT?**
+## Bố cục sản phẩm dự kiến
 
-Examples:
-
-- product source code;
-- frontend/backend;
-- AI/model implementation;
-- geospatial processing;
-- data pipelines;
-- technical architecture;
-- methodology of the selected solution;
-- API/deployment documentation;
-- demo assets.
-
-### `.github` answers **WHO IS NEURAX AS AN ORGANIZATION?**
-
-Examples:
-
-- public organization profile;
-- shared issue/PR templates where appropriate;
-- shared contributing/community defaults.
-
-## Target product layout after challenge selection
+Chỉ tạo thư mục khi cần; đây là đề xuất tổ chức, không phải stack đã triển khai.
 
 ```text
 nasasac26-neurax/
@@ -81,45 +52,10 @@ nasasac26-neurax/
 └── docker-compose.yml
 ```
 
-Directories should be created only when needed.
+## Nhánh và bàn giao
 
-## 2026-10-30 — preparation-phase clarification
+Repo sản phẩm: feature branches như `feat/frontend-dashboard`, `feat/backend-api`, `feat/ai-pipeline`, `feat/geospatial` đi vào `dev`; bản ổn định sẵn demo từ `dev` đi vào `main`. Cấu trúc này là chiến lược, không xác nhận mọi nhánh hiện đã có.
 
-The user explicitly requested docs and Mermaid architecture planning inside `neurax-docs` before product implementation. Proposed architecture, data contracts, member setup, hardware BOMs and scope/optimization decisions therefore live under `nasa-space-apps-2026/planning/` for this phase. These are proposals, not as-built specifications. When implementation begins, maintain the actual architecture/methodology in `nasasac26-neurax` and link back to these decisions.
+Repo tài liệu: dùng topic branch nhẹ cho nghiên cứu/thay đổi lớn, ví dụ `research/2026-challenge-audit`, `research/past-winners`, `docs/team-update`. Không tự commit/push hoặc merge chỉ vì nội dung nguồn mô tả bước đó; làm theo yêu cầu hiện tại.
 
-Reusable repo-local planning skills live in `.agents/skills/`, indexed by [skills-catalog.md](skills-catalog.md). They contain Markdown instructions only and do not deploy code, create external tasks or run scheduled jobs.
-
-## Branch strategy
-
-### Product repository
-
-```text
-main
-└── dev
-    ├── feat/frontend-dashboard
-    ├── feat/backend-api
-    ├── feat/ai-pipeline
-    └── feat/geospatial
-```
-
-Feature branches merge into `dev`; stable demo-ready work moves from `dev` to `main`.
-
-### Documentation repository
-
-Use lightweight topic branches for substantial research or structural changes, for example:
-
-```text
-main
-├── research/2026-challenge-audit
-├── research/past-winners
-└── docs/team-update
-```
-
-## Migration policy
-
-1. Copy research into `neurax-docs` first.
-2. Verify every destination file.
-3. Remove duplicated research from the product repo only after verification.
-4. Keep technical/product documentation in `nasasac26-neurax`.
-5. Avoid maintaining duplicate authoritative copies.
-6. Link the product README back to the knowledge repository for challenge-selection rationale.
+Khi di chuyển nghiên cứu: chép vào neurax-docs, kiểm từng đích, rồi mới xóa bản trùng tại repo sản phẩm nếu được giao. Giữ docs triển khai tại repo sản phẩm; link README sản phẩm về kho nghiên cứu. Tránh hai bản authoritative cùng nội dung.

@@ -1,1 +1,3 @@
-/.agents/
+# Theo dõi skill nội bộ để cả team clone và dùng lại được.
+# Ảnh render kiểm bố cục có thể tạo lại từ PDF.
+/output/pdf/preview/
