@@ -1,0 +1,266 @@
+{
+  "artifact_kind": "modelled_soil_access_probe_not_parcel_or_hamlet_assessment",
+  "script_sha256": "8064d7318616cc73e5678a9603a0ec44f55af10739f663093e2474ae772ddd4a",
+  "status": "warn_spatial_transfer_not_validated",
+  "provider": "ISRIC SoilGrids WCS",
+  "license": "CC-BY-4.0",
+  "native_grid": {
+    "crs": "EPSG:152160",
+    "resolution_m": 250
+  },
+  "requested_envelope_lon_lat": [
+    106.42,
+    10.89,
+    106.47,
+    10.94
+  ],
+  "envelope_role": "analyst_selected_access_probe_not_farm_or_commune_boundary",
+  "reference_point_lon_lat": [
+    106.44351,
+    10.91123
+  ],
+  "point_role": "GeoNames_historical_place_not_farm",
+  "returned_grid": {
+    "width": 22,
+    "height": 21,
+    "pixel_scale_deg": [
+      0.0022727272727272358,
+      0.0023809523809522836
+    ],
+    "upper_left_lon_lat": [
+      106.41999999999999,
+      10.939999999999998
+    ],
+    "crs": "EPSG:4326"
+  },
+  "reprojection_resampling_algorithm": "not_explicitly_set_or_verified",
+  "unit_authority": "ISRIC layers documentation; WCS generic uom W.m-2.Sr-1 is not soil units",
+  "conversion": "all three requested properties divide raw integer by 10",
+  "uncertainty": "Q0.05/Q0.95 are model prediction bounds, not measured minima/maxima or local confidence validation",
+  "zero_policy": "no valid pH/texture interpretation of zero; zero cells excluded, no regional aggregate computed",
+  "rows": [
+    {
+      "property": "phh2o",
+      "depth": "0-5cm",
+      "statistic": "mean",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 55,
+      "converted_value": 5.5,
+      "unit": "pH_H2O",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "phh2o",
+      "depth": "0-5cm",
+      "statistic": "Q0.05",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 41,
+      "converted_value": 4.1,
+      "unit": "pH_H2O",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "phh2o",
+      "depth": "0-5cm",
+      "statistic": "Q0.95",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 77,
+      "converted_value": 7.7,
+      "unit": "pH_H2O",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "phh2o",
+      "depth": "5-15cm",
+      "statistic": "mean",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 56,
+      "converted_value": 5.6,
+      "unit": "pH_H2O",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "phh2o",
+      "depth": "5-15cm",
+      "statistic": "Q0.05",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 41,
+      "converted_value": 4.1,
+      "unit": "pH_H2O",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "phh2o",
+      "depth": "5-15cm",
+      "statistic": "Q0.95",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 77,
+      "converted_value": 7.7,
+      "unit": "pH_H2O",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "sand",
+      "depth": "0-5cm",
+      "statistic": "mean",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 189,
+      "converted_value": 18.9,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "sand",
+      "depth": "0-5cm",
+      "statistic": "Q0.05",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 26,
+      "converted_value": 2.6,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "sand",
+      "depth": "0-5cm",
+      "statistic": "Q0.95",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 608,
+      "converted_value": 60.8,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "sand",
+      "depth": "5-15cm",
+      "statistic": "mean",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 184,
+      "converted_value": 18.4,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "sand",
+      "depth": "5-15cm",
+      "statistic": "Q0.05",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 26,
+      "converted_value": 2.6,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "sand",
+      "depth": "5-15cm",
+      "statistic": "Q0.95",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 587,
+      "converted_value": 58.7,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "clay",
+      "depth": "0-5cm",
+      "statistic": "mean",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 422,
+      "converted_value": 42.2,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "clay",
+      "depth": "0-5cm",
+      "statistic": "Q0.05",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 9,
+      "converted_value": 0.9,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "clay",
+      "depth": "0-5cm",
+      "statistic": "Q0.95",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 927,
+      "converted_value": 92.7,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "clay",
+      "depth": "5-15cm",
+      "statistic": "mean",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 443,
+      "converted_value": 44.3,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "clay",
+      "depth": "5-15cm",
+      "statistic": "Q0.05",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 9,
+      "converted_value": 0.9,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    },
+    {
+      "property": "clay",
+      "depth": "5-15cm",
+      "statistic": "Q0.95",
+      "reference_col": 10,
+      "reference_row": 12,
+      "raw_value": 928,
+      "converted_value": 92.8,
+      "unit": "percent_mass",
+      "status": "model_proxy_not_field_measurement",
+      "zero_cells_excluded_from_interpretation": 3
+    }
+  ],
+  "farm_eligibility_or_ranking_allowed": false,
+  "limitations": [
+    "No current cropland mask or verified parcel/AOI intersection",
+    "No salinity, drainage, irrigation or root-zone profile",
+    "No local soil samples or calibration",
+    "Depths stop at 15cm; cannot infer full root-zone water storage"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "artifact_kind": "reference_menu_not_actual_farm_baseline",
+  "version": "1.0",
+  "date": "2026-11-12",
+  "case_id": "duc-lap-ha-place-reference-v1",
+  "mode": "reference_sandbox",
+  "actual_baseline_remains": null,
+  "source_register": "../../team-proposal-2026-11-12.md#12-nguồn-và-artifact-đọc-tiếp",
+  "plans": [
+    {
+      "id": "REF-RICE",
+      "ui_label": "Tham chiếu ba vụ lúa — không phải hiện trạng đã khảo sát",
+      "season_tag_sequence": ["Lúa Đông Xuân", "Lúa Hè Thu", "Lúa Thu Đông"],
+      "provenance": "Historical district report supports three-rice practice; applying to a Duc Lap reference case is a design assumption",
+      "source_ids": ["team-proposal:S5"],
+      "dated_calendar": null,
+      "farm_specific_eligibility": "needs_review"
+    },
+    {
+      "id": "REF-MAIZE",
+      "ui_label": "Tham chiếu hai lúa, một bắp — candidate thiết kế",
+      "season_tag_sequence": ["Bắp Đông Xuân", "Lúa Hè Thu", "Lúa Thu Đông"],
+      "provenance": "Local historical maize season; full sequence constructed for review, not observed on a verified parcel",
+      "source_ids": ["team-proposal:S1", "team-proposal:S5"],
+      "dated_calendar": null,
+      "farm_specific_eligibility": "needs_review"
+    },
+    {
+      "id": "REF-SESAME",
+      "ui_label": "Tham chiếu hai lúa, một mè — cần review áp dụng",
+      "season_tag_sequence": ["Lúa Đông Xuân", "Mè Xuân Hè", "Lúa Hè Thu"],
+      "provenance": "Published structure; site transfer and dated windows not verified",
+      "source_ids": ["team-proposal:S3"],
+      "variety_candidate": "Mè ĐH-1; not selected or procured",
+      "source_variety_duration_days": [70, 75],
+      "dated_calendar": null,
+      "farm_specific_eligibility": "needs_review"
+    }
+  ],
+  "sandbox_calendar_examples": [
+    {
+      "id": "ILLUSTRATION-90-DAY-GAP",
+      "input_kind": "synthetic_gap_and_preparation_assumptions",
+      "available_days": 90,
+      "preparation_days_assumption": 7,
+      "crop_duration_range_days_from_source": [70, 75],
+      "required_days_range": [77, 82],
+      "calendar_only_result": "fits_assumed_gap",
+      "overall_eligibility": "needs_review"
+    },
+    {
+      "id": "ILLUSTRATION-75-DAY-GAP",
+      "input_kind": "synthetic_gap_and_preparation_assumptions",
+      "available_days": 75,
+      "preparation_days_assumption": 7,
+      "crop_duration_range_days_from_source": [70, 75],
+      "required_days_range": [77, 82],
+      "calendar_only_result": "does_not_fit_assumed_gap",
+      "overall_eligibility": "calendar_conflict_in_sandbox"
+    }
+  ],
+  "ranking": null,
+  "real_world_recommendation": null,
+  "team_approved": false
+}

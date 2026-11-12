@@ -1,7 +1,10 @@
+> **TRẠNG THÁI 12/11 - THAM KHẢO/SNAPSHOT:** phần thiết kế, địa bàn, phân công và phase bên dưới có nội dung trước correction. Không dùng làm quyết định hiện hành. Đọc [Bắt đầu ở đây](START-HERE.md), [roles hiện hành](my-thanh-team-roles-2026-11-12.md) và [bảng R0/R1/R2 Mỹ Thành](cases/my-thanh-cai-lay/rotation-evidence-for-bich.md). Hưng-Việt cùng core/UI khi cần; Hiếu backend remote gián đoạn; Bích Data/review nguồn-feature; An ESP demo; Luật QA/thống kê/đánh giá từng block. Không lấy Đức Lập/bắp hạt/đậu phộng hoặc lời “prototype ngay” ở snapshot thay case và quy định hiện tại.
+
 # AgroTwin — Proposal sơ bộ dự án
 
-> NeuraX · NASA Space Apps 2026 / Field Shift · Bản 0.3 · 07/11/2026 · Nội bộ
-> Trạng thái: đề xuất trước triển khai. Challenge đã được chọn ngày 04/11; vùng/cây, nguồn nông học, sample NASA, inventory, availability và giờ BTC vẫn có mục chưa xác nhận. Đây không phải báo cáo sản phẩm đã chạy hoặc dự án đã được duyệt toàn bộ.
+
+> NeuraX · NASA Space Apps 2026 / Field Shift · Bản 0.4 · 12/11/2026 · Nội bộ
+> Trạng thái: đề xuất trước triển khai. Challenge đã được chọn ngày 04/11; người dùng là nông dân; ưu tiên nghiên cứu Đức Lập Hạ cũ (nay thuộc xã Đức Lập, Tây Ninh). Thửa đất/hiện trạng, K1, sample NASA, thông số chip HTTPSLAB và giờ BTC vẫn chưa xác nhận. Đây không phải báo cáo sản phẩm đã chạy hoặc dự án đã được duyệt toàn bộ.
 
 ## Tóm tắt đề xuất
 
@@ -16,6 +19,10 @@ Giá trị kỳ vọng là giúp người dùng hiểu trade-off và khoảng tr
 ### Cách sử dụng proposal
 
 Tài liệu đi từ bài toán → giải pháp → dữ liệu/phương pháp → kiến trúc → đánh giá → thực hiện → rủi ro. Markdown là bản nguồn chính; PDF xuất từ cùng nội dung để review/chia sẻ. Schema chi tiết thuộc architecture/workflow; hardware chuyên sâu thuộc paper cho An. Khi có quyết định hoặc artifact thật, cập nhật tài liệu sở hữu và version; không biến giả định thành kết quả.
+
+### Cập nhật phương án 12/11
+
+Đề xuất AgroTwin là farm 2D để khám phá luân canh: vì sao loại, khi nào đổi ý, còn thiếu gì. Đây là hướng nâng chất lượng bài thi local và chuẩn bị gói review global, không phải cam kết giải thưởng. Người dùng đã xác nhận là nông dân. Case ưu tiên nghiên cứu Đức Lập Hạ cũ; nhóm cây tìm nguồn là đậu phộng–bắp–lúa, chưa là chuỗi đã hợp lệ. Chip HTTPSLAB đã được đồng ý cho mượn theo người dùng, đang chờ model/datasheet. Sensor live ở ô thử nghiệm riêng. Phần 19 đưa kế hoạch, đánh giá và cách cắt scope.
 
 ## 1. Bối cảnh, vấn đề và cơ hội
 
@@ -57,6 +64,12 @@ Nếu tiếp cận được người dùng/mentor, lưu ngày, vai trò, bối c
 ### 2.3 Chọn vùng và cây
 
 Ưu tiên vùng có dữ liệu môi trường phù hợp, tài liệu cây–đất–mùa truy nguồn được và người có thể rà ý nghĩa. Không chọn chỉ vì basemap đẹp hoặc crop label phổ biến. Hưng tổng hợp quyết định sau input Bích/Việt/Quang Luật; proposal không tự điền địa danh/cây khi thiếu căn cứ.
+
+### 2.4 Khoanh vùng có bằng chứng và giới hạn
+
+Ưu tiên khu vực Đức Lập Hạ cũ, nay thuộc xã Đức Lập, tỉnh Tây Ninh theo mục 31 Nghị quyết 1682 [S10]. Khuyến nông Quốc gia ghi nhận mô hình đậu phộng tại địa bàn này vụ Đông Xuân 2015–2016 [S9]. Đó là bằng chứng lịch sử cho một đầu mối nghiên cứu, chưa xác nhận nông hộ/thửa đất đang hoạt động năm 2026. Chưa có tọa độ thửa; không gán tâm xã thành trang trại thật hoặc suy đất toàn vùng từ tên địa phương.
+
+Bích cần xác minh đất, nguồn nước, lịch cây/giống, hiện trạng, ràng buộc lao động/đầu ra và nguồn kỹ thuật. Nhóm lúa–bắp–đậu phộng là candidate. Hiện trạng và hai chuỗi thay thế chỉ khóa sau review. Nếu thiếu nguồn hoặc người liên hệ, chọn điểm gần TP.HCM có bằng chứng tốt hơn; Củ Chi là fallback tiếp cận, chưa là case đã audit. Nông dân là user đã xác nhận, nhưng nhu cầu và tính hữu ích cụ thể vẫn cần hỏi/test.
 
 ## 3. Mục tiêu, giả thuyết và thành công
 
@@ -144,7 +157,23 @@ Không dùng màu làm cách duy nhất truyền đạt kết quả. Score có n
 
 Node có thẻ riêng ghi nơi đo thực, thời gian, quality và live/replay; không cập nhật timestamp NASA. Sensor rút ra không làm mất chiến lược nếu A1 còn hợp lệ; sensor live không mở khóa chiến lược thiếu K1.
 
-### 5.3 Kiểm trải nghiệm
+### 5.3 Farm 2D, sensor thật và ba tương tác
+
+Giao diện đề xuất gồm bối cảnh vùng/nguồn, ba hàng kế hoạch theo mùa và ô sensor live. Nông dân nhìn thứ tự cây, điều kiện hợp lệ, đánh đổi và dữ liệu thiếu. Không dựng chỉ số tăng trưởng/năng suất nếu chưa có mô hình kiểm định. Một cửa sổ 12 tháng là cách hiển thị, không ép mọi mùa vụ kết thúc đúng năm dương lịch.
+
+```mermaid
+%% figure:farm
+flowchart LR
+    CASE[Case địa phương] --> PLANS[Lịch ba phương án]
+    PLANS --> WHY[Vì sao loại / khi nào đổi ý / còn thiếu gì]
+    SENSOR[Sensor thật tại bàn] --> LIVE[Ô thử nghiệm live có nhãn]
+    LIVE --> SCREEN[Farm 2D]
+    WHY --> SCREEN
+```
+
+**Hình bổ sung — Farm tương tác.** Đây là wireframe chức năng đề xuất; không phải screenshot sản phẩm đã chạy. Sensor tại bàn không đại diện ruộng trong case. What-if dùng số đo chỉ khi bật sandbox riêng và không ghi đè dữ liệu vùng.
+
+### 5.4 Kiểm trải nghiệm
 
 Khi có prototype/người thử, giao nhiệm vụ: chọn ưu tiên, giải thích hai phương án khác nhau ở đâu, tìm nguồn và nêu điều cần hỏi chuyên gia. Ghi bước hiểu sai để sửa UI. Chưa có người thử thì chỉ báo kiểm nội bộ; không gọi farmer-friendly validated từ việc team tự thấy dễ dùng.
 
@@ -163,13 +192,21 @@ Khi có prototype/người thử, giao nhiệm vụ: chọn ưu tiên, giải th
 
 POWER có chuỗi khí tượng và format ứng dụng đọc được; Daily có chuẩn thời gian cần ghi tường minh [S2]. Monthly phản hồi theo năm/tháng nhưng không vì vậy mọi parameter đều là tổng tháng [S3]. Cần đọc metadata từng biến thay vì dựa vào tên cột.
 
-### 6.2 Grain và dictionary
+### 6.2 Input ENSO và dữ liệu thử trước
+
+Theo yêu cầu team, ENSO/El Niño được đưa vào bối cảnh hỗ trợ chuẩn bị mùa vụ. Bản tin phải có provider, ngày phát hành, horizon và xác suất nếu có. Trong lượt đọc 12/11, trang NOAA CPC hiển thị bản 08/10/2026 và dự kiến cập nhật 12/11 [S11]; chưa coi đó là bản tháng 11. Không suy xác suất El Niño thành xác suất thiếu nước tại một ruộng.
+
+Muốn ENSO đổi ranking cần quan hệ địa phương được kiểm định hoặc outlook khu vực có nguồn. Khi chưa có, hiển thị bối cảnh và chạy kịch bản nóng/khô có nhãn giả định. Historical data NASA không phải seasonal forecast. Không dùng outlook hiện tại để đánh giá ngược các năm lịch sử.
+
+POWER là dữ liệu mở có thể thử trước; không cần chờ BTC giao riêng một dataset [S2]. Sau khi chốt AOI nghiên cứu mới kiểm sample/unit/grain/coverage/QA. Thay dataset không chỉ đổi URL: kiểm metadata và tính lại feature/score. Sensor thử bằng payload thiết bị riêng; NASA data không thay log thật.
+
+### 6.3 Grain và dictionary
 
 Theo workflow, features.csv có một dòng region_id × tháng: key, period_start/end, precip_sum_mm, air_temp_mean_c, coverage, source_ids. Period cuối exclusive theo contract. Metadata phân biệt height/surface: air temperature và land-surface temperature không ghép dưới một tên vì cùng độ C.
 
 Nếu precipitation trả rate/trung bình ngày, chuyển sang tổng tháng theo đúng unit và số ngày hợp lệ. Không cộng monthly khác meaning, không coi tháng thiếu là tổng đầy đủ. Aggregate, timezone, missing code và denominator coverage cần ghi trước khi xuất D1.
 
-### 6.3 Source register
+### 6.4 Source register
 
 Mỗi nguồn ghi provider, URL, product/version, ngày truy cập, AOI/period, unit, spatial/temporal support, QA, license/citation, biến và transform. Tách đọc docs / tải sample / kiểm sample. Hiện POWER mới đọc docs; không gọi data case là ready.
 
@@ -243,22 +280,20 @@ Mỗi candidate có mục đích, input cần thêm, baseline so và tiêu chí 
 
 ```mermaid
 %% figure:architecture
-flowchart LR
-  RAW["Nguồn NASA / domain"] --> AD["Adapter DATA của Việt"]
-  AD --> D["D1 + dictionary + manifest"]
-  D --> Q["Quang Luật QC; Bích domain"]
-  Q --> M["Hưng + Việt: baseline / AI module"]
-  K["K1 có nguồn"] --> M
-  M --> A["A1 kết quả immutable"]
-  M --> E["E1 đánh giá độc lập"]
-  A --> UI["Hiếu: dashboard"]
-  E --> UI
-  H["An: node H1"] --> CTX["Context điểm đo"]
-  CTX --> UI
-  UI --> DISPLAY["Summary xuống thiết bị"]
+flowchart TB
+    NASA[NASA history] --> D[D1 / Q1 feature và chất lượng]
+    LOCAL[Đất / cây / mùa địa phương] --> K[K1 nguồn và ràng buộc]
+    CT[Ưu tiên / ENSO có horizon] --> C[Bối cảnh hoặc scenario có nhãn]
+    D --> ENGINE[Eligibility / scoring / sensitivity]
+    K --> ENGINE
+    C --> ENGINE
+    ENGINE --> A[A1 / farm 2D / why-not]
+    ENGINE --> E[E1 / review độc lập / evidence]
+    SENSOR[Thiết bị mượn, chờ model] --> H[H1 quality / ô live riêng]
+    H --> A
 ```
 
-**Hình 5.** Kiến trúc logic: package theo contract, không quy định mọi module phải là service riêng.
+**Hình 5.** Kiến trúc logic đề xuất với ba luồng nguồn và sensor riêng. Các mũi tên không chứng minh module đã triển khai. ENSO chỉ đổi ranking sau khi vượt gate quan hệ địa phương; sensor bàn không thay input vùng.
 
 ### 10.1 Vì sao batch/snapshot trước?
 
@@ -343,13 +378,19 @@ Quang Luật kiểm một mẫu aggregate và score/metric; Bích rà interpreta
 
 ## 13. Hardware trong hệ thống và giá trị tích hợp
 
-Node của An có method đo và contract riêng. Lần đầu đề xuất một probe ẩm đất điện dung, ESP32 có sẵn, USB data và laptop; SHT31/OLED theo inventory/test. Một probe đo hai chậu tuần tự được nếu protocol cố định; không cần mua hai chiếc chỉ để demo trông nhiều thiết bị.
+Node của An có method đo và contract riêng. Cấu hình tham chiếu dự phòng là một probe ẩm đất điện dung, ESP32 nếu inventory xác nhận, USB data và laptop; SHT31/OLED theo inventory/test. Nhánh ưu tiên mới là HTTPSLAB chờ thông số ở mục 13.1. Một probe đo hai chậu tuần tự được nếu protocol cố định; không cần mua hai chiếc chỉ để demo trông nhiều thiết bị.
 
 Giá trị là acquisition, quality, timestamp, stale và chiều summary từ laptop về thiết bị. Nó bổ sung chiều sâu hệ thống nhưng không thay NASA, K1 hoặc model evaluation. Sensor tại bàn không tự vào ranking vùng; đổi ưu tiên trên app tách khỏi chuyển chậu. Đây là ranh giới quan trọng cần người xem hiểu.
 
 Muốn dùng H1 làm model input sau này cần observation đúng vùng/thời gian, calibration, tính đại diện và response rule. Khi đó mới đánh giá input địa phương cải thiện quyết định nào. Trước khi đạt, giữ context riêng và hiển thị giới hạn rõ.
 
 Paper [hardware-design-paper.md](hardware-design-paper.md) / [PDF cho An](../../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf) giải thích alternatives, nguồn/ADC, calibration, test, lỗi và backup B0–B4. Proposal không lặp hết thông số. Các cấu hình ở đó là đề xuất NeuraX, chưa xác nhận inventory/tương thích module thực tế.
+
+### 13.1 HTTPSLAB và trạng thái mới
+
+Theo người dùng, bên HTTPSLAB đã đồng ý cho mượn chip nội địa; chờ tên/model, board, datasheet, SDK, sensor kèm theo và payload thật. Chưa xác nhận phạm vi thiết kế/chế tạo của từng thành phần. Không dùng claim “100% chip và sensor nội địa” hoặc “bảo đảm an ninh dữ liệu” khi chưa có evidence. Hardware paper 0.3 cập nhật nhánh thiết bị mượn; ESP32/probe là cấu hình tham chiếu dự phòng có điều kiện inventory.
+
+An xác minh acquisition/giao tiếp theo board thực. H1 phải giữ source/time/unit/quality và live/replay; không cần model AI chạy trên chip. Nếu chip chưa đến, core vẫn hoạt động; replay phải có nhãn hoặc bỏ ô live. Không fake số đo như live.
 
 ## 14. Đội hình, ownership và làm song song
 
@@ -473,6 +514,8 @@ Input là NASA, K1 và ưu tiên; hoạt động là QA/so sánh/giải thích; 
 
 ### 18.2 Khác biệt cần kiểm
 
+> Review mới 12/11: [audit tính mới](../competitor-research/field-shift-novelty-audit-2026-11-12.md) và [đội thắng local/global](../past-winners/evidence-review-2026-11-12.md). NASA/ranking/ENSO/explainability và farm mô phỏng đều có tiền lệ trong mẫu khảo sát. Đóng góp địa phương và tiện ích cần được chứng minh, chưa có căn cứ gọi AgroTwin độc nhất. Proposal/PDF 0.4 tích hợp kết luận audit; mục 18.4 dùng commit Orion mới 11/11.
+
 Giả thuyết khác biệt là evidence/uncertainty hiện ngay trong quyết định, cùng measurement chain có thể kiểm. Chưa có khảo sát từng project để nói độc nhất. Research đối thủ phải có URL/ngày, tính năng quan sát được và điểm so; concept công khai không chứng minh chất lượng implementation.
 
 | Góc review nội bộ | Evidence cần chuẩn bị |
@@ -489,7 +532,150 @@ Giả thuyết khác biệt là evidence/uncertainty hiện ngay trong quyết �
 
 Quyết định/hiện trạng → điều kiện và coverage NASA → so chiến lược → đổi ưu tiên/giải thích → mở source/missing → node context/lỗi → bước cần kiểm tiếp. Thời lượng rehearsal không là giới hạn video/slides BTC. Replay/synthetic phải được nói ngay ở phần liên quan.
 
-## 19. Deliverables, acceptance và quyết định tiếp theo
+### 18.4 Tiền lệ, đối thủ và giới hạn nguyên nhân thắng
+
+Orion Field Shift tại commit 4a80fa8ddb7dab99e2bf27cdfb95432a94fe6001 (11/11) mô tả NASA/ranking/scenario/provenance và Niño 3.4/DMI [S7]. MODEL_CARD cùng commit vẫn ghi validating/not shipped; không dùng README built làm chứng minh forecast đã tốt. GreenOrbit tại commit c9b3961caaa061a8a3af28963f7743bcdbecf91f mô tả POWER, ba rotation, ưu tiên và warming scenario; simulator nhiều năm còn ở roadmap [S8]. Đây là self-description, chưa audit runtime/award/eligibility.
+
+| Tiền lệ | Bằng chứng được xác nhận | Hàm ý suy luận cho NeuraX |
+| --- | --- | --- |
+| NVS-knot / 2plant | Galactic Impact global 2024; hỗ trợ rủi ro trồng [S5] | Giải một quyết định cụ thể |
+| Zumorroda-X | Art & Technology global 2025; mini-games nông nghiệp [S6] | Farm game không tự là mới |
+| HerCode Space | Storytelling global 2025; A Solar Tale [S6] | Chọn người xem và mạch truyện |
+| QUEÑARIS | Local Impact global 2025; câu chuyện nước Arequipa [S6] | Địa phương hóa bằng vấn đề có căn cứ |
+| BlueMarble | Giải Nhất local Ninh Bình 2025 [S12]; sách đa phương tiện [S14] | Dữ liệu có thể kể thành trải nghiệm |
+| Lotus Data Voyage | Giải Ba local [S12]; mô phỏng nông nghiệp [S14] | Hướng simulation có tiền lệ tại Việt Nam |
+| DeepEnd / Dublin | Community Choice local; có nhận xét judge về truyền đạt [S15] | Tương tác phải giúp hiểu sản phẩm |
+
+Giải local, Global Nominee và Global Winner khác nhau. BTC SEPA cập nhật danh sách nominee Ninh Bình [S13]; không gọi các đội này là global winners. HCMC chưa có nguồn đội thắng/project đủ rõ. NASA công bố giải và mô tả sản phẩm, không đủ phiếu điểm để suy nguyên nhân thắng chắc chắn. Nhận xét local NCI không là công thức thắng global. Đây là mẫu chọn có giới hạn, không thống kê toàn bộ đội thắng và không có nhóm đối chứng không thắng.
+
+Kết luận: phần lớn thành phần AgroTwin có tiền lệ. Case địa phương, tương tác và evidence là hướng tạo giá trị cần chứng minh; chưa có bằng chứng độc nhất hay tốt hơn đối thủ. Sensor thật là demo tích hợp tiềm năng, không tự là phát minh. Không tăng số dataset/AI/3D chỉ để tạo vẻ mới.
+
+### 18.5 Định vị có thể bảo vệ trước giám khảo
+
+Đề xuất định vị: một case địa phương được dẫn nguồn đến từng ràng buộc, giúp người review biết vì sao chọn, vì sao loại và điều gì có thể đổi kết luận. Đây là hướng thiết kế cần chứng minh bằng sản phẩm và review độc lập; chưa là ưu thế đã đo so với Orion hay công cụ thương mại.
+
+Demo cần mở được chuỗi source → feature → quality → constraint → score → recommendation. Một phương án bị loại phải hiện constraint_id và nguồn K1; một phương án đổi hạng phải chỉ ra trọng số hoặc điều kiện gây đổi. Một dữ liệu thiếu phải dẫn đến trạng thái review/unknown phù hợp, thay vì tự lấp để cho kết quả đẹp. Hardware đóng vai trò minh họa measurement chain, không là bằng chứng độ đúng của xếp hạng vùng.
+
+### 18.6 Ma trận bám đề và bằng chứng cần nộp
+
+| Yếu tố từ brief Field Shift đã lưu | Cách đáp ứng dự kiến | Bằng chứng / khoảng trống |
+| --- | --- | --- |
+| Điều kiện môi trường từ NASA | Feature có grain, unit, period và provenance | D1/Q1; chưa có sample audit vùng đã chốt |
+| So lựa chọn cây / luân canh | Ba chiến lược có hiện trạng và constraints | K1 có nguồn địa phương; chưa chốt vùng/cây |
+| Ưu tiên và đánh đổi | Weights, sensitivity, lý do và why-not | A1/E1; cần test độc lập và user review |
+| Tính hữu ích | Một người dùng, một quyết định và bước tiếp theo rõ | Chưa có phỏng vấn/pilot xác nhận |
+| Nhánh dự báo nâng cao | Chỉ mở nếu vượt baseline theo gate mục 9 | Không lấy synthetic hoặc hindcast làm dự báo đã xác thực |
+| Bài nộp và tính hợp lệ 2026 | Hưng đối chiếu guide và local BTC trước nộp | Chưa xác nhận đầy đủ guide 2026; khung 2025 chỉ tham khảo |
+
+Không gọi proposal là “đã đáp ứng đầy đủ mọi luật 2026” khi chưa kiểm guide đúng năm. Cần xác nhận định dạng, thời lượng, hạn/múi giờ, khai báo AI/nguồn, quyền sử dụng, quy định chuẩn bị trước sự kiện và tiêu chí địa phương. Danh sách này là việc cần xác minh, không phải tuyên bố những điều kiện cụ thể đã được NASA ban hành.
+
+### 18.7 Câu chuyện demo và phản biện
+
+Nhân vật dưới đây là tình huống minh họa, chưa là nông dân đã phỏng vấn. Một người tư vấn phải so hiện trạng với hai phương án mùa sau trong điều kiện dữ liệu không hoàn hảo. Mở đầu bằng câu hỏi “vì sao chọn phương án này, và điều gì khiến chúng ta đổi ý?”. Hiện coverage NASA và nguồn K1 trước kết quả. So ba phương án; đổi ưu tiên để bộc lộ trade-off; mở why-not và nguồn. Chủ động đưa một ca thiếu dữ liệu để hệ thống yêu cầu review. Cuối cùng minh họa node đo tại bàn với nhãn context riêng, rồi đề nghị pilot hẹp để kiểm tính hữu ích.
+
+| Câu hỏi giám khảo | Câu trả lời cần chứng minh |
+| --- | --- |
+| Vì sao cần NASA? | Truy từ parameter thực sự dùng tới criterion và quyết định; bỏ feature đó có tác động gì |
+| Điểm mới so dự án khác? | Trình bày case địa phương, evidence packet và review; thừa nhận phần trùng công khai |
+| Điểm số có đáng tin? | Cho xem nguồn K1, chuẩn hóa, missing policy, sensitivity và E1 độc lập |
+| Cảm biến chứng minh gì? | Chứng minh thu nhận/log/trạng thái phép đo tại điểm; không xác thực pixel NASA từ một chậu |
+| Đã tạo tác động thực tế chưa? | Chưa; nêu giả thuyết, thiết kế pilot và cách đo trước/sau phù hợp |
+| AI có bắt buộc không? | Baseline giải thích được là core; ML chỉ dùng khi có bằng chứng cải thiện |
+
+## 19. Phương án nâng chất lượng cho local và global
+
+### 19.1 Phương án được khuyến nghị
+
+Giữ Field Shift, chọn một case nghiên cứu tại Đức Lập Hạ cũ (nay thuộc xã Đức Lập, Tây Ninh), người dùng là nông dân. AgroTwin là farm 2D tương tác để so kế hoạch luân canh, mở căn cứ và tìm điều kiện làm kết luận thay đổi. Sensor thật tạo một ô thử nghiệm live riêng; chip HTTPSLAB đang chờ model/datasheet. Không chờ chip để hoàn thành core NASA/K1.
+
+Định vị làm việc: **Hiểu lựa chọn trước mùa vụ: vì sao chọn, vì sao loại, khi nào cần đổi ý.** Khác biệt hữu ích cần được chứng minh qua case địa phương, phương pháp và trải nghiệm; không tự gọi độc nhất. [Audit đối thủ](../competitor-research/field-shift-novelty-audit-2026-11-12.md) cho thấy NASA/ranking/ENSO/explanation và farm game đều có tiền lệ.
+
+### 19.2 Ba tương tác phải làm tốt
+
+| Tương tác | Giá trị cho quyết định | Bằng chứng cần có |
+| --- | --- | --- |
+| Vì sao loại? | Một kế hoạch vi phạm ràng buộc được nêu lý do và nguồn, không chỉ điểm thấp | constraint_id, scope, source, trạng thái; rule được review |
+| Khi nào đổi ý? | Chỉ ra thay đổi ưu tiên hoặc giả định khiến kết quả đổi, hòa hoặc chưa chắc chắn | Sweep hữu hạn trong miền cho phép, contributions; không bịa ngưỡng chính xác |
+| Còn thiếu gì? | Hướng người dùng tới dữ liệu/câu hỏi cần kiểm trước khi quyết định | Danh sách thiếu gắn rule; unknown không thành pass |
+
+Chỉ gọi ngưỡng đổi kết luận khi phương pháp thực sự tìm được: ghi rõ lưới bước, miền quét và các biến giữ cố định. Nếu không tìm thấy thì hiện “chưa thấy đổi hạng trong miền đã thử”; nếu thiếu dữ liệu thì needs_review. Cận ngưỡng số học không phải xác suất đúng nông học. Không điều chỉnh trọng số để ép một màn đảo hạng đẹp.
+
+### 19.3 Case và phương án
+
+Nguồn khuyến nông xác nhận mô hình đậu phộng lịch sử tại Đức Lập Hạ, không đủ chứng minh hiện trạng 2026 hoặc loại đất của một thửa. Bích lập case sheet đất/nước/mùa/giống/hiện trạng/nguồn và khoảng trống. Nhóm cây nghiên cứu lúa–bắp–đậu phộng chưa là ba chuỗi đã hợp lệ. Hưng/Bích chốt hiện trạng và hai phương án sau review; nếu chỉ hai phương án đủ bằng chứng thì ghi rõ giới hạn, không bịa phương án thứ ba.
+
+Chốt AOI nghiên cứu trước khi lấy NASA sample; tọa độ có thể là điểm nghiên cứu công khai có nhãn, không giả một ruộng đã khảo sát. Độ phân giải NASA không đủ để tách các ruộng nhỏ chỉ vì UI cho zoom gần. Nếu không có nguồn đất, giữ unknown hoặc đổi case có nguồn tốt hơn. [Dossier địa phương](local-case-scope-and-simulation.md) ghi nguồn và mapping địa danh.
+
+### 19.4 Luồng sản phẩm
+
+NASA history → feature/quality → constraint/score → farm 2D → evidence packet. ENSO có ngày phát hành/horizon là input bối cảnh; muốn dùng thay ranking cần quan hệ địa phương hoặc forecast khu vực được dẫn nguồn. Chưa có thì dùng kịch bản giả định riêng và không gọi là dự báo El Niño tại ruộng. Sensor H1 → quality → ô live; sandbox cần bật riêng, không ghi đè dữ liệu vùng.
+
+Farm hiển thị chuỗi cây theo mùa và các khoảng đất trống nếu lịch có căn cứ; lợi ích đất không được suy trực tiếp từ một probe ẩm. Giữ score định tính khi nguồn chỉ hỗ trợ định tính; không quy đổi thành % tăng sức khỏe đất/năng suất.
+
+### 19.5 Chuẩn bị local và gói review global
+
+Đây là hai góc trình bày của cùng sản phẩm và cùng bằng chứng, không phải hai hệ thống. Local judges cũng cần validity; global judges cũng cần hiểu câu chuyện nhanh. Việc đạt giải local không tự bảo đảm global nomination; xác nhận quy trình đúng năm với BTC.
+
+| Góc chuẩn bị | Local: trình bày trực tiếp theo thời lượng BTC | Global: reviewer tự xem artifact |
+| --- | --- | --- |
+| Hiểu bài toán | Một case Việt Nam và quyết định cụ thể | Tóm tắt tiếng Anh đủ context địa phương |
+| Demo | Một đường so kế hoạch hoàn chỉnh, chuyển sensor có nhãn | Demo truy cập được, snapshot và hướng dẫn ngắn |
+| Khoa học | Mở một rule/source và phép tính kiểm lại | Method/data card, manifest, E1 cùng version |
+| Tính mới | Thừa nhận overlap, nêu đóng góp cần chứng minh | So dự án public theo commit/nguồn; không claim đầu tiên |
+| Độ tin cậy | Thử missing/stale/mất mạng và backup | Limitations, data_as_of, cách chạy lại và phụ thuộc |
+| Bài nộp | Q&A và format/deadline địa phương đã xác nhận | Guide global đúng năm, nguồn/license/AI disclosure |
+
+Các hạng mục chỉ là lăng kính: Validity/Relevance làm nền; Presentation/Impact phải có case và artifact. Không tăng feature để cố gắn nhãn Best Technology hoặc Local Impact.
+
+### 19.6 Protocol đánh giá nhỏ nhưng có ý nghĩa
+
+Quang Luật kiểm độc lập bảng tính/rule trong một case bằng công cụ quen thuộc; giữ input và expected output tách khỏi code sản phẩm. DATA kiểm grain/unit/time/nodata; method kiểm ràng buộc, tie, missing và sensitivity; UI kiểm hiển thị đúng trạng thái.
+
+Đề xuất thử khám phá với 3–5 người nếu tiếp cận được, phân biệt nông dân/người tư vấn với thành viên team hoặc sinh viên. Đây là số mục tiêu tuyển, chưa là người đã tham gia. Cho cùng thông tin vào bảng tĩnh và AgroTwin, đổi thứ tự giữa người tham gia để giảm hiệu ứng học. Không cho feedback ở lượt đầu trước khi hoàn thành lượt sau. Ghi familiarity và mức hỗ trợ.
+
+Ba tác vụ: tìm phương án bị loại và lý do; nêu điều kiện có thể đổi lựa chọn; nhận ra thông tin chưa đủ và nguồn cần kiểm. Ghi hoàn thành/thời gian/lỗi hiểu/nguyên văn feedback nếu được đồng ý; không bịa quote. Dữ liệu cá nhân không cần cho demo. Mẫu nhỏ dùng phát hiện vấn đề và cải tiến, không khẳng định statistical significance hay hiệu quả toàn bộ nông dân. Nếu chỉ test với bạn học thì gọi usability smoke test.
+
+Gate nội bộ đề xuất: không vi phạm known hard constraints trong eligible set; phép tính khớp review độc lập; mọi lý do demo mở được source; người review phân biệt history/scenario/live; không có lỗi khiến sensor tại bàn bị hiểu thành dữ liệu ruộng. Các gate này không thay xác nhận khoa học ngoài phạm vi.
+
+### 19.7 Trình tự và cắt scope
+
+| Mốc | Đầu ra ưu tiên | Owner dẫn / điều kiện dừng |
+| --- | --- | --- |
+| Chuẩn bị 12–13/11 | Case sheet, data/rule candidates, guide check, storyboard, thông số chip khi có | Hưng/Bích; Việt/Quang Luật; An. Chỉ triển khai theo thời gian BTC cho phép |
+| Khối đầu của thời gian build được phép | Một case D1/Q1/K1/A1 chạy end-to-end | Việt/Hưng/Hiếu; thiếu domain thì needs_review |
+| Sau core | Ba tương tác, review độc lập và fault cases | Hưng/Quang Luật/Hiếu |
+| Sau khi nhận board | Adapter/log thật, live tile và stale | An/Quang Luật; không chặn core |
+| Trước khóa nộp | Rehearsal, brief Anh, snapshot, hướng dẫn, link/format/credits | Cả team, Hưng tổng hợp |
+
+Nếu phải cắt: bỏ 3D, chatbot, nguồn EO phụ, forecast học máy, cloud realtime, actuator và animation phụ trước. Giữ decision flow, NASA thực chất, K1/limits, evidence và bài nộp. Nếu thiếu chip: replay có nhãn hoặc bỏ live, không giả truyền số đo. Nếu thiếu K1: giữ case nghiên cứu minh bạch hoặc đổi case có nguồn, không dùng synthetic làm tư vấn thật.
+
+### 19.8 Storyboard và thông điệp
+
+Mở bằng câu hỏi nông dân cần quyết, không mở bằng danh sách công nghệ. Dùng case nghiên cứu công khai, chưa đặt tên người thật nếu chưa phỏng vấn. Một kế hoạch có thể tốt về nước nhưng bị loại bởi lịch/đất; một kế hoạch có thể đổi hạng khi ưu tiên đổi; một kết quả có thể cần review khi thiếu nguồn. Sau đó minh họa phép đo live và giới hạn quy mô. Kết bằng pilot hẹp và việc sẽ đo để chứng minh ích lợi.
+
+Draft English: “AgroTwin helps farmers explore crop-rotation choices before the next season. For a local study case, it shows why a plan is eligible, what could change the ranking, and what still needs local review. NASA climate history informs the comparison; a separate live sensor tile demonstrates point measurements.”
+
+Đây là nháp thông điệp, không mô tả các chức năng đã triển khai. Thời lượng rehearsal nội bộ không thay thời lượng BTC. Không hứa bảo đảm an ninh lương thực, tăng năng suất hoặc chip nội địa tự bảo đảm an ninh dữ liệu.
+
+### 19.9 Gói bàn giao và tiêu chí xong
+
+Proposal/PDF đồng bộ; paper An có trạng thái thiết bị mới và backup; case sheet/K1; sample NASA/manifest/Q1; A1/E1; storyboard; method/data card; credits; instructions/snapshot. Năm gói sản phẩm sau docs chỉ được ghi hoàn tất khi có artifact thật ở repo sản phẩm. Với mỗi claim pitch, ghi source hoặc phép thử, version, owner và giới hạn.
+
+Không cần chờ sau local mới chuẩn bị gói review độc lập; chuẩn bị cùng core. Không tự ý sửa sản phẩm sau deadline; mọi cập nhật bài nộp theo BTC. Mục tiêu là giảm lý do bị loại và tăng chất lượng bằng chứng, không đưa xác suất thắng thiếu cơ sở.
+
+```mermaid
+%% figure:evidence
+flowchart LR
+    SOURCE[Nguồn / input version] --> RULE[Feature / rule]
+    RULE --> RESULT[Eligibility / score / reason]
+    RESULT --> REVIEW[Review / điều kiện đổi ý]
+    REVIEW --> NEXT[Dữ liệu cần kiểm tiếp]
+```
+
+**Hình bổ sung — Chuỗi bằng chứng.** Mỗi claim phải dẫn về input và phép kiểm cùng version; chưa có artifact thì giữ trạng thái đề xuất.
+
+
+## 20. Deliverables, acceptance và quyết định tiếp theo
 
 | Deliverable | Owner dẫn | Hoàn tất khi |
 | --- | --- | --- |
@@ -501,24 +687,36 @@ Quyết định/hiện trạng → điều kiện và coverage NASA → so chi�
 | Proposal/paper/methodology | Team theo ownership | Source/version khớp; proposal tách as-built |
 | Page/pitch/nộp | Hưng + Hiếu + team | Đúng luật, link/source/disclosure và receipt thật |
 
-### 19.1 Definition of done core MVP
+### 20.1 Definition of done core MVP
 
 Reviewer đi được từ câu hỏi tới data/constraint/score/reason của ít nhất một case có nguồn. Eligible set không vi phạm known hard constraints; arithmetic/metadata khớp; warnings không mất ở UI. Có package/hướng dẫn chạy lại và evidence cùng version. Claim khoa học bằng mức kiểm đã làm. Chưa có artifact thì proposal không ghi pass.
 
-### 19.2 Việc cần giải ngay
+### 20.2 Việc cần giải ngay
 
-Hưng/Bích chọn người dùng giả thuyết, vùng/cây và chiến lược có nguồn. Việt xác định product/parameter/sample và mapping. Quang Luật chốt Q1/E1/edge cases trước khi chọn candidate. Hiếu/Việt thống nhất A1/UI state; An xác nhận board/inventory. Hưng xác minh giờ, ngôn ngữ, format, source/license và quyền chuẩn bị trước với BTC.
+Hưng/Bích kiểm nhu cầu nông dân và case Đức Lập, chốt cây/chiến lược có nguồn. Việt xác định product/parameter/sample và mapping. Quang Luật chốt Q1/E1/edge cases trước khi chọn candidate. Hiếu/Việt thống nhất A1/UI state; An xác nhận board/inventory. Hưng xác minh giờ, ngôn ngữ, format, source/license và quyền chuẩn bị trước với BTC.
 
-Owner quyết định chi tiết implementation trong contract. Đổi scope, meaning criterion hoặc trạng thái team cần ghi ngày/lý do. Proposal 0.3 là baseline review, không đồng nghĩa team đã approve toàn bộ nội dung.
+Owner quyết định chi tiết implementation trong contract. Đổi scope, meaning criterion hoặc trạng thái team cần ghi ngày/lý do. Proposal 0.4 là baseline review, không đồng nghĩa team đã approve toàn bộ nội dung.
 
-## 20. Nguồn và phạm vi xác minh
+## 21. Nguồn và phạm vi xác minh
 
-Nguồn web dưới đây được đọc 07/11/2026. Field Shift dựa bản người dùng lưu trong repo; live 502, chưa audit Resources mới. NASA/FAO giúp hiểu bối cảnh và tìm nguồn, không xác nhận dataset case, nông học địa phương hoặc model đã chạy.
+Nguồn S1–S4 được đọc 07/11; nguồn bổ sung được đọc/đối chiếu 12/11/2026. Các nguồn là bằng chứng theo phạm vi mô tả, không là phép thử thực địa. Field Shift dựa bản người dùng lưu trong repo; live 502, chưa audit Resources mới. NASA/FAO giúp hiểu bối cảnh và tìm nguồn, không xác nhận dataset case, nông học địa phương hoặc model đã chạy.
 
 - [S1] NASA Science. Space Apps 2026: mô hình và ngày sự kiện. https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/
 - [S2] NASA POWER. Daily API: response, format, time standards. https://power.larc.nasa.gov/docs/services/api/temporal/daily/
 - [S3] NASA POWER. Monthly/Annual API: grain và format. https://power.larc.nasa.gov/docs/services/api/temporal/monthly/
 - [S4] FAO. Species diversification: luân canh và mục tiêu quản lý. https://www.fao.org/conservation-agriculture/in-practice/species-diversification/en/
+
+- [S5] NASA. Global Winners 2024: NVS-knot và các hạng mục. https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/nasa-international-space-apps-challenge-announces-2024-global-winners/
+- [S6] NASA. Global Winners 2025: mô tả và giải, không phải phiếu điểm. https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/nasa-announces-2025-international-space-apps-challenge-global-winners/
+- [S7] Team Orion. README tại commit 11/11/2026; tự mô tả. https://github.com/Zul-Qarnain/field-shift/blob/4a80fa8ddb7dab99e2bf27cdfb95432a94fe6001/README.md
+- [S8] GreenOrbit. README cố định commit; tự mô tả. https://github.com/yunusarfat/Nasa-space_challenge-2026-GreenOrbit/blob/c9b3961caaa061a8a3af28963f7743bcdbecf91f/README.md
+- [S9] Khuyến nông Quốc gia. Mô hình đậu phộng Long An lịch sử. https://khuyennongvn.gov.vn/chuong-trinh-nganh-nong-nghiep/tai-co-cau-nganh-nong-nghiep/long-an-co-gioi-hoa--giai-phap-can-thiet-trong-canh-tac-dau-phong-15728.html
+- [S10] Cổng Chính phủ. Nghị quyết 1682, địa danh Đức Lập mục 31. https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1682-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-tay-ninh-nam-2025-119250616210257367.htm
+- [S11] NOAA CPC. ENSO Diagnostic Discussion, bản hiển thị 08/10 trong lượt đọc 12/11. https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml
+- [S12] Cổng Khánh Hội, Ninh Bình. Công bố giải local 2025. https://khanhhoi.ninhbinh.gov.vn/thong-tin-tuyen-truyen/trao-giai-cuoc-thi-sang-tao-ung-dung-khong-gian-nasa-space-apps-challenge-2025-tai-ninh-binh-327.html
+- [S13] BTC SEPA. Cập nhật tám Global Nominees Ninh Bình 2025. https://sepa.org.vn/en/nasa-space-apps-challenge-ninh-binh-2025-announces-eight-global-nominee-teams-selected-for-the-next-round-of-global-evaluation.htm
+- [S14] VietnamNet. Phỏng vấn và tường thuật sản phẩm đội local 2025. https://vietnamnet.vn/90-doi-tranh-tai-tai-nasa-space-apps-challenge-2025-thap-lua-dam-me-stem-2450162.html
+- [S15] National College of Ireland. Dự án Dublin 2025 và nhận xét judges. https://blog.ncirl.ie/nasa-space-apps-challenge-projects-that-launched
 
 Nguồn nội bộ: [brief nguyên văn](../challenges/07-field-shift.md), [final-selection](../final-selection.md), [decision-log](../decision-log.md), [provenance](../sources/challenge-intake.md), [team-profile](../../team/team-profile.md), [workflow](workflows/field-shift.md), [architecture](architecture.md), [workstreams](team-workstreams.md), [timeline](event-timeline.md), [playbook](competition-playbook.md).
 
@@ -530,12 +728,12 @@ Proposal sở hữu framing, mục tiêu, phạm vi tổng thể/kế hoạch re
 
 | ID | Unknown | Owner và evidence cần có |
 | --- | --- | --- |
-| A01 | Người dùng/vùng/cây | Hưng + Bích: nguồn/feedback và scope rationale |
+| A01 | Nông dân đã xác nhận; case Đức Lập đề xuất, thửa/hiện trạng còn mở | Hưng + Bích: case sheet và nguồn/feedback |
 | A02 | Ba chiến lược có cơ sở | Bích + Hưng: rotations/constraints có nguồn |
 | A03 | NASA sample đủ cho grain | Việt + Quang Luật: product/unit/coverage/mapping |
 | A04 | Utility/weights giải thích được | Hưng/Bích + Quang Luật: definition/sensitivity |
 | A05 | Forecast có giá trị | Việt + Quang Luật: split/MAE/baseline; thiếu thì bỏ |
-| A06 | Hardware có và phù hợp | An: SKU/ảnh, electrical checks/log |
+| A06 | HTTPSLAB đồng ý cho mượn theo user; model và sensor còn mở | An: datasheet/SDK, log, electrical checks |
 | A07 | Capacity khớp kế hoạch | Từng thành viên, Hưng tổng hợp |
 | A08 | Luật/giờ HCMC | Hưng: tài liệu BTC đúng năm/deadline |
 | A09 | Khác biệt so approach hiện có | Research có URL/ngày và so cụ thể |
@@ -544,4 +742,4 @@ Proposal sở hữu framing, mục tiêu, phạm vi tổng thể/kế hoạch re
 
 Ghi ngày/version, người tham gia thực tế, nội dung giữ/sửa và unknown còn mở. Mỗi quyết định có lý do, evidence, owner, mốc cần có và artifact bị ảnh hưởng. Kết luận có thể chấp nhận scope có điều kiện hoặc yêu cầu thu hẹp, không nhất thiết approved cho toàn dự án.
 
-Bước tiếp theo là giải A01–A04, xác nhận inventory/luật rồi build theo thời gian được phép. Khi có phép thử thật, cập nhật method/as-built và kết quả tại repo sản phẩm; giữ proposal để biết giả định và lý do thay đổi.
+Bước tiếp theo là chốt case sheet/K1 tại Đức Lập, kiểm sample NASA, xác nhận board/luật rồi build theo thời gian được phép. Khi có phép thử thật, cập nhật method/as-built và kết quả tại repo sản phẩm; giữ proposal để biết giả định và lý do thay đổi.

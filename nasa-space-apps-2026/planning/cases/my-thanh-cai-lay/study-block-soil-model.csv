@@ -1,0 +1,16 @@
+property,depth,statistic,raw_integer,value,unit,source_file,sha256
+clay,0-5cm,mean,353,35.3,percent_mass,soilgrids/clay_0-5cm_mean.tif,8c0356517d8358768cfbe5f6c8a8d18100cc49e266a25d05c759a40cb2d5ef0f
+clay,0-5cm,Q0.05,4,0.4,percent_mass,soilgrids/clay_0-5cm_Q0.05.tif,1a1426605967c1432967e3de6077ef752ccc786fb462ea5857b8a6b99f855f48
+clay,0-5cm,Q0.95,932,93.2,percent_mass,soilgrids/clay_0-5cm_Q0.95.tif,770a16d8c7138c8755c0ffdd92467b2b9760b37dc73bbaa7f586220a92e337e7
+phh2o,0-5cm,mean,63,6.3,pH_H2O,soilgrids/phh2o_0-5cm_mean.tif,3bc6e149e1596cea26345f42f84dc87bbb4c8d4a5f993ffc570dd10606c939a6
+phh2o,0-5cm,Q0.05,45,4.5,pH_H2O,soilgrids/phh2o_0-5cm_Q0.05.tif,476c799be7fb3c8714bfc6b5077d7ceb40a37a68b088b361c2f515445dc99e84
+phh2o,0-5cm,Q0.95,83,8.3,pH_H2O,soilgrids/phh2o_0-5cm_Q0.95.tif,7bf1cb7a3d423b76dbbff9586fb507ef9e20de9947e81449cdf54ba8d9d6f20e
+phh2o,15-30cm,mean,63,6.3,pH_H2O,soilgrids/phh2o_15-30cm_mean.tif,5d00608fad8a189797f5a34757445adfa80a47185ac6a5ff798a076ec3da6bff
+phh2o,15-30cm,Q0.05,45,4.5,pH_H2O,soilgrids/phh2o_15-30cm_Q0.05.tif,ab890ea55f2301e85629fa3dfbd3988ce0596855c391841a2096aa46d97a0266
+phh2o,15-30cm,Q0.95,83,8.3,pH_H2O,soilgrids/phh2o_15-30cm_Q0.95.tif,8f5b6371c22b067619b3b61d3c5505110e017757d69b3afdb698a4a52c229e9d
+phh2o,5-15cm,mean,63,6.3,pH_H2O,soilgrids/phh2o_5-15cm_mean.tif,9d7175dac6e922c69f9e2c93bb3db7204bf0aaff4332fbf662df87e9ac136e82
+phh2o,5-15cm,Q0.05,45,4.5,pH_H2O,soilgrids/phh2o_5-15cm_Q0.05.tif,454bebaace86ff3d257fa62fb009dcb28e9d93ac0215c43e8e792f458ce801d8
+phh2o,5-15cm,Q0.95,83,8.3,pH_H2O,soilgrids/phh2o_5-15cm_Q0.95.tif,b7fe383fd46bbae30eba7044543eda773be344229efd1da485558f47948d0313
+sand,0-5cm,mean,211,21.1,percent_mass,soilgrids/sand_0-5cm_mean.tif,3026e379ed950db5f87078a733a6073aee07bee9309f98241cdb0a94c6a1f8f9
+sand,0-5cm,Q0.05,12,1.2,percent_mass,soilgrids/sand_0-5cm_Q0.05.tif,1846fdc319a121e99fcf4b32056f10f60421e0820772d6441416691d27bdfd4d
+sand,0-5cm,Q0.95,725,72.5,percent_mass,soilgrids/sand_0-5cm_Q0.95.tif,e4f5a0933eb8ef39ebf88db3962d32baa5319c695e9458f2c042394103c15fea

@@ -1,0 +1,63 @@
+{
+  "review_date": "2026-11-12",
+  "properties": {
+    "id": "MT-BLOCK-01",
+    "status": "analyst_digitised_visible_cultivation_block_not_verified_farm",
+    "area_ha_approx": 1.996,
+    "center_lon_lat": [
+      106.0216210397036,
+      10.479098076600966
+    ],
+    "crs": "EPSG:4326",
+    "homogeneous_soil_verified": false,
+    "current_crop_verified": false,
+    "rotation_verified": false,
+    "may_contain_multiple_subplots": true,
+    "legal_boundary": false,
+    "source_image_date_metadata": "2025-08-07",
+    "date_scope": "source citation footprint; not current 2026 field survey",
+    "edge_interpretation": "visible outer cultivation edges next to tree strips and bunds; no land title or farm ownership inferred"
+  },
+  "source_pixel_vertices": [
+    [
+      699,
+      54
+    ],
+    [
+      913,
+      130
+    ],
+    [
+      850,
+      299
+    ],
+    [
+      844,
+      316
+    ],
+    [
+      626,
+      241
+    ],
+    [
+      638,
+      211
+    ],
+    [
+      660,
+      155
+    ],
+    [
+      680,
+      101
+    ]
+  ],
+  "source_image_sha256": "e64dab81840a53bd24cbac3f640c9bf17673b5d93dfd7596a303d2f8974012ea",
+  "georeferencing_export": "nasa-space-apps-2026/sources/data-audits/my-thanh-cai-lay-2026-11-12/imagery/my-thanh-close-export.json",
+  "inside_source_commune_check": "all vertices and 21 samples per edge pass point-in-polygon",
+  "accuracy": "not independently measured; source citation nominal accuracy is not an error bound for this trace",
+  "area_method": "local spherical equirectangular approximation, not cadastral area",
+  "weather_role": "existing POWER point is nearby regional context, not this block centroid; no new weather observation",
+  "soil_role": "centroid resampled from cached coverage separately; do not copy old point values as measured block properties",
+  "script_sha256": "ba4f254f551438acadcd5e86f0a7a03cede060821d7fb3068d8d2a83733945b8"
+}

@@ -1,0 +1,56 @@
+{
+  "event": {
+    "date_utc": "2020-06-14",
+    "nasa_power_precip_mm_over_one_day": 494.17,
+    "era5_via_open_meteo_precip_mm": 17.3,
+    "difference_mm": 476.87
+  },
+  "six_day_totals_mm": {
+    "NASA_POWER": 651.17,
+    "ERA5_via_Open_Meteo": 65.2
+  },
+  "requested_lon_lat": [
+    106.44351,
+    10.91123
+  ],
+  "era5_returned_lon_lat": [
+    106.5,
+    11.0
+  ],
+  "power_returned_geometry": {
+    "type": "Point",
+    "coordinates": [
+      106.444,
+      10.911,
+      9.93
+    ]
+  },
+  "source_grid_degrees": {
+    "POWER_met_lat_lon": [
+      0.5,
+      0.625
+    ],
+    "ERA5_lat_lon": [
+      0.25,
+      0.25
+    ]
+  },
+  "models": [
+    "NASA POWER header MERRA2/POWER",
+    "Explicit models=era5 via Open-Meteo; not best_match"
+  ],
+  "status": "warn_model_disagreement_unresolved",
+  "conclusion": "Different reanalysis products and grid supports disagree. No station truth; neither corrected nor deleted NASA values. Do not use isolated event to optimize crop calendar.",
+  "raw_sha256": "578798f000dfbfe743385ab016db0c65d8d586c7d0c18b9dc86cf25db7e52397",
+  "nasa_raw_sha256": "6c8bbc92a68985ae620e209f36958999db895bdc5a48d1c2dca2c5fc9a36cf5e",
+  "script_sha256": "e2aa2a72b765edc790251dcf79716493d672e120f07b8f6847a105f52cfc35bf",
+  "attribution": [
+    "NASA Langley Research Center POWER Project",
+    "ECMWF/Copernicus ERA5, distributed by Open-Meteo"
+  ],
+  "provider_docs": [
+    "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+    "https://open-meteo.com/en/docs/historical-weather-api"
+  ],
+  "time_check": "Daily windows requested UTC; mm/day integrated over one day compared with mm daily sum. Different spatial support remains."
+}

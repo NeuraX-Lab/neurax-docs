@@ -1,8 +1,12 @@
+> **TRẠNG THÁI 12/11 - THAM KHẢO/SNAPSHOT:** phần thiết kế, địa bàn, phân công và phase bên dưới có nội dung trước correction. Không dùng làm quyết định hiện hành. Đọc [Bắt đầu ở đây](START-HERE.md), [roles hiện hành](my-thanh-team-roles-2026-11-12.md) và [bảng R0/R1/R2 Mỹ Thành](cases/my-thanh-cai-lay/rotation-evidence-for-bich.md). Hưng-Việt cùng core/UI khi cần; Hiếu backend remote gián đoạn; Bích Data/review nguồn-feature; An ESP demo; Luật QA/thống kê/đánh giá từng block. Không lấy Đức Lập/bắp hạt/đậu phộng hoặc lời “prototype ngay” ở snapshot thay case và quy định hiện tại.
+
 # Tiểu An phụ trách hardware; Quang Luật kiểm dữ liệu đo
+
+> Cập nhật 12/11: HTTPSLAB đã đồng ý cho mượn theo người dùng; chờ model/datasheet/SDK/sensor/payload. Paper 0.3 có intake, gate và vai trò sensor trong farm mô phỏng. BOM ESP32 và brief cũ dưới đây là cấu hình tham chiếu dự phòng có điều kiện inventory, không là lựa chọn chính đã chốt hay yêu cầu mua.
 
 > Bản thuyết minh chính sau review: [hardware-design-paper.md](hardware-design-paper.md) / [PDF paper A4](../../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf). Dùng paper để hiểu lý do, trade-off, calibration, test và backup; bảng dưới phục vụ inventory.
 
-> Bổ sung 2026-11-06: [brief ngắn cho An](hardware-demo-brief.md) và [PDF trực quan](../../output/pdf/NeuraX-AgroTwin-Hardware-Brief-An.pdf) chốt bộ đo tối thiểu một probe + ESP32/USB; SHT31 và OLED tùy chọn theo inventory. Bảng dưới là danh sách chuẩn bị đầy đủ hơn, không phải giỏ mua hàng bắt buộc.
+> Lịch sử 2026-11-06: [brief ngắn cho An](hardware-demo-brief.md) mô tả bộ tham chiếu một probe + ESP32/USB; SHT31 và OLED tùy inventory. Bản PDF dùng hiện nay là [paper kỹ thuật 0.3](../../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf), đã ghi trạng thái HTTPSLAB. Bảng dưới là danh sách tham chiếu, không phải giỏ mua hàng bắt buộc.
 
 > 2026-10-30 · BOM đề xuất cho Field Shift. Chưa biết team đã có thiết bị nào; chưa mua, chưa có báo giá, chưa kiểm pinout/module thực tế.
 > Mục tiêu: node đo tại chỗ có log và hiển thị kết quả. An sở hữu thiết bị; Quang Luật hỗ trợ thống kê/kiểm log. Gá/vỏ dùng đồ sẵn có nếu cần, không là deliverable chính của Quang Luật.

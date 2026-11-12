@@ -1,0 +1,45 @@
+{
+  "expected_days": 4018,
+  "parameter_count": 4,
+  "fill_value": -999.0,
+  "missing_values": {
+    "T2M": 0,
+    "T2M_MAX": 0,
+    "T2M_MIN": 0,
+    "PRECTOTCORR": 0
+  },
+  "key_issues": {
+    "T2M": {
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "T2M_MAX": {
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "T2M_MIN": {
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "PRECTOTCORR": {
+      "missing_keys": [],
+      "extra_keys": []
+    }
+  },
+  "physical_flags": [],
+  "review_flags": [
+    {
+      "date": "2020-06-14",
+      "parameter": "PRECTOTCORR",
+      "value": 494.17,
+      "reason": "Above exploratory 200 mm/day review threshold; not proof of error and not automatically removed"
+    }
+  ],
+  "status": "warn",
+  "duplicate_json_keys": "none",
+  "time_standard": "UTC",
+  "date_range": [
+    "2015-01-01",
+    "2025-12-31"
+  ]
+}

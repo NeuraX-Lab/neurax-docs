@@ -1,3 +1,5 @@
+> **TRẠNG THÁI 12/11 - THAM KHẢO/SNAPSHOT:** phần thiết kế, địa bàn, phân công và phase bên dưới có nội dung trước correction. Không dùng làm quyết định hiện hành. Đọc [Bắt đầu ở đây](START-HERE.md), [roles hiện hành](my-thanh-team-roles-2026-11-12.md) và [bảng R0/R1/R2 Mỹ Thành](cases/my-thanh-cai-lay/rotation-evidence-for-bich.md). Hưng-Việt cùng core/UI khi cần; Hiếu backend remote gián đoạn; Bích Data/review nguồn-feature; An ESP demo; Luật QA/thống kê/đánh giá từng block. Không lấy Đức Lập/bắp hạt/đậu phộng hoặc lời “prototype ngay” ở snapshot thay case và quy định hiện tại.
+
 # Brief gửi chị An — node đo và demo AgroTwin
 
 > Sau review 06/11: bản này và PDF sáu trang chỉ là tóm tắt phụ trợ. Tài liệu thuyết minh chính là [paper đầy đủ](hardware-design-paper.md) / [PDF kỹ thuật A4](../../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf), có lý do chọn, phương án thay thế, hiệu chuẩn, kiểm thử và backup.
@@ -61,4 +63,4 @@ An giao wiring theo board thật, BOM exact SKU, firmware về sau và log. Quan
 
 Ảnh dùng nhận diện linh kiện trong brief nội bộ, giữ credit; không đại diện endorsement hay linh kiện đã mua. Không có báo giá địa phương trong tài liệu. Phần thiết kế luồng, BOM tối thiểu và storyboard là đề xuất NeuraX.
 
-[PDF để gửi](../../output/pdf/NeuraX-AgroTwin-Hardware-Brief-An.pdf) · [Phân tích dự án](project-brief.md) · [BOM chi tiết](hardware-preparation.md).
+[PDF paper hiện hành để gửi](../../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf) · [Phân tích dự án](project-brief.md) · [BOM chi tiết](hardware-preparation.md). PDF brief sáu trang cũ không có trong checkout hiện tại; dùng paper đã cập nhật HTTPSLAB.

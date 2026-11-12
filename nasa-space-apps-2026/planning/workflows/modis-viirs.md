@@ -1,3 +1,5 @@
+> **WORKFLOW KHÔNG CHỌN / SNAPSHOT:** team đang giữ Field Shift - Mỹ Thành. Phân công trong trang này là tham khảo cũ; xem [trạng thái hiện hành](../START-HERE.md) và [roles](../my-thanh-team-roles-2026-11-12.md).
+
 # MODIS/VIIRS — workflow FireSense
 
 > Đề xuất 2026-10-30; chưa tải overlap hoặc fit model. [Brief](../../challenges/09-modis-viirs-hot-spots.md) · [Contract](../architecture.md) · [Lịch](../event-timeline.md).

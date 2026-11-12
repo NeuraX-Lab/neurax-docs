@@ -1,0 +1,175 @@
+{
+  "aoi_id": "AOI-MT-01",
+  "status": "illustrative_sample_not_validated_field",
+  "review_date": "2026-11-12",
+  "center_lon_lat": [
+    106.02154675,
+    10.4770865
+  ],
+  "area_ha_approx": 17.08,
+  "area_method": "local spherical equirectangular approximation, not cadastral measurement",
+  "boundary_source_role": "third-party WGS84 commune reference, not official survey boundary",
+  "boundary_source_commit": "8b78ba5118715e1fa81769286724db79346abf52",
+  "boundary_source_url": "https://github.com/ThangLeQuoc/vietnamese-provinces-database/blob/master/json/geojson/82_dong_thap/wards/28456_my_thanh.geojson",
+  "boundary_method": "manually digitised analytical polygon; all vertices and 21 samples per edge inside reference commune",
+  "esri_imagery_citation_attributes": [
+    {
+      "OBJECTID": 8829,
+      "SRC_DATE": 20250807,
+      "SRC_RES": 0.34,
+      "SRC_ACC": 5,
+      "SAMP_RES": 0.6,
+      "SRC_DESC": "LG03",
+      "MinMapLevel": 12,
+      "MaxMapLevel": 18,
+      "NICE_NAME": "Vivid",
+      "DrawOrder": 80,
+      "SRC_DATE2": 1754524800000,
+      "NICE_DESC": "Vantor",
+      "Shape_Length": 97127.76333342893,
+      "Shape_Area": 306600180.5,
+      "BlockName": "Vivid_Standard_VN02_26Q1",
+      "ReleaseName": "Raster Basemaps 2026.R05"
+    }
+  ],
+  "esri_attribution": "Source: Esri, Vantor, Earthstar Geographics, and the GIS User Community",
+  "sentinel_scene_quality": [
+    {
+      "scene_id": "S2C_MSIL2A_20260325T031541_R118_T48PXS_20260325T082919",
+      "datetime_utc": "2026-03-25T03:15:41.025000Z",
+      "tile_cloud_percent": 8.695676,
+      "processing_baseline": "05.12",
+      "SCL_pixel_centers_inside_AOI": 419,
+      "class_counts": {
+        "3": 6,
+        "5": 378,
+        "4": 21,
+        "7": 14
+      },
+      "nodata": 0,
+      "cloud_flag_percent_AOI_sample": 0.0,
+      "cloud_shadow_percent_AOI_sample": 1.43,
+      "method": "pixel-center mask on categorical nearest-reprojected ~20m SCL; diagnostic not ground truth"
+    },
+    {
+      "scene_id": "S2B_MSIL2A_20261105T031919_R118_T48PXS_20261105T070650",
+      "datetime_utc": "2026-11-05T03:19:19.024000Z",
+      "tile_cloud_percent": 8.68696,
+      "processing_baseline": "05.13",
+      "SCL_pixel_centers_inside_AOI": 419,
+      "class_counts": {
+        "5": 284,
+        "4": 16,
+        "7": 36,
+        "6": 83
+      },
+      "nodata": 0,
+      "cloud_flag_percent_AOI_sample": 0.0,
+      "cloud_shadow_percent_AOI_sample": 0.0,
+      "method": "pixel-center mask on categorical nearest-reprojected ~20m SCL; diagnostic not ground truth"
+    }
+  ],
+  "imagery_inputs": [
+    {
+      "file": "imagery/admin-map-export.json",
+      "bytes": 462,
+      "sha256": "1631ad0f93f39228e4d57bd7e6514cde2282a5f75d46105649489b24e4e093d4"
+    },
+    {
+      "file": "imagery/admin-satellite-raw.png",
+      "bytes": 1043357,
+      "sha256": "fd5c2db27fa38a466e56231b98a3aefc9d34683f1323f884967e427f18547e58"
+    },
+    {
+      "file": "imagery/aoi-imagery-citation.json",
+      "bytes": 2630,
+      "sha256": "b5cf63031eb066d1850da11d2e44119c071fccbecc821969ed52949012817314"
+    },
+    {
+      "file": "imagery/boundary-readme.md",
+      "bytes": 19453,
+      "sha256": "52ec958ef1f24de96003581708e1b4fb817fe37383568ade238ad499e4b31ad7"
+    },
+    {
+      "file": "imagery/boundary-source-commit.txt",
+      "bytes": 42,
+      "sha256": "e83e22cda246ebe8e0ce17260b3e975805cc0f23f7b2e7e5e2b7cb9e940c7698"
+    },
+    {
+      "file": "imagery/esri-world-imagery-service.json",
+      "bytes": 11142,
+      "sha256": "3c41ca79d7ddc2267fa1ac60c43263acbfed04915e3b2433e6b8e5d30378e2dc"
+    },
+    {
+      "file": "imagery/my-thanh-boundary.geojson",
+      "bytes": 54340,
+      "sha256": "2ac4f02ebfa1afed235a7e4d583319f571fe7840999b52ae9567125da6cee301"
+    },
+    {
+      "file": "imagery/my-thanh-close-export.json",
+      "bytes": 462,
+      "sha256": "4d0cafa6348e1a1b8799fb4d85d7e0a118fa3d6a4e26ef1c9a81dfb42e5545cf"
+    },
+    {
+      "file": "imagery/my-thanh-close.png",
+      "bytes": 920577,
+      "sha256": "e64dab81840a53bd24cbac3f640c9bf17673b5d93dfd7596a303d2f8974012ea"
+    },
+    {
+      "file": "imagery/my-thanh-detail-export.json",
+      "bytes": 461,
+      "sha256": "066232eb557eac03e0034dd3168f621543a7f228a8ebc586140b443bf55b1575"
+    },
+    {
+      "file": "imagery/my-thanh-detail.png",
+      "bytes": 1224536,
+      "sha256": "9bba9743b821fa47d2cf8a5f9ce73e7603f231a7684ddea8aaf720923c15e1ab"
+    },
+    {
+      "file": "imagery/official-my-thanh-geometry.json",
+      "bytes": 14675,
+      "sha256": "bb602d3a4dcc03a30951177af67c8f297dd41ebe976689833faac8d0e5466ca5"
+    },
+    {
+      "file": "imagery/pc-scenes.json",
+      "bytes": 46372,
+      "sha256": "a5e0a531b5ca81ea96dcdfc3efcd709b6abcc3c3dd912d7b7081098280f358d0"
+    },
+    {
+      "file": "imagery/render-2026-03-25.json",
+      "bytes": 696,
+      "sha256": "aa16bd7ed7cc1a9c844274ef4f214880a5b556e18e22217f01ce381cb0888d34"
+    },
+    {
+      "file": "imagery/render-2026-11-05.json",
+      "bytes": 696,
+      "sha256": "b545f65dbd522923a36273e65c3ba78a25d34d1309d13780eb89a7aad3307222"
+    },
+    {
+      "file": "imagery/scl-2026-03-25.tif",
+      "bytes": 24396,
+      "sha256": "785db21a17e0974ccdaf29b20b3c3d1550963316791eaf77f4919d0d83c2bee4"
+    },
+    {
+      "file": "imagery/scl-2026-11-05.tif",
+      "bytes": 24396,
+      "sha256": "21fa6ac841caa49e78fa0581d279a7e5f269dc8b533a3101bb9fdec513c7e4d3"
+    },
+    {
+      "file": "imagery/sentinel-2026-03-25.png",
+      "bytes": 131411,
+      "sha256": "4c0f12397f7c845c2920e14e8ff318c41d595c33cdca24323364e19f225c448a"
+    },
+    {
+      "file": "imagery/sentinel-2026-11-05.png",
+      "bytes": 125081,
+      "sha256": "acec2b3f82fa24ada3c561aa5387d2bbdd79c4cb116780a7f0e6b5b9cd5fabaa"
+    }
+  ],
+  "script_sha256": "a1112d4a89facd8cde824a9359c33e1306bc3ea8cc9561f1979545bebfa8b8fd",
+  "field_survey_in_scope": false,
+  "historical_trial_plot_identified": false,
+  "specific_crop_or_current_rotation_verified": false,
+  "decision_scope": "Manual sample retained for audit only; independently sourced commune boundary is primary AOI",
+  "soil_weather_summary_path": "../../../sources/data-audits/my-thanh-cai-lay-2026-11-12/summary.json"
+}

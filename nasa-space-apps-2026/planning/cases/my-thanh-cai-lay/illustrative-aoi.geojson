@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "AOI-MT-01",
+      "properties": {
+        "name": "NeuraX Mỹ Thành / Cai Lậy remote-analysis AOI",
+        "status": "illustrative_sample_not_validated_field",
+        "selection_date": "2026-11-12",
+        "area_ha_approx": 17.08,
+        "boundary_role": "analyst_digitised_research_area_not_cadastral_or_historical_trial_plot",
+        "current_commune": "Mỹ Thành, Đồng Tháp",
+        "commune_code_reference": "28456",
+        "field_survey_required_for_agreed_prototype_scope": false,
+        "farm_advice_validated": false,
+        "center_lon": 106.02154675,
+        "center_lat": 10.4770865,
+        "coordinates_precision_is_not_accuracy": true,
+        "methods": "high-resolution imagery inspection; recent S2/SCL; reference commune containment"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.018467,
+              10.47694
+            ],
+            [
+              106.021693,
+              10.474813
+            ],
+            [
+              106.024627,
+              10.477233
+            ],
+            [
+              106.0214,
+              10.47936
+            ],
+            [
+              106.018467,
+              10.47694
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

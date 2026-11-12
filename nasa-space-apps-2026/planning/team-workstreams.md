@@ -1,89 +1,54 @@
 # Sáu người làm song song, bàn giao bằng dữ liệu
 
+> Áp dụng case đã giữ là Mỹ Thành: [phân công 12/11 và ranh giới trước/sau T0](my-thanh-team-roles-2026-11-12.md), [bảng đất-nước-cây-mùa để Bích review](cases/my-thanh-cai-lay/rotation-evidence-for-bich.md). Chỉ triển khai project sau giờ BTC cho phép; ba chuỗi là reference, chưa là hiện trạng block đã xác minh.
+
 > 2026-10-30 · Áp dụng một trong ba idea, không xây cả ba tại sự kiện.
 > Quang Luật: DATA QA/thống kê/báo cáo; An: hardware. Xem [lịch 14–15/11](event-timeline.md) và [hợp đồng bàn giao](architecture.md).
 
-## Phân công chính
+## Phân công hiện hành - 12/11/2026
 
-| Owner | Việc chính | Đầu ra cho người tiếp theo | Reviewer / người nhận |
-| --- | --- | --- | --- |
-| Việt — Technical Lead | Chốt kiến trúc/contract; pipeline DATA và module AI theo idea; review integration | D1 + module AI/A1 theo phân công, technical decisions và checklist tích hợp | Hưng rà logic/model; Quang Luật kiểm số; Bích kiểm nghĩa |
-| Quang Luật | EDA, QC, thống kê độc lập, kiểm split/metric | Q1: báo cáo pass/warn/fail theo feature và sample; bảng lỗi; chart | Việt sửa dữ liệu; Hưng nhận phần pass |
-| Bích | Câu hỏi khoa học, biến/ràng buộc và giới hạn | K1: bảng domain có nguồn, phương pháp diễn giải | Hưng và Quang Luật |
-| Hưng | Định hướng/scope; module AI theo idea, baseline trước cải tiến sau | A1 của module mình sở hữu + protocol đánh giá; E1 do Quang Luật kiểm độc lập | Việt review kỹ thuật; Quang Luật kiểm; Hiếu/An nhận A1 |
-| Hiếu | Adapter kết quả, dashboard, trạng thái lỗi, demo package | Giao diện chạy được với A1 mẫu và A1 thật | Hưng/Bích rà nội dung, An tích hợp |
-| Tiểu An | Node hoặc thiết bị điều khiển/hiển thị tùy idea | H1: log thiết bị; thiết bị đọc kết quả rút gọn | Quang Luật kiểm log; Hiếu kiểm truyền/hiển thị |
+| Owner | Job | Đầu ra / người nhận |
+| --- | --- | --- |
+| Hưng + Việt | Hai đóng góp chính; cùng features, pipeline data, kiến trúc và output demo. Hưng workflow/scope Data -> AI; Việt technical AI/Data Analysis | D1/A1/contract; cùng làm UI/UX và hỗ trợ backend khi cần |
+| Bích | Data, rà nguồn/src, ý nghĩa/chất lượng dữ liệu, review features và đất-nước-cây-mùa | Data/evidence + K1 cho Hưng-Việt; phối hợp Luật |
+| Hiếu | Backend/API/adapter, remote có lúc offline | Phần chạy được, README/run command, trạng thái/handoff cho Hưng-Việt |
+| Tiểu An | Demo ESP/sensor, tích hợp đo/firmware và log có nhãn lab | H1 cho Luật kiểm và Hưng-Việt nối demo |
+| Quang Luật | Thống kê, đánh giá và QA từng block; hỏi từng owner để hiểu workflow và cập nhật tình hình | Q1/E1 + bảng owner/input/output/status/blocker/next action |
 
 ```mermaid
 flowchart LR
-  S["Nguồn NASA và nguồn domain"] --> V["Việt - Technical Lead: DATA và kiến trúc"]
-  V --> Q["Quang Luật: QA và Q1"]
-  B["Bích: ý nghĩa biến và K1"] --> Q
-  Q -->|"chỉ dữ liệu đủ điều kiện"| H["Hưng + Việt: chia module AI và A1"]
-  Q -->|"lỗi có record_id"| V
-  H --> E["Quang Luật: metric độc lập E1"]
-  H --> I["Hiếu: dashboard"]
-  E --> I
-  V -.->|"review contract và tích hợp"| I
-  M["Ví dụ A1 trong tài liệu"] --> I
-  M --> A["An: thiết bị"]
-  I --> A
-  A -->|"H1 log đo hoặc sự kiện thiết bị"| Q
+  S["Nguồn NASA + đất/cây/mùa"] --> B["Bích: Data + review nguồn/features"]
+  B --> HV["Hưng + Việt: pipeline/features/kiến trúc/AI"]
+  HV --> BE["Hiếu: backend remote gián đoạn"]
+  BE --> UI["Hưng + Việt: dashboard UI/UX + demo output"]
+  HV -->|"cùng contract, backend support khi cần"| UI
+  AN["An: ESP/sensor demo + H1"] --> UI
+  Q["Luật: thống kê/đánh giá từng block + hỏi owner + QA workflow"] -.-> B
+  Q -.-> HV
+  Q -.-> BE
+  Q -.-> UI
+  Q -.-> AN
 ```
 
-Sơ đồ chỉ luồng bàn giao, không có nghĩa mọi người chờ DATA xong. Việt chốt contract để Hiếu và An làm song song; Việt và Hưng chia module AI theo cùng schema. Khi dữ liệu thật đến, Việt thay adapter đầu vào thay vì bắt cả team đổi kiểu dữ liệu.
+Sơ đồ là phân công đề xuất triển khai sau T0, chưa là luồng đã chạy. Hưng-Việt cùng thống nhất contract, không để cả team chờ xong DATA. Bích làm Data trong phạm vi chuyên ngành và review nguồn/features; Luật không thay người viết mọi module mà kiểm input/output, thống kê, tiêu chí và blocker theo block.
 
-## Quyền sở hữu theo từng idea
+## Hiếu remote: bàn giao không phụ thuộc phản hồi ngay
 
-| Người | Field Shift | Earth Analog | MODIS/VIIRS |
-| --- | --- | --- | --- |
-| Việt — TL/DATA/AI | EO features + seasonal-naive forecast khi đủ chuỗi; kiến trúc | Feature extraction + distance/similarity implementation; kiến trúc | Data pipeline + baseline anomaly; forecast chỉ khi đủ điều kiện; kiến trúc |
-| Quang Luật | Missingness, seasonality, QC, metric forecast nếu có | Đơn vị/scale, phân bố feature, sensitivity rank | Overlap, bias/MAE, seasonality, holdout |
-| Bích | Đất/cây/mùa, quy tắc rotation | Dimension analog và chỗ không tương đồng | Nguồn nhiệt, mùa đốt, giới hạn đếm |
-| Hưng | Constraint/ranking và tiêu chí đánh giá | Mục tiêu test, dimensions/weights và đánh giá ranking | Harmonization B0/B1 và tiêu chí đánh giá |
-| Hiếu | So 3 chiến lược, nguồn và rủi ro | Map và bảng giải thích từng site | Calendar raw/harmonized + export |
-| An | Node điểm đo và hiển thị | Bộ đo nghiêng minh họa hoặc controller chọn site | Thiết bị hiển thị calendar/anomaly, không cần sensor cháy |
+Hiếu báo sẽ đi Đà Nẵng sáu ngày, không dự trực tiếp T7/CN, có lúc offline/không xem được tin nhắn. Chưa xác nhận khung online hoặc điều kiện dự remote với BTC. Không lập lịch trực hoặc hứa Hiếu luôn sẵn.
 
-Workflow chi tiết: [Field Shift](workflows/field-shift.md) · [Earth Analog](workflows/earth-analog.md) · [MODIS/VIIRS](workflows/modis-viirs.md).
+- Trước T0: xác nhận giờ có thể online, đầu việc backend vừa sức và cách bàn giao trong phạm vi BTC cho phép; Hưng hỏi BTC về remote, không tự suy đủ điều kiện.
+- Sau T0: chia backend thành phần nhỏ có contract, lệnh chạy và ví dụ input/output. Mỗi handoff ghi phần xong, phần dở, lỗi và bước tiếp theo; không chuyển credential qua tài liệu.
+- Hưng-Việt có khả năng tiếp quản/hỗ trợ backend và cùng làm dashboard UI/UX; giữ một đường demo tối thiểu theo cùng schema. Recorded/synthetic/replay phải có nhãn nếu backend/live chưa sẵn.
+- Luật hỏi owner và ghi bảng QA theo block: nguồn -> xử lý -> features -> AI -> backend -> UI -> ESP. Trạng thái chưa có bằng chứng ghi chưa kiểm, không suy từ lời báo “xong”.
 
-## Task có thể bắt đầu độc lập
+## QA theo block và mốc phối hợp
 
-| ID | Owner | Input | Deliverable / done | Phụ thuộc |
-| --- | --- | --- | --- | --- |
-| DOC-01 | Việt (TL), Hưng + Hiếu phối hợp | Brief và ví dụ dưới các workflow | Chốt schema v0.1, người dùng, một demo path | Chưa cần data |
-| DOC-02 | Bích | Brief + tài liệu domain | Dictionary/constraints có evidence; đánh dấu unknown | Chưa cần tải raster |
-| DOC-03 | Quang Luật | Schema + phương pháp | QA checklist, expected cases, biểu đồ cần có, evaluation protocol | Không cần model |
-| DOC-04 | Việt | Danh mục nguồn candidate | Bảng raw field → canonical field; ghi chưa biết units/access | Không cần UI |
-| DOC-05 | An | Loại đầu ra DEPLOY + inventory | Sơ đồ thiết bị, contract H1, quy trình lỗi/stale | Không cần AI chạy trên chip |
-| EVT-01 | Việt | Nguồn thật tại sự kiện | D1 một lát cắt nhỏ có lineage | Nguồn truy cập được |
-| EVT-02 | Quang Luật + Bích | D1 + K1 | Q1 có pass/warn/fail, ví dụ sai và cách sửa | EVT-01; làm cuốn chiếu từng feature |
-| EVT-03 | Hưng/Việt theo module trong workflow | D1 pass + K1 | Baseline A1 cho một trường hợp; Việt rà contract tích hợp | Không đợi mọi dataset |
-| EVT-04 | Hiếu | A1 mẫu trước, A1 thật sau | Một đường demo, không lỗi khi result=[] hoặc partial | Contract ổn định |
-| EVT-05 | An; Quang Luật hỗ trợ | H1, result summary | Thiết bị chạy độc lập và log kiểm tra | Không chặn EVT-03/04 |
-| EVT-06 | Quang Luật | Kết quả baseline/candidate, split cố định | E1 nêu metric, n, coverage, phương pháp và giới hạn | EVT-03 |
-| EVT-07 | Hưng + cả team | Demo + E1 + references | Pitch, report và nộp thử trước hạn | Mốc theo event-timeline |
+Luật theo dõi các block chức năng: nguồn/Data -> tiền xử lý -> features -> AI/so sánh -> backend -> dashboard -> ESP/sensor. Mỗi block có owner, input/output, tiêu chí, artifact/bằng chứng kiểm, pass/warn/fail hoặc chưa kiểm, blocker và next action. Luật hỏi owner để nắm tình hình; không chỉ kiểm sensor cuối demo hoặc tự sửa ngưỡng domain.
 
-DOC là chuẩn bị tài liệu hiện tại. EVT là công việc dự kiến khi thời gian làm dự án của sự kiện bắt đầu; chưa được thực hiện trong lượt này.
+Hưng-Việt cùng thống nhất schema/contract, chia rõ đầu việc đang làm và review chéo; Hưng giữ workflow/scope, Việt tập trung technical AI/Data Analysis. Bích làm Data/review nguồn/feature; Hiếu backend theo khung online đã xác nhận; An firmware/log. Chưa có cam kết giờ rảnh nên không đặt lịch trực hoặc phiên hỗ trợ cứng cho thành viên.
 
-## Quyết định và tránh quá tải Technical Lead
+Sau T0 có thể dùng các mốc review ngắn T+2/T+6/T+12 nếu phù hợp lịch thực; đó là kế hoạch nội bộ, không agenda BTC. Mỗi lần cập nhật ghi “đã có / thiếu gì / cần ai / bước tiếp”. Nếu nguồn hoặc thiết bị chưa đủ, cắt feature phụ hoặc dùng replay có nhãn, không gán metric/hiệu quả chưa kiểm.
 
-Việt quyết định cấu trúc DATA/AI, contract, lựa chọn triển khai và giải quyết lỗi tích hợp liên block. Hưng quyết định bài toán/scope và ưu tiên; Bích rà domain; Quang Luật độc lập kiểm QA/E1. Hiếu tự chủ UI/deploy và An tự chủ firmware trong contract đã chốt.
+## Tài liệu nguồn duy nhất cho phân công
 
-Mỗi module AI có một người làm chính theo bảng trên, người kia review; không cùng viết hai baseline trùng nhau. T+2 chốt contract; T+6 review D1/model interface; T+12 review chạy đầu cuối. Nếu Việt bị kẹt ingestion, Hưng nhận module AI đang chặn, Quang Luật nhận EDA/QC; không dồn thêm UI/hardware cho Việt.
-
-## Quang Luật làm DATA và kiểm thiết bị như thế nào?
-
-Đầu ra đầu tiên là một **báo cáo QA một trang**: số dòng/kỳ, thiếu dữ liệu, duplicate, unit/range, biểu đồ phân bố, các record lỗi và khuyến nghị. Khi có dữ liệu thật, Quang Luật kiểm một mẫu nhỏ độc lập trong R hoặc MATLAB thay vì viết lại toàn pipeline của Việt.
-
-Với An: thống nhất điều kiện thử và log trước, sau đó phân tích độ lặp lại, tỷ lệ mất bản ghi, sai lệch so tham chiếu nếu có. Không có thiết bị chuẩn thì chỉ báo độ lặp, không báo độ chính xác tuyệt đối. Tối đa một phiên hỗ trợ khoảng 60–90 phút trước mốc khóa feature; ưu tiên D1/Q1/E1 nếu đang tắc.
-
-AutoCAD chỉ dùng nếu An xác định một giá/gá đơn giản là cần thiết. Dùng linh kiện/hộp có sẵn trước; bỏ deliverable chế tạo riêng khỏi đường găng.
-
-## Tránh phí thời gian
-
-- Chỉ chọn **một idea** để triển khai; ba workflow là ba phương án để ra quyết định.
-- Mỗi owner tối đa một task đường găng đang làm; cập nhật async “đã có / thiếu gì / cần ai / trước khi nào”.
-- Đồng bộ 10 phút ở các mốc T+2, T+6, T+12 và D−8h; không họp dài mỗi khi sửa một cột.
-- Việt và Hưng công bố package immutable kèm version; Hiếu chỉ đọc schema, không đọc notebook.
-- Quang Luật có quyền báo fail kèm record và tiêu chí. Hưng quyết định cắt feature; không bỏ qua lỗi units/source để giữ demo.
-- Đóng scope theo deadline: baseline trước ML, demo trước animation, nguồn đúng trước nhiều layer, báo cáo ngắn trước định dạng LaTeX cầu kỳ.
+[Roles hiện hành](my-thanh-team-roles-2026-11-12.md) là nguồn phân công; [hồ sơ năng lực](../../team/team-profile.md) giữ bằng chứng năng lực; [START-HERE](START-HERE.md) hướng dẫn thứ tự đọc. Workflow Earth Analog/MODIS và proposal cũ chỉ còn tham khảo, không dùng chia việc cho case Mỹ Thành hiện tại.

@@ -1,4 +1,8 @@
+> Phân công cập nhật: [roles hiện hành](my-thanh-team-roles-2026-11-12.md) và [START-HERE](START-HERE.md) thay owner lịch cũ. Hưng-Việt cùng core/UI khi cần; Bích Data; Hiếu backend remote gián đoạn, không có lịch online cố định; An ESP demo; Luật QA từng block.
+
 # Lịch chuẩn bị và vận hành — HCMC, 14–15/11/2026
+
+> Xác minh bổ sung 12/11: [GO Team trả lời 05/11/2026](https://github.com/nasa/spaceapps/discussions/1813) nêu được nghiên cứu/chọn challenge/đọc resources/lập team trước thi; project work bắt đầu 09:00 thứ Bảy theo giờ địa phương Local Event, làm trước có thể bị loại. Nguồn này cập nhật mức xác minh của ranh giới chuẩn bị trước bên dưới; không xác nhận agenda/pitch HCMC hoặc miễn trừ artifact có sẵn. [Audit và việc cần chốt](pre-event-readiness-audit-2026-11-12.md).
 
 > Cập nhật 2026-10-30 · Múi giờ Asia/Saigon (UTC+7).
 > Team xác nhận đăng ký Ho Chi Minh City, địa điểm **NOVAWORLD**, ngày **14–15/11/2026**. Tên địa điểm do người dùng cung cấp; chưa xác minh địa chỉ chi tiết, giờ mở cửa, giờ pitching và hạn nộp local.

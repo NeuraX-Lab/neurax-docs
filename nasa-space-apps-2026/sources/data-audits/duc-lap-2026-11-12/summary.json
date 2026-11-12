@@ -1,0 +1,81 @@
+{
+  "period": "2015-2025",
+  "years": 11,
+  "days": 4018,
+  "daily_values": 16072,
+  "mean_annual_rain_mm": 1546.284,
+  "minimum_rain_year": {
+    "year": 2016,
+    "rain_total_mm": 837.33,
+    "tmean_c": 29.017,
+    "days_tmax_ge35c": 145
+  },
+  "maximum_rain_year": {
+    "year": 2020,
+    "rain_total_mm": 2571.8,
+    "tmean_c": 28.205,
+    "days_tmax_ge35c": 134
+  },
+  "driest_reference_month": {
+    "month": 2,
+    "years": 11,
+    "mean_monthly_rain_mm": 4.211,
+    "median_monthly_rain_mm": 1.46,
+    "min_monthly_rain_mm": 0.02,
+    "max_monthly_rain_mm": 15.91,
+    "mean_tmean_c": 28.983,
+    "mean_days_tmax_ge35c": 24.364
+  },
+  "wettest_reference_month": {
+    "month": 6,
+    "years": 11,
+    "mean_monthly_rain_mm": 280.525,
+    "median_monthly_rain_mm": 204.34,
+    "min_monthly_rain_mm": 91.4,
+    "max_monthly_rain_mm": 913.24,
+    "mean_tmean_c": 27.837,
+    "mean_days_tmax_ge35c": 1.455
+  },
+  "hottest_reference_month": {
+    "month": 4,
+    "years": 11,
+    "mean_monthly_rain_mm": 44.182,
+    "median_monthly_rain_mm": 32.92,
+    "min_monthly_rain_mm": 1.76,
+    "max_monthly_rain_mm": 137.21,
+    "mean_tmean_c": 31.469,
+    "mean_days_tmax_ge35c": 25.636
+  },
+  "max_monthly_daily_rain_sum_delta_mm": 0.0,
+  "interpretation": "Historical gridded reference only; not official 30-year normal, field rain gauge, ENSO attribution or crop recommendation.",
+  "review_flags": [
+    {
+      "date": "2020-06-14",
+      "parameter": "PRECTOTCORR",
+      "value": 494.17,
+      "reason": "Above exploratory 200 mm/day review threshold; not proof of error and not automatically removed"
+    }
+  ],
+  "quality_status": "warn",
+  "median_wettest_month": {
+    "month": 7,
+    "years": 11,
+    "mean_monthly_rain_mm": 230.478,
+    "median_monthly_rain_mm": 255.46,
+    "min_monthly_rain_mm": 84.23,
+    "max_monthly_rain_mm": 402.91,
+    "mean_tmean_c": 27.29,
+    "mean_days_tmax_ge35c": 0.182
+  },
+  "sensitivity_excluding_flagged_day_contributions": {
+    "description": "Arithmetic influence check only; leaves an incomplete period. Not imputation, correction or validated rain estimate. Raw and reported reference remain unchanged.",
+    "flagged_days": [
+      "2020-06-14"
+    ],
+    "mean_annual_rain_contribution_mm": 1501.359,
+    "maximum_month": {
+      "month": 10,
+      "mean_rain_contribution_excluding_flagged_days_mm": 238.704
+    }
+  }
+}

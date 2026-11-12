@@ -1,10 +1,15 @@
 # Kho kiến thức nội bộ NeuraX
 
+> **ĐIỂM BẮT ĐẦU HIỆN HÀNH:** [Đọc trạng thái, vai trò và ba tài liệu cần dùng](nasa-space-apps-2026/planning/START-HERE.md). Mỹ Thành; Hưng-Việt cùng core; Hiếu backend remote. Các proposal/PDF cũ là snapshot, không dùng ghép phân công.
+
+
 `neurax-docs` là kho nghiên cứu, hồ sơ team và quyết định của **NeuraX-Lab**: vì sao chọn hướng đi, giải quyết vấn đề gì và chuẩn bị ai làm gì.
 
 Hiện tại chỉ làm **Markdown + Mermaid**, gồm cả kiến trúc đề xuất và chuẩn bị hardware. Code sản phẩm và tài liệu hệ thống đã triển khai thuộc [nasasac26-neurax](https://github.com/NeuraX-Lab/nasasac26-neurax).
 
-## NASA Space Apps 2026 — cập nhật 2026-11-07
+## NASA Space Apps 2026 — cập nhật 2026-11-12
+
+Kết quả kiểm case mới nhất: [Đức Lập — đất/cây/mùa và NASA](nasa-space-apps-2026/planning/cases/duc-lap/README.md). Đã tải POWER 2015–2025, 4.018 ngày, kiểm kỹ thuật đạt nhưng QA tổng thể WARN do một ngày mưa cần đối chiếu. Chưa đủ baseline thật và hai rotation hợp lệ cùng thửa; ưu tiên review bắp/mè, giữ đậu phộng candidate. Đây là bổ sung sau snapshot PDF proposal 0.4, chưa xuất lại PDF trong lượt audit dữ liệu.
 
 - Đã phân tích **14 đề chi tiết** từ bản `docs/challenges.md` do người dùng cung cấp; nguyên văn từng đề ở cuối mỗi dossier.
 - Đội hình **6 người**: AI ×2, Khoa học Môi trường, Software Engineering, Hardware và Quang Luật — sinh viên Cơ khí năm 2, thế mạnh thống kê/trực quan hóa (RStudio, MATLAB), AutoCAD và báo cáo LaTeX/Overleaf.
@@ -14,7 +19,11 @@ Hiện tại chỉ làm **Markdown + Mermaid**, gồm cả kiến trúc đề xu
 
 ## Đọc theo thứ tự
 
-Đọc dự án: [proposal sơ bộ AgroTwin 0.3](nasa-space-apps-2026/planning/project-brief.md) · [PDF proposal cho cả team](output/pdf/NeuraX-AgroTwin-Preliminary-Proposal.pdf), cập nhật 07/11/2026. Riêng hardware: [PDF kỹ thuật gửi An](output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf) · [Markdown nguồn](nasa-space-apps-2026/planning/hardware-design-paper.md). Brief sáu trang là bản đọc nhanh phụ trợ.
+**Đầu việc đang mở:** hoàn thiện [hồ sơ địa phương Đức Lập](nasa-space-apps-2026/planning/cases/duc-lap/README.md) về địa điểm–đất–nước–cây–mùa để đề xuất case với team. [Đề xuất tổng hợp 1.0](nasa-space-apps-2026/planning/team-proposal-2026-11-12.md) và [PDF tương ứng](output/pdf/NeuraX-AgroTwin-Team-Decision-Proposal.pdf) là tài liệu phụ trợ đã soạn trước khi làm rõ phạm vi; không là kết luận hoàn tất nghiên cứu địa phương. Không gọi reference baseline là hiện trạng ruộng đã xác minh.
+
+Phương án cải thiện hiện hành: [kế hoạch local/global](nasa-space-apps-2026/planning/local-to-global-strategy.md). Ba tương tác ưu tiên: vì sao loại, khi nào đổi ý, còn thiếu gì. Farm 2D là giao diện quyết định; sensor thật ở ô live riêng. Case Đức Lập là đề xuất nghiên cứu; HTTPSLAB đã đồng ý cho mượn theo team, đang chờ thông số.
+
+Đọc dự án: [proposal sơ bộ AgroTwin 0.4](nasa-space-apps-2026/planning/project-brief.md) · [PDF proposal cho cả team](output/pdf/NeuraX-AgroTwin-Preliminary-Proposal.pdf), cập nhật 12/11/2026. Riêng hardware: [PDF kỹ thuật gửi An](output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf) · [Markdown nguồn](nasa-space-apps-2026/planning/hardware-design-paper.md). Brief sáu trang là bản đọc nhanh phụ trợ.
 
 1. [Hồ sơ team](team/team-profile.md).
 2. [Mục lục 14 challenge](nasa-space-apps-2026/challenges/README.md).
@@ -28,7 +37,7 @@ Hiện tại chỉ làm **Markdown + Mermaid**, gồm cả kiến trúc đề xu
 
 Team xác nhận thi tại **NOVAWORLD, local event Ho Chi Minh City**, ngày **14–15/11/2026**; giờ cụ thể chưa có. Quang Luật ưu tiên DATA QA/thống kê và cùng An kiểm thiết bị; không mặc định phụ trách vỏ/cọc/gá.
 
-**Việt là Technical Lead / DATA + AI**: kiến trúc/contract, dữ liệu, module AI và review tích hợp. Hưng giữ hướng bài toán/scope và cùng Việt phát triển AI; Hiếu và An vẫn sở hữu software/embedded của mình.
+**Hưng-Việt cùng đóng góp chính:** features, pipeline, kiến trúc, output demo; Hưng workflow/scope Data -> AI, Việt technical AI/Data Analysis. Bích Data/review nguồn-feature; Hiếu backend remote gián đoạn; An ESP/sensor demo; Luật thống kê/đánh giá/QA từng block.
 
 ## Bộ skill dùng lại
 

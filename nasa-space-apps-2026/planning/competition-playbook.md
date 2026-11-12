@@ -1,3 +1,5 @@
+> Phân công hiện hành: [roles](my-thanh-team-roles-2026-11-12.md), [START-HERE](START-HERE.md). Owner/rubric tham khảo bên dưới không thay Hưng-Việt cùng core và UI/UX, Hiếu backend remote; chưa xác minh rubric 2026 đầy đủ.
+
 # Chuẩn bị thi NASA Space Apps với Field Shift
 
 > Kiểm nguồn ngày 2026-11-06. Field Shift đã được chọn 04/11; hướng dẫn này phục vụ chuẩn bị và review, chưa ghi nhận sản phẩm chạy hay đảm bảo giải thưởng.
@@ -15,7 +17,7 @@ Năm tiêu chí Impact, Creativity, Validity, Relevance, Presentation xuất hi�
 | Tiêu chí tham chiếu | Bằng chứng NeuraX cần chuẩn bị | Owner dẫn |
 | --- | --- | --- |
 | Impact — tác động | Một nhóm người dùng, một quyết định, vấn đề có nguồn; phỏng vấn nếu thực sự thực hiện | Hưng + Bích |
-| Creativity — sáng tạo | So phương án hiện có có URL/ngày đọc; chỉ rõ cải tiến có ích, tránh claim 'đầu tiên' thiếu kiểm chứng | Hưng + Hiếu |
+| Creativity — sáng tạo | So phương án hiện có có URL/ngày đọc; chỉ rõ cải tiến có ích, tránh claim 'đầu tiên' thiếu kiểm chứng | Hưng + Việt, Hiếu hỗ trợ backend |
 | Validity — tính đúng/khả thi | NASA sample truy nguồn, K1 nông học, QA, baseline và sensitivity; forecast có holdout riêng | Việt + Bích + Quang Luật |
 | Relevance — bám đề | NASA-derived feature thực sự ảnh hưởng so luân canh; nêu contribution của từng nguồn | Việt + Hưng |
 | Presentation — trình bày | Luồng demo, biểu đồ đọc được, nguồn và giới hạn; rehearsal với người chưa biết dự án | Hiếu + cả team |

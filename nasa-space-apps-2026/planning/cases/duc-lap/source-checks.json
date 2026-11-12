@@ -1,0 +1,85 @@
+{
+  "artifact_kind": "desk_research_access_and_validation_record",
+  "review_date": "2026-11-12",
+  "scope": "Local case only; no new proposal or PDF output; no commit/push",
+  "source_register": "local-feasibility-study.md#9-nguồn-mới-và-cách-kiểm",
+  "downloaded_pdf_checks": [
+    {
+      "source_id": "D0",
+      "source_url": "https://storage-vnportal.vnpt.vn/gov-lan/6001/FileQuanTriTinTuc/2.%20H%E1%BB%87%20th%E1%BB%91ng%20bi%E1%BB%83u.pdf",
+      "bytes": 6071586,
+      "sha256": "252692297954ca52ce4f8d34241fb61dd9fd37403727062030baf0e2f7db7179",
+      "pages": 104,
+      "selected_pdf_pages_1based": [
+        1,
+        2
+      ],
+      "review_method": "text plus visual table review",
+      "raw_pdf_in_repo": false
+    },
+    {
+      "source_id": "D8",
+      "source_url": "https://tapchi.vaas.vn/sites/tapchi.vaas.vn/files/tapchi/2021-08/tc1-2018_0.pdf",
+      "bytes": 161704,
+      "sha256": "d604906e98c2901553004d35376e91eb85fa3407ffd349ddf5f6c0924318914b",
+      "pages": 5,
+      "selected_pdf_pages_1based": [
+        3
+      ],
+      "review_method": "text plus visual table review",
+      "raw_pdf_in_repo": false
+    },
+    {
+      "source_id": "D11",
+      "source_url": "https://thamvan.mae.gov.vn/Uploads/11062025/OH11.6.%20%20BC%20DTM%20KCN%20DA%20DUC%20HOA%20-%20MUOI%20DAY.pdf",
+      "bytes": 62304697,
+      "sha256": "9b21db33bd7389623470e65af35eaf99ca7c8fe90c5e97fe942e868d3f8f070a",
+      "pages": 318,
+      "selected_pdf_pages_1based": [
+        88,
+        92,
+        93,
+        94
+      ],
+      "review_method": "selected extracted text; not visual review of entire PDF",
+      "raw_pdf_in_repo": false
+    }
+  ],
+  "access_limits": [
+    "D5 old Phu Nu article: indexed body available, direct redirect inaccessible; exact publication date not verified",
+    "SoilGrids REST officially paused; WCS succeeded",
+    "MTTQ web fetch timed out, native HTML succeeded",
+    "Landuse and VAAS web screenshot timed out; native PDF render inspected instead"
+  ],
+  "excluded_evidence": [
+    "EIA geotechnical layers are not farm topsoil samples",
+    "EIA socio-economic paragraph mixes commune names and years; crop statistics not adopted",
+    "Real estate listings not proof of active farming",
+    "Duc Lap Lam Dong and Duc Hanh elsewhere are different places"
+  ],
+  "checked_outputs": [
+    "18 SoilGrids coverages same CRS/extent; source unit conversion used instead of incorrect generic WCS uom",
+    "44 historical windows; inclusive dates/leap years; raw NASA not changed",
+    "Landuse 2024 table column labels and VAAS CP888 duration table visually inspected"
+  ],
+  "fieldwork": {
+    "contacted_anyone": false,
+    "farmer_interview": false,
+    "soil_sample": false,
+    "verified_farm_polygon": false,
+    "agronomic_approval": false
+  },
+  "state": "conditional_research_case_not_field_verified",
+  "verification": {
+    "runtime": "Windows Python 3.12.14; Pillow 13.0.0 already installed",
+    "scope": "case directory, two new audit directories, research README and parent data audit README",
+    "relative_links_checked": 50,
+    "missing_relative_links": 0,
+    "json_files_parsed": 7,
+    "cached_replay_output_hashes_identical": true,
+    "nasa_raw_sha256_unchanged": "6c8bbc92a68985ae620e209f36958999db895bdc5a48d1c2dca2c5fc9a36cf5e",
+    "git_diff_check": "pass; pre-existing hardware-demo-brief LF/CRLF warning only",
+    "new_proposal_or_pdf_authored": false,
+    "git_publication_performed": false
+  }
+}

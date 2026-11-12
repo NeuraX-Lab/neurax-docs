@@ -1,0 +1,27 @@
+{
+  "provider_parameters": {
+    "T2M": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters"
+    },
+    "T2M_MAX": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters Maximum"
+    },
+    "T2M_MIN": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters Minimum"
+    },
+    "PRECTOTCORR": {
+      "units": "mm/day",
+      "longname": "Precipitation Corrected"
+    }
+  },
+  "derived": {
+    "rain_total_mm": "Sum of complete daily PRECTOTCORR (mm/day) over one-day intervals; total mm",
+    "tmean_c": "Arithmetic mean daily T2M; no field validation",
+    "days_tmax_ge35c": "Diagnostic >=35 C threshold only, not a validated crop damage rule",
+    "days_rain_lt1mm": "Diagnostic <1 mm/day threshold only; not root-zone drought",
+    "monthly_reference": "Mean/median/min/max of 11 yearly month totals; not 30-year climate normal"
+  }
+}

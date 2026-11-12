@@ -1,0 +1,22 @@
+{
+  "review_date": "2026-11-12",
+  "scope": "public-source desk review; no field survey",
+  "sources": [
+    {
+      "url": "https://ipe.iuh.edu.vn/uploads/2026/03/1.-LUAN-AN-TIEN-SI_NGUYEN-TAN-XUAN-TUNG.pdf",
+      "sha256": "d423df0664cbbffc910dfcc06139ec3a858ed5ca042b5793079e241ba5e09509",
+      "evidence": "methods, field rice experiment, PDF pages 64-65 / printed 47-48; historical 2022 trial, not current parcel verification"
+    },
+    {
+      "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml",
+      "issue_date_visible": "2026-10-08",
+      "next_issue_scheduled": "2026-11-12",
+      "status_visible": "El Nino Advisory",
+      "use": "dated outlook context, not calibrated farm drought probability"
+    },
+    {
+      "url": "https://publications.metergroup.com/Sales%20and%20Support/METER%20Environment/Website%20Articles/how-calibrate-soil-moisture-sensors.pdf",
+      "use": "soil-specific calibration principle; not certification or accuracy specification of unknown HTTPSLAB probe"
+    }
+  ]
+}

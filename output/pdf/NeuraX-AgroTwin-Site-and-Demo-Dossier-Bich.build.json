@@ -1,0 +1,56 @@
+{
+  "source_sha256": "0f27118aa8db2399acfe55a51570420043240d6c420c620bb1fa42aa59f606af",
+  "output_sha256": "3140d1633d37749c22d8996bea8e1acc84c4182cab528cddd9765980e8c1b653",
+  "inputs": [
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/bich-site-and-demo-dossier.md",
+      "sha256": "0f27118aa8db2399acfe55a51570420043240d6c420c620bb1fa42aa59f606af"
+    },
+    {
+      "path": "output/pdf/assets/neurax-logo-original.png",
+      "sha256": "95a8cdd5d6eec50d018f9f33e262bc4b5a026a8614cb3582f53443c5a16d150f"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/rotation-evidence-for-bich.md",
+      "sha256": "27802a5f39859a3f8caa0fdbced9b5fd4010f15f137b58b72569661cbd3e915b"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/my-thanh-team-roles-2026-11-12.md",
+      "sha256": "d90d173362a5bd9383ded13d9b9a91427714cc8568aa04288faeaeecbc272e05"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/maps/my-thanh-commune-aoi.png",
+      "sha256": "6feb6e87fdd23aa8068a718a1355777ff4e895f1ef45840f38ac164816182345"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/maps/my-thanh-study-block-detail.png",
+      "sha256": "896729ac850c899ee1ca2f78ef7a2a11d06ee31eaa7a57a19df2e150a63aefcf"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/study-block.geojson",
+      "sha256": "8d8d0f7b5963b197f7dddb2d86d5a99eae812e617e477f135b540f6038ac7950"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/study-block-coordinates.csv",
+      "sha256": "1ef400f2c35257a1a11544fc10c196f2f9725861ebdc88acfd26bd4fb1cfe6f5"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/study-block-soil-model.json",
+      "sha256": "a209dcd87ee5c4438dcae0c5e7dfc2e70cacee1711af666c9bd7017ac47be637"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/study-block-manifest.json",
+      "sha256": "5673108d1e3cb489cef2a2c9faa9176715c07f9706d3c245086e669c1940cfa9"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/aoi-manifest.json",
+      "sha256": "6d80b4439f404521a303688bf16327e50bf32cc2c9af902be8512bf7648fd701"
+    },
+    {
+      "path": "nasa-space-apps-2026/planning/cases/my-thanh-cai-lay/rotation-evidence-review.csv",
+      "sha256": "7fa076fd2b43b4752db72588e3c79981eab6da9a35449af6f88f224c21690e07"
+    }
+  ],
+  "script_sha256": "498de0de56337e38a996634fa0e4494a15019cc9f89b2b4800c60efd440c9531",
+  "validation": "render and review after build; PDF build is not sensor or agronomic validation"
+}

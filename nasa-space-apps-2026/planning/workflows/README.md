@@ -14,14 +14,14 @@
 
 Output DATA không phải chỉ là ảnh/chart hoặc “data sạch” chung chung: phải là bảng có grain, unit, keys, metadata và QA pass theo từng feature. Output AI không phải chỉ notebook hay model.pkl: phải có **kết quả để render**, version, bằng chứng và giới hạn.
 
-## Ai đi cùng block nào?
+## Ai đi cùng block nào - hiện hành
 
-- **Technical Lead:** Việt giữ kiến trúc/contract và tích hợp kỹ thuật, đồng thời trực tiếp làm DATA và AI; Hưng giữ hướng bài toán/scope.
-- **DATA:** Việt tạo pipeline; Quang Luật kiểm QC/thống kê; Bích kiểm ý nghĩa và quy tắc.
-- **AI:** Hưng và Việt chia module cụ thể: Field Shift = ranking / forecast; Earth Analog = dimensions-weights / similarity implementation; MODIS/VIIRS = harmonization / anomaly. Quang Luật kiểm E1 độc lập; Bích rà interpretation.
-- **DEPLOY:** Hiếu sở hữu software; An sở hữu hardware; Quang Luật hỗ trợ phân tích log một phiên ngắn.
+- Hưng workflow/scope Data -> AI; Việt technical AI/Data Analysis. **Hưng-Việt cùng core**, features, pipeline, kiến trúc và output demo; cùng UI/UX và hỗ trợ backend khi cần.
+- Bích làm Data, review src/features/ý nghĩa và K1; không chỉ góp ý domain.
+- Hiếu backend remote gián đoạn, có contract/lệnh chạy/handoff; không mặc định chủ UI hoặc online liên tục.
+- An demo ESP/sensor/log; Luật thống kê, đánh giá và QA từng block, hỏi owner để nắm workflow/trạng thái.
 
-Một người có thể góp nhiều block nhưng chỉ có một task đường găng đang mở. Hưng chịu trách nhiệm quyết định cắt scope; không để Quang Luật đồng thời gánh pipeline, evaluation, chế tạo và báo cáo.
+[Roles và ranh giới đầy đủ](../my-thanh-team-roles-2026-11-12.md) · [Bắt đầu ở đây](../START-HERE.md). Các bảng ba idea phía trên là tham khảo thiết kế; hiện chỉ Field Shift được chọn.
 
 ## Khi chưa có data
 

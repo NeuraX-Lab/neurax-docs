@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "MT-BLOCK-01",
+        "status": "analyst_digitised_visible_cultivation_block_not_verified_farm",
+        "area_ha_approx": 1.996,
+        "center_lon_lat": [
+          106.0216210397036,
+          10.479098076600966
+        ],
+        "crs": "EPSG:4326",
+        "homogeneous_soil_verified": false,
+        "current_crop_verified": false,
+        "rotation_verified": false,
+        "may_contain_multiple_subplots": true,
+        "legal_boundary": false,
+        "source_image_date_metadata": "2025-08-07",
+        "date_scope": "source citation footprint; not current 2026 field survey",
+        "edge_interpretation": "visible outer cultivation edges next to tree strips and bunds; no land title or farm ownership inferred"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.02119400000001,
+              10.479885999999999
+            ],
+            [
+              106.02108000000001,
+              10.479603999999998
+            ],
+            [
+              106.02096000000002,
+              10.479279999999997
+            ],
+            [
+              106.02082800000001,
+              10.478943999999998
+            ],
+            [
+              106.020756,
+              10.478763999999998
+            ],
+            [
+              106.02206400000001,
+              10.478313999999997
+            ],
+            [
+              106.02210000000001,
+              10.478415999999998
+            ],
+            [
+              106.022478,
+              10.479429999999997
+            ],
+            [
+              106.02119400000001,
+              10.479885999999999
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

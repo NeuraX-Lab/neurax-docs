@@ -1,0 +1,29 @@
+{
+  "case_mode": "reference_sandbox",
+  "window_definition": {
+    "sowing_date": "15 January each year, design assumption not farm record",
+    "length_days_inclusive": 75,
+    "duration_rationale": "Upper end of IAS DH-1 published 70-75 day duration, transfer not reviewed",
+    "source": "https://iasvn.org/giong-me-dh-1"
+  },
+  "years": 11,
+  "rain_total_mm": {
+    "minimum": 0.35,
+    "median": 12.0,
+    "mean": 27.42,
+    "maximum": 112.84
+  },
+  "mean_tmean_c": 29.295,
+  "flagged_2020_06_14_in_window": false,
+  "quality": "Complete window coverage; overall POWER audit WARN and crop validity not established",
+  "raw_sha256": "6c8bbc92a68985ae620e209f36958999db895bdc5a48d1c2dca2c5fc9a36cf5e",
+  "script_sha256": "440c51a81086784d5da587ec7a4386becaddb41c642a5bd13cde233123d44c9f",
+  "limits": [
+    "Hypothetical sowing window, not observed cropping calendar",
+    "Historical grid exposure, not coming-season forecast",
+    "No ET/crop coefficient/soil storage/irrigation; cannot compute water deficit or water saving",
+    "Tmax >=35 C is a diagnostic count, not a crop damage threshold",
+    "Outside flagged event by predeclared season window, not outlier cleaning"
+  ],
+  "decision_use": "Makes water availability and sowing calendar explicit review questions; does not select a best crop or certify eligibility"
+}

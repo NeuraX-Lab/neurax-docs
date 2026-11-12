@@ -1,13 +1,15 @@
+> **TRẠNG THÁI 12/11 - THAM KHẢO/SNAPSHOT:** phần thiết kế, địa bàn, phân công và phase bên dưới có nội dung trước correction. Không dùng làm quyết định hiện hành. Đọc [Bắt đầu ở đây](START-HERE.md), [roles hiện hành](my-thanh-team-roles-2026-11-12.md) và [bảng R0/R1/R2 Mỹ Thành](cases/my-thanh-cai-lay/rotation-evidence-for-bich.md). Hưng-Việt cùng core/UI khi cần; Hiếu backend remote gián đoạn; Bích Data/review nguồn-feature; An ESP demo; Luật QA/thống kê/đánh giá từng block. Không lấy Đức Lập/bắp hạt/đậu phộng hoặc lời “prototype ngay” ở snapshot thay case và quy định hiện tại.
+
 # AgroTwin — Hồ sơ phân tích và thiết kế hệ thống demo
 
-> NeuraX · Field Shift · Bản thiết kế 0.2 · 06/11/2026 · Nội bộ
-> Người đọc: An và cả nhóm. Đây là paper thiết kế trước triển khai, không phải báo cáo thực nghiệm. Chưa xác nhận inventory, vùng/cây, sample NASA, giá mua hay kết quả phần cứng. Các ngưỡng và thời gian thử được ghi rõ là đề xuất cần pilot.
+> NeuraX · Field Shift · Bản thiết kế 0.3 · 12/11/2026 · Nội bộ
+> Người đọc: An và cả nhóm. Đây là paper thiết kế trước triển khai, không phải báo cáo thực nghiệm. HTTPSLAB đã đồng ý cho mượn theo người dùng; đang chờ model/datasheet/sensor. Case Đức Lập là đề xuất nghiên cứu; sample NASA và kết quả phần cứng chưa xác nhận. Các ngưỡng và thời gian thử được ghi rõ là đề xuất cần pilot.
 
 ## Tóm tắt
 
 AgroTwin được đề xuất để hỗ trợ so sánh luân canh khi điều kiện môi trường và ưu tiên của người trồng thay đổi. Giá trị chính nằm ở việc kết nối dữ liệu NASA, kiến thức cây–đất–mùa có nguồn và một phương pháp xếp hạng giải thích được. Phần cứng bổ sung khả năng quan sát tại điểm đo và chứng minh luồng tích hợp từ thiết bị tới giao diện rồi trở lại thiết bị. Hai vai trò này cần được phân biệt để demo không tạo ấn tượng sai rằng một cảm biến trên bàn có thể xác nhận khuyến nghị cho cả vùng nông nghiệp.
 
-Paper này giải thích thiết kế được ưu tiên, lý do chọn từng thành phần, những lựa chọn chưa cần thiết và cách tiếp tục khi một thành phần không hoạt động. Kiến trúc ban đầu sử dụng một probe ẩm đất điện dung, ESP32, USB Serial và laptop; SHT31 và màn hình chỉ bổ sung sau khi đường đo và dashboard ổn định. Cấu hình tối thiểu là một mốc tích hợp, không phải giới hạn chiều sâu kỹ thuật. Chiều sâu được thể hiện bằng provenance, phương pháp đo, kiểm chất lượng, xử lý lỗi, đánh giá và khả năng tái lập.
+Paper này giải thích thiết kế được ưu tiên, lý do chọn từng thành phần, những lựa chọn chưa cần thiết và cách tiếp tục khi một thành phần không hoạt động. Nhánh ưu tiên mới là thiết bị HTTPSLAB đang chờ thông số. Cấu hình tham chiếu dự phòng sử dụng probe ẩm đất điện dung, ESP32, USB Serial và laptop nếu inventory xác nhận; SHT31 và màn hình chỉ bổ sung sau khi đường đo và dashboard ổn định. Cấu hình tối thiểu là một mốc tích hợp, không phải giới hạn chiều sâu kỹ thuật. Chiều sâu được thể hiện bằng provenance, phương pháp đo, kiểm chất lượng, xử lý lỗi, đánh giá và khả năng tái lập.
 
 Thiết kế chưa chứng minh độ chính xác đo độ ẩm tuyệt đối, lợi ích năng suất hay khả năng tiết kiệm nước. Các kết luận đó cần nghiên cứu riêng. Trong giai đoạn chuẩn bị, đầu ra có thể kiểm được là nguồn và giả định rõ ràng, contract có phiên bản, sơ đồ kết nối theo board thực và protocol kiểm thử đủ để một người khác thực hiện lại.
 
@@ -15,13 +17,41 @@ Thiết kế chưa chứng minh độ chính xác đo độ ẩm tuyệt đối,
 
 Phần 1–4 giải thích bài toán, kiến trúc và tiêu chí quyết định. Phần 5–10 đi sâu vào cảm biến, board, truyền thông, dữ liệu và hiệu chuẩn. Phần 11–14 trình bày kiểm thử, xử lý sự cố, backup và demo. Phần 15–17 dành cho phân công, BOM, quyết định còn mở và nguồn tham khảo. Các nhãn “theo hãng”, “đề xuất” và “chưa kiểm” có ý nghĩa khác nhau; không chuyển thông số danh định thành kết quả đạt được của hệ thống.
 
+## 0. Cập nhật HTTPSLAB và farm mô phỏng ngày 12/11
+
+Theo người dùng, HTTPSLAB đã đồng ý cho mượn chip nội địa. Team đang chờ thông số, không phải đang chờ chấp thuận mượn. Chưa xác nhận model, board, SDK, cách nạp, cảm biến đi kèm, payload hay ngày bàn giao. Nguồn gốc chip không chứng minh toàn bộ sensor nội địa hoặc bảo mật dữ liệu. Cần tài liệu về phạm vi thiết kế/chế tạo được phép mô tả.
+
+Các phần điện/probe/ESP32, hình linh kiện và sơ đồ đấu nối trong paper này là cấu hình tham chiếu dự phòng; chưa áp dụng sang HTTPSLAB. Không suy điện áp, pinout, ADC hoặc SDK của board chưa biết. An chỉ chốt wiring sau datasheet và kiểm board thực. Không mua thêm chỉ để bám cấu hình cũ khi thiết bị mượn đã đáp ứng.
+
+### 0.1 Thiết bị cần phục vụ điều gì?
+
+Farm 2D trên máy giúp so luân canh theo NASA/K1. Thiết bị đo mẫu tại bàn cập nhật một ô live riêng, hiển thị timestamp/unit hoặc raw-index/quality. Có thể đổi hai mẫu để thấy phản hồi, không mô phỏng cây chết ngay hay suy % năng suất từ ADC. Nếu không có sensor độ ẩm đi kèm, chọn phép đo thật phù hợp hoặc không đưa tile đó vào demo; chip riêng không mặc nhiên có cảm biến.
+
+Người dùng bật what-if mới chuyển số đo mẫu thành điều kiện giả định sandbox; không thay input vùng Đức Lập hoặc xác thực pixel NASA. Chưa hứa mô hình nước/tăng trưởng nếu chưa đủ tham số và baseline. Mặc định không cần gửi A1 ngược xuống board; OLED/return channel chỉ làm nếu có ích, phù hợp SDK và còn công suất.
+
+### 0.2 Intake và điều kiện tích hợp
+
+| Cần nhận | Kiểm trước tích hợp | Backup |
+| --- | --- | --- |
+| Model/datasheet/board | Nguồn, IO, mức điện áp, host toolchain | Chưa biết thì không đấu nối |
+| SDK/example/cách nạp | Chạy ví dụ tối thiểu trên runtime phù hợp | Hỗ trợ kỹ thuật từ bên cho mượn |
+| Sensor và payload thật | Đại lượng, unit, range, timestamp, sample rate | Fixture có nhãn để thử parser, không gọi live |
+| Nguồn gốc và phạm vi sử dụng | Mô tả chip/board/sensor chính xác, quyền dùng ảnh/logo | Chỉ ghi sự hỗ trợ đã được xác nhận |
+| Ngày bàn giao/phụ kiện | Cáp, nguồn, debug và người hỗ trợ | ESP32 chỉ nếu có; replay hoặc bỏ live |
+
+### 0.3 Acceptance mới
+
+Core NASA/K1 chạy không cần board. Thử end-to-end measurement → adapter → H1 → live tile; phân biệt live/replay/synthetic. Ngắt board hiện stale/unavailable, không giữ số cũ như vừa cập nhật. Chưa hiệu chuẩn thì không hiện %VWC. Ghi nguồn phép đo là mẫu tại bàn. Kết quả thử chỉ ghi pass khi có log thật và version phù hợp.
+
+H1 trong phần sau là proposal contract; thay meaning/unit phải version và cập nhật producer/consumer. HTTPSLAB adapter chưa được triển khai. [Proposal 0.4](project-brief.md) và [kế hoạch local/global](local-to-global-strategy.md) sở hữu scope sản phẩm; paper này sở hữu measurement/test/backup.
+
 ## 1. Vấn đề cần giải và vai trò của phần cứng
 
 ### 1.1 Quyết định người dùng
 
 Theo brief Field Shift đã lưu, công cụ cần hỗ trợ người trồng khám phá lựa chọn luân canh bằng NASA Earth observations, thông tin đất địa phương, đặc tính cây và ưu tiên sử dụng. Một phương án có thể thuận lợi ở tiêu chí nước nhưng không phù hợp mùa vụ hoặc ràng buộc thị trường. Vì vậy, dashboard cần hiển thị cả điều kiện loại trừ, lý do so sánh và thông tin chưa biết; không chỉ đưa ra một tên cây với điểm số.
 
-MVP đề xuất giới hạn ở một vùng, một nhóm cây và ba chiến lược có căn cứ gồm hiện trạng. Địa phương và cây cụ thể chưa được chọn trong paper. Việc chọn sau này phải dựa vào nguồn nông học và data sample, không bắt đầu từ hiệu ứng demo mong muốn rồi tìm số liệu để minh họa. Một NASA-derived feature chỉ có giá trị khi nó tham gia trực tiếp vào so sánh và giải thích.
+MVP đề xuất giới hạn ở một vùng, một nhóm cây và ba chiến lược có căn cứ gồm hiện trạng. Ưu tiên nghiên cứu Đức Lập Hạ cũ (nay thuộc xã Đức Lập, Tây Ninh), nhóm đậu phộng–bắp–lúa; chưa chốt thửa đất, hiện trạng hoặc chuỗi cây hợp lệ. Việc chọn sau này phải dựa vào nguồn nông học và data sample, không bắt đầu từ hiệu ứng demo mong muốn rồi tìm số liệu để minh họa. Một NASA-derived feature chỉ có giá trị khi nó tham gia trực tiếp vào so sánh và giải thích.
 
 ### 1.2 Phần cứng tạo giá trị ở đâu?
 
@@ -47,7 +77,7 @@ CSV/JSON là điểm giao ban đầu vì cả Python, R và MATLAB đều có th
 
 ### 2.2 Luồng thiết bị
 
-Probe → ESP32 → bridge trên laptop → log H1 → thẻ context. Chiều ngược lại là một bản tóm tắt A1 đã tính trên laptop → ESP32 → OLED hoặc Serial. Không gửi toàn bộ raster, tập huấn luyện hay model lớn xuống MCU chỉ để chứng minh có AI trên chip. Chức năng thiết bị hiện tại là acquisition, chất lượng tín hiệu, giao tiếp và hiển thị trạng thái.
+Nhánh tham chiếu dự phòng: probe → ESP32 → bridge trên laptop → log H1 → thẻ context. Chiều ngược lại là một bản tóm tắt A1 đã tính trên laptop → ESP32 → OLED hoặc Serial. Không gửi toàn bộ raster, tập huấn luyện hay model lớn xuống MCU chỉ để chứng minh có AI trên chip. Chức năng thiết bị hiện tại là acquisition, chất lượng tín hiệu, giao tiếp và hiển thị trạng thái.
 
 ### 2.3 Tại sao tách hai luồng?
 

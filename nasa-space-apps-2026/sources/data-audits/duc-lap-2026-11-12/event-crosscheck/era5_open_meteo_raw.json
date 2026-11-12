@@ -1,0 +1,1 @@
+{"latitude":11.0,"longitude":106.5,"generationtime_ms":0.035643577575683594,"utc_offset_seconds":0,"timezone":"GMT","timezone_abbreviation":"GMT","elevation":6.0,"daily_units":{"time":"iso8601","precipitation_sum":"mm"},"daily":{"time":["2020-06-12","2020-06-13","2020-06-14","2020-06-15","2020-06-16","2020-06-17"],"precipitation_sum":[5.40,11.10,17.30,24.60,5.40,1.40]}}
