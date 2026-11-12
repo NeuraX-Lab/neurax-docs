@@ -1,0 +1,81 @@
+{
+  "audit_kind": "documentation and cached-source integrity, not product/field validation",
+  "review_date": "2026-11-12",
+  "checks": {
+    "markdown": {
+      "files": 68,
+      "local_link_occurrences": 508,
+      "project_missing_links": 0,
+      "imported_upstream_readme_missing_links": [
+        {
+          "file": "nasa-space-apps-2026/sources/data-audits/my-thanh-cai-lay-2026-11-12/imagery/boundary-readme.md",
+          "target": "../../postgresql/gis/"
+        },
+        {
+          "file": "nasa-space-apps-2026/sources/data-audits/my-thanh-cai-lay-2026-11-12/imagery/boundary-readme.md",
+          "target": "../../mysql/gis/"
+        },
+        {
+          "file": "nasa-space-apps-2026/sources/data-audits/my-thanh-cai-lay-2026-11-12/imagery/boundary-readme.md",
+          "target": "../../sqlserver/gis/"
+        },
+        {
+          "file": "nasa-space-apps-2026/sources/data-audits/my-thanh-cai-lay-2026-11-12/imagery/boundary-readme.md",
+          "target": "../../elasticsearch/README.md"
+        },
+        {
+          "file": "nasa-space-apps-2026/sources/data-audits/my-thanh-cai-lay-2026-11-12/imagery/boundary-readme.md",
+          "target": "../../mongodb/gis/README.md"
+        }
+      ],
+      "fences": "pass"
+    },
+    "raw_data": {
+      "hashes_verified": 16,
+      "days_per_variable": 4018,
+      "values": 16072,
+      "daily_keys_finite_fill_temp_order_precip_sign": "pass",
+      "rain_review_flag_mm": 488.17,
+      "quality": "WARN, not corrected or field validated"
+    },
+    "geometry_and_soil": {
+      "commune_matches_primary_source": true,
+      "block_pixel_to_coordinate_transform": "pass",
+      "kml_parse": "pass",
+      "soil_model_values_rechecked": 15,
+      "not_checked": "field boundaries, crop identity, uniform soil, suitability, independent positional accuracy"
+    },
+    "crop_evidence": {
+      "rows": 12,
+      "review_status": "not reviewed; decision/date empty",
+      "field_recommendation_ready": false
+    },
+    "current_pdf": {
+      "pages": 13,
+      "included_source_hashes": 12,
+      "output_hash": "pass",
+      "roles_and_unknown_semantics": "pass",
+      "visual_review": "separate rendered-page inspection required"
+    },
+    "snapshot_pdfs": {
+      "files": 3,
+      "notice_current_version": "1.3",
+      "original_pages_text_preserved": true
+    },
+    "zip": {
+      "entries": 26,
+      "internal_local_links_verified": 11,
+      "crc_and_hashes": "pass",
+      "pdf_matches_current": true
+    }
+  },
+  "warnings": [
+    "Imported vendor README retains links to absent upstream database folders; provenance snapshot left unchanged."
+  ],
+  "unresolved": [
+    "Official challenge Resources/local agenda/remote eligibility not fully verified",
+    "Crop-water-season review and sourced NASA-feature-to-comparison rule incomplete",
+    "No end-to-end product execution, trained model validation, farmer test or hardware calibration in this audit"
+  ],
+  "script_sha256": "f3dfec7ea65bf4e6ea1807f69ca4c367551e80f38485220f21a33af5cc615d8e"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "S2C_MSIL2A_20260325T031541_R118_T48PXS_20260325T082919",
+  "date": "2026-03-25",
+  "rgbUrl": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/106.017,10.461833333333331,106.039,10.480166666666669/300x250.png?collection=sentinel-2-l2a&item=S2C_MSIL2A_20260325T031541_R118_T48PXS_20260325T082919&assets=visual&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest",
+  "sclUrl": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/106.017,10.461833333333331,106.039,10.480166666666669/120x100.tif?collection=sentinel-2-l2a&item=S2C_MSIL2A_20260325T031541_R118_T48PXS_20260325T082919&assets=SCL&dst_crs=EPSG%3A4326&resampling=nearest&reproject=nearest"
+}

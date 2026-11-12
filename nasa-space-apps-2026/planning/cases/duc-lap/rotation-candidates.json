@@ -1,0 +1,184 @@
+{
+  "artifact_kind": "research_candidates_not_approved_rotations",
+  "version": "2.0",
+  "review_date": "2026-11-12",
+  "case_id": "duc-lap-ha-place-reference-v1",
+  "baseline": {
+    "id": "R0",
+    "status": "unknown_baseline",
+    "sequence": null,
+    "source_ids": [],
+    "reason": "No current farm or actual crop sequence verified"
+  },
+  "source_register": "local-feasibility-study.md#9-nguồn-mới-và-cách-kiểm",
+  "alternatives_for_priority_review": [
+    {
+      "id": "DL-A-MAIZE",
+      "previous_crop_candidate_id": "C-MAIZE",
+      "status": "candidate_annual_design",
+      "designed_sequence": [
+        "Bắp Đông Xuân",
+        "Lúa Hè Thu",
+        "Khoảng nghỉ cuối năm có quản lý; cần bàn với hộ"
+      ],
+      "complete_observed_sequence": null,
+      "evidence_scope": "local crop/season history plus southern regional trial duration; full cycle is analyst design",
+      "source_ids": [
+        "L1",
+        "D8"
+      ],
+      "variety_example_not_selected": "CP888",
+      "source_duration_days": [
+        102,
+        110
+      ],
+      "farm_dated_calendar": null,
+      "research_calendar_assumptions": {
+        "dry_crop_sowing_options_month_day": [
+          "01-01",
+          "01-15"
+        ],
+        "rice_sowing_month_day": "05-15",
+        "turnaround_days": 14,
+        "rice_window": "mid-May through end-August; variety/duration not verified",
+        "late_year_gap": "September–December, analyst design not actual baseline or approved fallow prescription"
+      },
+      "eligibility": "needs_review",
+      "conditions": [
+        "drainage_and_dry_wet_transition",
+        "water_during_critical_stages",
+        "grain_harvest_and_drying_field_release",
+        "grain_buyer_and_mechanisation"
+      ],
+      "missing": [
+        "actual_baseline",
+        "verified_farm_geometry_and_current_landuse",
+        "parcel_soil_and_drainage",
+        "seasonal_irrigation_supply_and_quality",
+        "current_variety_and_field_release_dates",
+        "rice_variety_and_calendar",
+        "labor_market_and_farmer_priorities",
+        "local_agronomic_review"
+      ],
+      "economic_soil_water_benefits_measured": false
+    },
+    {
+      "id": "DL-B-PEANUT",
+      "previous_crop_candidate_id": "C-PEANUT",
+      "status": "candidate_annual_design",
+      "designed_sequence": [
+        "Đậu phộng Đông Xuân",
+        "Lúa Hè Thu",
+        "Khoảng nghỉ cuối năm có quản lý; cần bàn với hộ"
+      ],
+      "complete_observed_sequence": null,
+      "evidence_scope": "local commune crop history; D5 indexed hamlet lead; duration at adjacent Duc Hoa Thuong trial; full cycle analyst design",
+      "source_ids": [
+        "L2",
+        "D5",
+        "D7",
+        "T1"
+      ],
+      "variety_example_not_selected": "GV10",
+      "source_duration_days": [
+        95,
+        95
+      ],
+      "farm_dated_calendar": null,
+      "research_calendar_assumptions": {
+        "dry_crop_sowing_options_month_day": [
+          "01-01",
+          "01-15"
+        ],
+        "rice_sowing_month_day": "05-15",
+        "turnaround_days": 14,
+        "rice_window": "mid-May through end-August; variety/duration not verified",
+        "late_year_gap": "September–December, analyst design not actual baseline or approved fallow prescription"
+      },
+      "eligibility": "needs_review",
+      "conditions": [
+        "friable_soil_and_drainage",
+        "irrigation_and_pump_operation",
+        "disease_and_previous_legume_history",
+        "harvest_labor_or_machine",
+        "buyer_and_residue_management"
+      ],
+      "missing": [
+        "actual_baseline",
+        "verified_farm_geometry_and_current_landuse",
+        "parcel_soil_and_drainage",
+        "seasonal_irrigation_supply_and_quality",
+        "current_variety_and_field_release_dates",
+        "rice_variety_and_calendar",
+        "labor_market_and_farmer_priorities",
+        "local_agronomic_review"
+      ],
+      "economic_soil_water_benefits_measured": false
+    }
+  ],
+  "reserve_candidate": {
+    "id": "C-SESAME",
+    "status": "regional_candidate_reserve_not_field_verified",
+    "concept": "Mè trong chuỗi với lúa; cần chọn biến thể theo ruộng",
+    "source_ids": [
+      "L3",
+      "D9"
+    ],
+    "source_variety_duration_days": [
+      70,
+      75
+    ],
+    "variety_example": "ĐH-1; not selected/procured",
+    "eligibility": "needs_review",
+    "reason_for_reserve": "Published regional structures, but stronger narrowed-local evidence now supports groundnut for first pair"
+  },
+  "comparison_scores": null,
+  "ranking": null,
+  "recommendation_status": "two_conditional_designs_ready_to_discuss_not_farm_advice",
+  "priority_change": {
+    "previous": [
+      "C-MAIZE",
+      "C-SESAME"
+    ],
+    "current": [
+      "DL-A-MAIZE",
+      "DL-B-PEANUT"
+    ],
+    "reason": "Named hamlet/corridor leads and new adjacent-trial groundnut duration; research priority only, not team approval"
+  },
+  "legacy_reference_menu_path": "reference-menu.json",
+  "legacy_reference_menu_role": "earlier_sandbox_design_not_current_local_case_recommendation",
+  "team_approved": false,
+  "calendar_screen_summary_path": "../../../sources/data-audits/duc-lap-2026-11-12/rotation-window-screen/summary.json",
+  "proposed_review_constraints": [
+    {
+      "id": "LOCAL-SOIL-WATER",
+      "requires": [
+        "soil_texture",
+        "drainage",
+        "irrigation"
+      ],
+      "unknown_action": "needs_review",
+      "reviewed_by_local_expert": false
+    },
+    {
+      "id": "CALENDAR-NO-OVERLAP",
+      "requires": [
+        "variety",
+        "dated_crop_windows",
+        "land_preparation_interval"
+      ],
+      "unknown_action": "needs_review",
+      "reviewed_by_local_expert": false
+    },
+    {
+      "id": "GROUNDNUT-RESIDUES",
+      "applies_to": "C-PEANUT",
+      "source_ids": [
+        "T1"
+      ],
+      "rule_kind": "qualitative_review_question_not_scoring_weight",
+      "local_transfer_reviewed": false
+    }
+  ]
+}

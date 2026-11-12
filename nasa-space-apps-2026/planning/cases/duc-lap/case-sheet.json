@@ -1,0 +1,161 @@
+{
+  "artifact_kind": "research_case_sheet_not_production_K1",
+  "case_id": "duc-lap-ha-place-reference-v1",
+  "review_date": "2026-11-12",
+  "status": "named_microarea_and_two_conditional_designs_not_field_verified",
+  "historical_area": "Đức Lập Hạ, Đức Hòa, Long An",
+  "current_area": "Xã Đức Lập, tỉnh Tây Ninh",
+  "administrative_source_ids": [
+    "L0"
+  ],
+  "place_reference": {
+    "latitude_deg": 10.91123,
+    "longitude_deg": 106.44351,
+    "source_id": "G1",
+    "role": "historical_place_reference_not_farm_or_verified_boundary_centroid"
+  },
+  "farm": {
+    "selected": false,
+    "coordinates": null,
+    "current_rotation": null,
+    "last_three_crop_cycles": null,
+    "interview_or_extension_review": null
+  },
+  "soil": {
+    "parcel_texture": null,
+    "parcel_ph": null,
+    "parcel_salinity": null,
+    "parcel_drainage": null,
+    "parcel_water_holding_capacity": null,
+    "soil_polygon_downloaded": false,
+    "historical_project_description": {
+      "source_id": "L1",
+      "description": "Bắp chuyển đổi trên đất lúa cát pha trong dự án có Đức Lập Hạ",
+      "scope": "project_lands_2013_2014_not_all_commune_or_API_point"
+    },
+    "soilgrids_context_probe": {
+      "downloaded": true,
+      "summary_path": "../../../sources/data-audits/duc-lap-2026-11-12/soilgrids-context/summary.json",
+      "target": "historical_GeoNames_place_not_selected_farm",
+      "native_resolution_m": 250,
+      "depths_cm": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          15
+        ]
+      ],
+      "local_validation": false,
+      "may_fill_parcel_fields": false
+    }
+  },
+  "water": {
+    "irrigation_source": null,
+    "dry_season_reliability": null,
+    "flood_or_waterlogging_history": null,
+    "rainfall_equals_irrigation_supply": false,
+    "regional_evidence": {
+      "source_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "positive_evidence": "Feb7 2025 regional report stated no shortage detected then",
+      "limitation": "Neither current farm supply nor 2026 drought status established; D4 concerns neighboring communes; D5 historical indexed lead"
+    }
+  },
+  "historical_crop_evidence": [
+    {
+      "crop": "maize",
+      "source_ids": [
+        "L1"
+      ],
+      "season_tag": "Đông Xuân 2013–2014",
+      "scope": "historical_local_project"
+    },
+    {
+      "crop": "groundnut",
+      "source_ids": [
+        "L2"
+      ],
+      "season_tag": "Đông Xuân 2015–2016",
+      "scope": "historical_local_project"
+    },
+    {
+      "crop": "sesame",
+      "source_ids": [
+        "L3"
+      ],
+      "season_tag": "Xuân Hè hoặc Thu Đông",
+      "scope": "regional_Long_An_not_verified_at_case"
+    }
+  ],
+  "nasa_audit": {
+    "manifest_path": "../../../sources/data-audits/duc-lap-2026-11-12/manifest.json",
+    "period": "2015-01-01/2025-12-31",
+    "quality_status": "warn",
+    "technical_completeness_checks": "pass",
+    "unresolved_review_date": "2020-06-14",
+    "ranking_ready": false,
+    "event_crosscheck": {
+      "status": "performed_model_disagreement_unresolved",
+      "provider": "ECMWF ERA5 via Open-Meteo",
+      "summary_path": "../../../sources/data-audits/duc-lap-2026-11-12/event-crosscheck/summary.json",
+      "ground_truth_verified": false
+    }
+  },
+  "decision_gates": {
+    "research_area_supported": true,
+    "actual_baseline_verified": false,
+    "two_complete_alternatives_verified_for_same_parcel": false,
+    "parcel_soil_and_water_verified": false,
+    "crop_calendar_and_varieties_verified": false,
+    "agronomic_ranking_permitted": false,
+    "named_search_corridor_supported": true,
+    "two_conditional_annual_designs_documented": true,
+    "soil_model_access_probe_downloaded": true,
+    "current_cropland_at_target_verified": false
+  },
+  "next_owner_review": [
+    "Bích",
+    "Hưng",
+    "Việt",
+    "Quang Luật"
+  ],
+  "source_register": "README.md#source-register",
+  "reference_menu_path": "reference-menu.json",
+  "research_recommendation": "Discuss Duc Hanh 1 named search area and maize-DX/rice-HT vs groundnut-DX/rice-HT conditional designs; verify parcel soil/water/R0/calendar before selection; sesame reserve",
+  "research_dossier": "local-feasibility-study.md",
+  "target_microarea": {
+    "status": "named_search_corridor_not_verified_field_polygon",
+    "priority_hamlet_historical": "Đức Hạnh 1, Đức Lập Hạ",
+    "access_corridor": "Lục Viên–Láng Cẩm; Tân Hòa–Đức Hạnh 1–Đức Hạnh 2",
+    "source_ids": [
+      "D1",
+      "D5",
+      "D6"
+    ],
+    "priority_basis": "D1 confirms named road/hamlets; D5 is indexed historical lead only; no current parcel verified",
+    "fallback_named_areas": [
+      "Tân Hòa/Đức Hạnh 2 on same named corridor",
+      "Remaining agricultural plots in former Mỹ Hạnh Bắc"
+    ],
+    "verified_boundary_geometry": null,
+    "current_landcover_verified": false,
+    "exclude": [
+      "industrial_or_residential_development",
+      "filled_or_acquired_land",
+      "unconfirmed_farming_access"
+    ]
+  },
+  "current_priority_candidate_ids": [
+    "DL-A-MAIZE",
+    "DL-B-PEANUT"
+  ],
+  "current_reserve_candidate_id": "C-SESAME",
+  "publication_scope": "Research dossier only; no proposal/PDF regeneration, commit or push in this update"
+}

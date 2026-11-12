@@ -1,0 +1,97 @@
+{
+  "audit_date_local": "2026-11-12",
+  "case_id": "duc-lap-ha-place-reference-v1",
+  "point_role": "Approximate historical place reference from GeoNames; not surveyed farm, not verified parcel centroid",
+  "point_source": "https://www.geonames.org/search.html?q=Xa+Duc+Lap+Ha&country=VN",
+  "requested_lon_lat": [
+    106.44351,
+    10.91123
+  ],
+  "coordinate_reference": "Longitude/latitude degrees; geodetic place reference, not a cadastral survey",
+  "returned_geometry": {
+    "type": "Point",
+    "coordinates": [
+      106.444,
+      10.911,
+      9.93
+    ]
+  },
+  "query": {
+    "parameters": "T2M,T2M_MAX,T2M_MIN,PRECTOTCORR",
+    "community": "AG",
+    "longitude": "106.44351",
+    "latitude": "10.91123",
+    "start": "20150101",
+    "end": "20251231",
+    "format": "JSON",
+    "time-standard": "UTC"
+  },
+  "retrieval": {
+    "retrieved_at_utc": "2026-11-11T19:44:32.497743+00:00",
+    "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR&community=AG&longitude=106.44351&latitude=10.91123&start=20150101&end=20251231&format=JSON&time-standard=UTC",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 268042
+  },
+  "source_header": {
+    "title": "NASA/POWER Source Native Resolution Daily Data",
+    "api": {
+      "version": "v2.10.3",
+      "name": "POWER Daily API"
+    },
+    "sources": [
+      "MERRA2",
+      "POWER"
+    ],
+    "fill_value": -999.0,
+    "time_standard": "UTC",
+    "start": "20150101",
+    "end": "20251231"
+  },
+  "source_parameter_metadata": {
+    "T2M": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters"
+    },
+    "T2M_MAX": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters Maximum"
+    },
+    "T2M_MIN": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters Minimum"
+    },
+    "PRECTOTCORR": {
+      "units": "mm/day",
+      "longname": "Precipitation Corrected"
+    }
+  },
+  "messages": [],
+  "resolution_source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+  "meteorology_source_grid_deg_lat_lon": [
+    0.5,
+    0.625
+  ],
+  "crs_note": "Point GeoJSON geographic coordinates; no reprojection/resampling in this audit",
+  "use_restriction": "NASA POWER open data; credit provider/source; no rights inferred for third-party soil documents",
+  "raw_sha256": "6c8bbc92a68985ae620e209f36958999db895bdc5a48d1c2dca2c5fc9a36cf5e",
+  "raw_bytes": 268042,
+  "analysis_script": "scripts/research/audit_duc_lap_power.py",
+  "script_sha256": "f3fa0bdf38e0a803f8982fe9a674f438c192b50af98da725b5e1a0fae77fa83d",
+  "qa_result": "warn",
+  "passed_checks": [
+    "completeness",
+    "units",
+    "duplicate keys",
+    "temperature ordering",
+    "nonnegative rain",
+    "monthly vs daily sums"
+  ],
+  "limitations": [
+    "Exploratory extreme-rain review flag unresolved; independent cross-check pending",
+    "No parcel soil, irrigation, crop sequence or farm observation validated",
+    "Not an agronomic suitability or yield model",
+    "No current-season forecast or ENSO causal analysis",
+    "Requested and returned point precision does not improve source grid resolution"
+  ]
+}

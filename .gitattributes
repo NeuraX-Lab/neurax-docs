@@ -1,0 +1,4 @@
+# Preserve exact evidence/build bytes across Windows and Linux; manifests hash raw bytes.
+# -text disables automatic CRLF conversion, not readable text diffs.
+* -text
+*.pdf binary

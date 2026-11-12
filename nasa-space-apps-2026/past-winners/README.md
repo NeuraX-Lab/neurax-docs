@@ -1,5 +1,11 @@
 # Past Winner Research — NASA Space Apps
 
+## Hồ sơ đã đối chiếu nguồn
+
+[Review local/global ngày 12/11/2026](evidence-review-2026-11-12.md): giải được xác nhận, mô tả dự án, nhận xét giám khảo nếu có, bài học suy luận và phần chưa xác minh HCMC. [Audit tính mới AgroTwin](../competitor-research/field-shift-novelty-audit-2026-11-12.md).
+
+Các giả thuyết lịch sử dưới đây không thay cho kết luận của review có nguồn.
+
 This folder captures patterns from previous NASA Space Apps Global Winners, Global Finalists and selected Local Winners that are useful for NeuraX's 2026 project decisions.
 
 ## Working pattern observed

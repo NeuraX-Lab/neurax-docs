@@ -1,0 +1,36 @@
+{
+  "aoi_id": "AOI-MT-ADMIN-v1",
+  "review_date": "2026-11-12",
+  "properties": {
+    "name": "Mỹ Thành commune / AOI-MT-ADMIN-v1",
+    "status": "source_defined_commune_AOI_for_remote_research_not_crop_suitability",
+    "source": "https://sapnhap.bando.com.vn",
+    "source_object_id": "diaphanhanhchinhcapxa_2025.464",
+    "source_area_km2": 52.3,
+    "aoi_role": "administrative_research_extent_not_a_farm",
+    "current_cropland_mask_available": false,
+    "same_soil_or_rotation_everywhere": false,
+    "field_boundary_validated": false
+  },
+  "bbox": [
+    106.000558,
+    10.395381,
+    106.092558,
+    10.532335
+  ],
+  "primary_request": {
+    "url": "https://sapnhap.bando.com.vn/pread_json",
+    "method": "POST",
+    "form": {
+      "id": "diaphanhanhchinhcapxa_2025.464"
+    }
+  },
+  "primary_geometry_sha256": "bb602d3a4dcc03a30951177af67c8f297dd41ebe976689833faac8d0e5466ca5",
+  "geometry_matches_reference_after_removing_duplicate_vertices": true,
+  "reference_independence": "reference is a copy derived from same publisher, not independent field validation",
+  "provider_application_geojson_data_projection": "EPSG:4326, verified in public application code",
+  "normalization": "removed only consecutive duplicate closing vertex; no invented corners or simplification; rebuilt bbox for selected feature",
+  "legacy_manual_polygon": "illustrative-aoi.geojson, not validated field boundary and no longer primary AOI",
+  "soil_weather_spatial_scope": "existing point samples; not an observed or aggregate soil census of whole commune",
+  "script_sha256": "d304cc767331ca15c887431eb5a2b51d18c8f372f09236e7cf41197a302da2cc"
+}

@@ -1,5 +1,11 @@
 # Nguồn đầu vào và quy ước bằng chứng
 
+## Đối chiếu bản Field Shift gửi lại — 2026-11-06
+
+Đã đọc file đính kèm `Pasted text.txt` người dùng gửi ngày 06/11. Phần Event đến cuối Potential Considerations trùng bản tiếng Anh đã lưu trong [dossier Field Shift](../challenges/07-field-shift.md) sau khi chuẩn hóa khoảng trắng. Không có yêu cầu mới hay nội dung Resources bổ sung trong file này, nên giữ một bản nguyên văn làm nguồn. Đây là kiểm nội dung file, chưa xác nhận website live có thay đổi khác.
+
+Field Shift đã được chọn ngày 04/11 theo [decision log](../decision-log.md); các gate sample/K1/QA còn mở. Lượt truy cập lại trang challenge và trang HCMC trả lỗi/không đọc được. [Playbook](../planning/competition-playbook.md) ghi nguồn cuộc thi 2026 và rubric tham chiếu 2025 tách biệt.
+
 > Ngày tiếp nhận/phân tích: 2026-10-30 (Asia/Saigon).
 
 ## Bản đề được sử dụng

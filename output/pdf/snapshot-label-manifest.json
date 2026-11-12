@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-12",
+  "files": [
+    {
+      "file": "NeuraX-AgroTwin-Preliminary-Proposal.pdf",
+      "original_archive": "output/pdf/archive/pre-current-state-label-2026-11-12/NeuraX-AgroTwin-Preliminary-Proposal.pdf",
+      "original_sha256": "eee06459a7e4d35de7087d143f613524c5a5f8e2c7724edc1597f5fc7c0db3b9",
+      "output_sha256": "650db4edac4e904edc523589d246053cc8e763b9322e0b30a1af99c6e10ccabc",
+      "original_pages": 33,
+      "output_pages": 34,
+      "scope": "one notice page added, original content unchanged"
+    },
+    {
+      "file": "NeuraX-AgroTwin-Team-Decision-Proposal.pdf",
+      "original_archive": "output/pdf/archive/pre-current-state-label-2026-11-12/NeuraX-AgroTwin-Team-Decision-Proposal.pdf",
+      "original_sha256": "d6f2b3a19c2d0d383c859883a46d2c630c2e2dc13462f0f41f605986fa8f91be",
+      "output_sha256": "1398c76da7a351d260f44bfb24efa1f6c536d7495bdefc27be42a26d21513e20",
+      "original_pages": 9,
+      "output_pages": 10,
+      "scope": "one notice page added, original content unchanged"
+    },
+    {
+      "file": "NeuraX-AgroTwin-Technical-Paper-An.pdf",
+      "original_archive": "output/pdf/archive/pre-current-state-label-2026-11-12/NeuraX-AgroTwin-Technical-Paper-An.pdf",
+      "original_sha256": "0cf405f17ed93111df1d3dbc8e8196763c8b153e7ba9dacdcecdafa369e607d3",
+      "output_sha256": "98cefc3efe7a9ddbd65421b053db330594805ac6f7e51f04abc5772c91974a42",
+      "original_pages": 22,
+      "output_pages": 23,
+      "scope": "one notice page added, original content unchanged"
+    }
+  ]
+}

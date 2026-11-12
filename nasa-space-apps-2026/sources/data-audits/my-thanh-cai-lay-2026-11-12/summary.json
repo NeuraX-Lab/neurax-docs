@@ -1,0 +1,337 @@
+{
+  "artifact_kind": "fixed_AOI_remote_data_not_measured_farm_soil_or_crop_model",
+  "review_date": "2026-11-12",
+  "sample_point_lon_lat": [
+    106.02154675,
+    10.4770865
+  ],
+  "sample_role": "point_within_commune_not_field_or_whole_commune_soil_average",
+  "aoi_geometry_path": "../../../planning/cases/my-thanh-cai-lay/aoi.geojson",
+  "power": {
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20150101",
+      "end": "20251231"
+    },
+    "units": {
+      "T2M": {
+        "units": "C",
+        "longname": "Temperature at 2 Meters"
+      },
+      "T2M_MAX": {
+        "units": "C",
+        "longname": "Temperature at 2 Meters Maximum"
+      },
+      "T2M_MIN": {
+        "units": "C",
+        "longname": "Temperature at 2 Meters Minimum"
+      },
+      "PRECTOTCORR": {
+        "units": "mm/day",
+        "longname": "Precipitation Corrected"
+      }
+    },
+    "days": 4018,
+    "values": 16072,
+    "technical_checks": "pass",
+    "quality": "warn",
+    "extreme_rain_review_threshold_mm": 200,
+    "flags_not_proven_errors": [
+      {
+        "date": "2020-06-14",
+        "rain_mm": 488.17
+      }
+    ],
+    "raw_sha256": "60fd764713fde469a037889ec2459018821abddd842c089899ac01d34e0fdf32",
+    "same_parameter_arrays_as_long_khanh_probe": true,
+    "spatial_support_degrees": [
+      0.5,
+      0.625
+    ]
+  },
+  "soilgrids": {
+    "native_support_m": 250,
+    "native_crs": "EPSG:152160",
+    "output_crs": "EPSG:4326",
+    "query_center_not_whole_AOI_soil_average": true,
+    "resampling_algorithm_not_verified": true,
+    "conversion_authority": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_01.html",
+    "all_requested_properties_divide_raw_by": 10,
+    "zero_not_interpreted_as_valid_soil_value": true,
+    "values": [
+      {
+        "property": "phh2o",
+        "depth": "0-5cm",
+        "statistic": "mean",
+        "raw_integer": 63,
+        "converted_value": 6.3,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "0-5cm",
+        "statistic": "Q0.05",
+        "raw_integer": 45,
+        "converted_value": 4.5,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "0-5cm",
+        "statistic": "Q0.95",
+        "raw_integer": 83,
+        "converted_value": 8.3,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "5-15cm",
+        "statistic": "mean",
+        "raw_integer": 63,
+        "converted_value": 6.3,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "5-15cm",
+        "statistic": "Q0.05",
+        "raw_integer": 45,
+        "converted_value": 4.5,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "5-15cm",
+        "statistic": "Q0.95",
+        "raw_integer": 83,
+        "converted_value": 8.3,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "15-30cm",
+        "statistic": "mean",
+        "raw_integer": 64,
+        "converted_value": 6.4,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "15-30cm",
+        "statistic": "Q0.05",
+        "raw_integer": 45,
+        "converted_value": 4.5,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "phh2o",
+        "depth": "15-30cm",
+        "statistic": "Q0.95",
+        "raw_integer": 83,
+        "converted_value": 8.3,
+        "unit": "pH_H2O",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "sand",
+        "depth": "0-5cm",
+        "statistic": "mean",
+        "raw_integer": 206,
+        "converted_value": 20.6,
+        "unit": "percent_mass",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "sand",
+        "depth": "0-5cm",
+        "statistic": "Q0.05",
+        "raw_integer": 12,
+        "converted_value": 1.2,
+        "unit": "percent_mass",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "sand",
+        "depth": "0-5cm",
+        "statistic": "Q0.95",
+        "raw_integer": 719,
+        "converted_value": 71.9,
+        "unit": "percent_mass",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "clay",
+        "depth": "0-5cm",
+        "statistic": "mean",
+        "raw_integer": 371,
+        "converted_value": 37.1,
+        "unit": "percent_mass",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "clay",
+        "depth": "0-5cm",
+        "statistic": "Q0.05",
+        "raw_integer": 4,
+        "converted_value": 0.4,
+        "unit": "percent_mass",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      },
+      {
+        "property": "clay",
+        "depth": "0-5cm",
+        "statistic": "Q0.95",
+        "raw_integer": 942,
+        "converted_value": 94.2,
+        "unit": "percent_mass",
+        "valid_model_value": true,
+        "returned_grid_size": [
+          10,
+          8
+        ],
+        "pixel_scale_deg": [
+          0.002200000000001978,
+          0.00229166666666712
+        ]
+      }
+    ],
+    "local_samples": null
+  },
+  "script_sha256": "f460d9646028ec2ea89a4f16d6720742d6cb063ff2d8d38c164f27a64adaeadf",
+  "limits": [
+    "No farmer or field survey required for the agreed remote-data hackathon scope",
+    "No claim of agronomic suitability or measured irrigation/yield/soil benefit",
+    "No current baseline rotation inferred from two satellite dates",
+    "Published Long Khanh/Cai Lay experiments are reference evidence, not same-site observations"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "artifact_kind": "research_window_screen_not_crop_model_or_recommendation",
+  "baseline": null,
+  "overall_status": "needs_local_soil_water_calendar_review",
+  "assumptions": {
+    "starts": [
+      "January 1",
+      "January 15"
+    ],
+    "rice_sowing": "May 15",
+    "turnaround_days": 14,
+    "these_are_farm_records": false
+  },
+  "duration_evidence": {
+    "D8": "CP888 102-110 days in southern regional trials; upper bound used, not universal maximum",
+    "D7": "GV10 95 days in Duc Hoa Thuong DX2011-2012 trial; transfer needs review"
+  },
+  "raw_sha256": "6c8bbc92a68985ae620e209f36958999db895bdc5a48d1c2dca2c5fc9a36cf5e",
+  "script_sha256": "c54dbd34ba25fda6cfb6951e1898afdeb91570cecf2f20b7cbe37f46ab0c8927",
+  "groups": [
+    {
+      "candidate": "DL-A-MAIZE",
+      "assumed_sowing_month_day": "01-01",
+      "duration_days": 110,
+      "years": 11,
+      "rain_mm_median": 47.37,
+      "rain_mm_min": 3.79,
+      "rain_mm_max": 247.84,
+      "mean_tmean_c": 29.348,
+      "calendar_slack_days_min": 10,
+      "calendar_slack_days_max": 11,
+      "calendar_conflict_years_under_assumptions": 0
+    },
+    {
+      "candidate": "DL-A-MAIZE",
+      "assumed_sowing_month_day": "01-15",
+      "duration_days": 110,
+      "years": 11,
+      "rain_mm_median": 72.1,
+      "rain_mm_min": 4.61,
+      "rain_mm_max": 322.97,
+      "mean_tmean_c": 29.981,
+      "calendar_slack_days_min": -4,
+      "calendar_slack_days_max": -3,
+      "calendar_conflict_years_under_assumptions": 11
+    },
+    {
+      "candidate": "DL-B-PEANUT",
+      "assumed_sowing_month_day": "01-01",
+      "duration_days": 95,
+      "years": 11,
+      "rain_mm_median": 29.62,
+      "rain_mm_min": 3.05,
+      "rain_mm_max": 225.69,
+      "mean_tmean_c": 29.009,
+      "calendar_slack_days_min": 25,
+      "calendar_slack_days_max": 26,
+      "calendar_conflict_years_under_assumptions": 0
+    },
+    {
+      "candidate": "DL-B-PEANUT",
+      "assumed_sowing_month_day": "01-15",
+      "duration_days": 95,
+      "years": 11,
+      "rain_mm_median": 46.29,
+      "rain_mm_min": 2.71,
+      "rain_mm_max": 245.9,
+      "mean_tmean_c": 29.708,
+      "calendar_slack_days_min": 11,
+      "calendar_slack_days_max": 12,
+      "calendar_conflict_years_under_assumptions": 0
+    }
+  ],
+  "limits": [
+    "Different window lengths cannot rank irrigation demand using rain totals",
+    "No ET, Kc, rooting depth, soil storage, irrigation volume or yield model",
+    "Meteorological grid at historical place; not verified selected hamlet or farm",
+    "POWER overall QA WARN persists; flagged June14 2020 outside these declared windows",
+    "No current ENSO or future-season forecast; no farmer sowing/harvest records",
+    "Maturity duration may not equal field release; field drying and clearing require verification",
+    "Rice variety/duration and full annual feasibility remain unverified"
+  ],
+  "allowed_use": "Discuss calendar sensitivity and questions about irrigation; never score farm eligibility"
+}

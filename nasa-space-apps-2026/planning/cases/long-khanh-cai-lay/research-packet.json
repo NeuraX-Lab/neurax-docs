@@ -1,0 +1,140 @@
+{
+  "artifact_kind": "historical_research_reference_not_2026_farm_pilot",
+  "review_date": "2026-11-12",
+  "recommendation": "Prefer Cai Lay / former Long Khanh research reference for hackathon; Duc Lap fallback with real farm access",
+  "team_approved": false,
+  "selection_rationale": "Published comparator and two alternatives with soil context, less construction than Duc Lap; not improved NASA weather accuracy",
+  "location": {
+    "historical": "Long Khánh, Cai Lậy, Tiền Giang",
+    "current_mapping": "former Long Khanh belongs to Cai Lay ward, Dong Thap",
+    "mapping_source": "https://dongthap.gov.vn/tin-tuc/chi-tiet?id=5843926",
+    "verified_experimental_plot_coordinates": null,
+    "locality_reference_lon_lat": [
+      106.11667,
+      10.38333
+    ],
+    "locality_source": "https://mapcarta.com/15497128",
+    "current_farm_partner": null,
+    "current_landuse_verified": false
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/download/605/3214/3214",
+      "publication_year_from_pdf": 2009,
+      "sha256": "ecc93a21a7b965dbc62a1d5722c001d9f2058edb0555708ba85108bb0eee1ccf",
+      "bytes": 354215,
+      "pages": 6,
+      "review": "text and selected table rendered/inspected",
+      "scope": "Long Khanh physical soil profile and rotation treatments; results separate from Vinh My",
+      "raw_pdf_in_repo": false
+    },
+    {
+      "id": "S2",
+      "url": "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/download/597/3222/3222",
+      "publication_year_from_pdf": 2009,
+      "sha256": "316c7b190c8db3959b2b54096ce9434fe38d21aa0f8373a31a29157d69995155",
+      "bytes": 406859,
+      "pages": 8,
+      "review": "text and selected table rendered/inspected",
+      "scope": "Cai Lay district experiment; exact field co-location with S1 not verified",
+      "raw_pdf_in_repo": false
+    }
+  ],
+  "plans": [
+    {
+      "id": "LK-R0",
+      "sequence": [
+        "rice",
+        "rice",
+        "rice"
+      ],
+      "role": "historical experimental comparator, not current farmer baseline",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "LK-A",
+      "sequence": [
+        "rice",
+        "baby_corn",
+        "rice"
+      ],
+      "role": "published research alternative",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "LK-B",
+      "sequence": [
+        "rice",
+        "mungbean",
+        "rice"
+      ],
+      "role": "published research alternative",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    }
+  ],
+  "season_structure": {
+    "source_id": "S2",
+    "scope": "Cai Lay experiment, exact field match to S1 not verified",
+    "seasons": [
+      "Đông Xuân",
+      "Hè Thu",
+      "Thu Đông"
+    ],
+    "upland_replacement_season": "Hè Thu",
+    "varieties_and_dated_calendar": null
+  },
+  "published_soil_context": [
+    {
+      "source_id": "S1",
+      "scope": "Long Khanh historical soil profile, NOT NASA locality or present farm",
+      "surface_depth_cm": [
+        0,
+        15
+      ],
+      "sand_percent": 2.4,
+      "silt_percent": 30.9,
+      "clay_percent": 66.7,
+      "bulk_density_g_cm3": 0.98,
+      "do_not_transfer_without_field_validation": true
+    },
+    {
+      "source_id": "S2",
+      "scope": "Cai Lay experimental topsoil baseline2001; do not merge with S1 as same sample",
+      "depth_cm": [
+        0,
+        15
+      ],
+      "ph_h2o": 5.1,
+      "ec_mS_cm": 0.36,
+      "ec_extraction_method_for_threshold_transfer": null,
+      "field_trial_continued_since": 2001,
+      "reported_sampling_year": 2005
+    }
+  ],
+  "water": {
+    "present_irrigation_supply": null,
+    "historical_conditions_source": "S2",
+    "rainfall_not_irrigation": true
+  },
+  "nasa_manifest_path": "../../../sources/data-audits/long-khanh-cai-lay-2026-11-12/manifest.json",
+  "evidence_limits": [
+    "S1 soil aggregate stability differences at Long Khanh not statistically significant; do not substitute Vinh My results",
+    "Published summaries are not raw replicate-level training observations",
+    "Historical experiments and climate2015-2025 are different periods",
+    "No verified current plot, farmer, irrigation, varieties or exact sowing dates",
+    "No yield/soil/water-saving model validated"
+  ],
+  "ranking": null,
+  "selected_for_2026_farm_advice": false,
+  "discussion_note": "../site-choice-2026-11-12.md"
+}

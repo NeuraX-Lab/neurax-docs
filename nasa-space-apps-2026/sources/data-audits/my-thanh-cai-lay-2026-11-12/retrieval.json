@@ -1,0 +1,148 @@
+{
+  "files": [
+    {
+      "file": "power_daily_2015_2025.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN%2CPRECTOTCORR&community=AG&longitude=106.02154675&latitude=10.4770865&start=20150101&end=20251231&format=JSON&time-standard=UTC",
+      "retrieved_at_utc": "2026-11-12T02:12:21.632567+00:00",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes": 268296,
+      "sha256": "60fd764713fde469a037889ec2459018821abddd842c089899ac01d34e0fdf32"
+    },
+    {
+      "file": "soilgrids/phh2o_0-5cm_mean.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_mean&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:20.834578+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 679,
+      "sha256": "3bc6e149e1596cea26345f42f84dc87bbb4c8d4a5f993ffc570dd10606c939a6"
+    },
+    {
+      "file": "soilgrids/phh2o_0-5cm_Q0.05.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_Q0.05&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:21.722146+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 682,
+      "sha256": "476c799be7fb3c8714bfc6b5077d7ceb40a37a68b088b361c2f515445dc99e84"
+    },
+    {
+      "file": "soilgrids/phh2o_0-5cm_Q0.95.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_Q0.95&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:22.390743+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 674,
+      "sha256": "7bf1cb7a3d423b76dbbff9586fb507ef9e20de9947e81449cdf54ba8d9d6f20e"
+    },
+    {
+      "file": "soilgrids/phh2o_5-15cm_mean.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_5-15cm_mean&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:22.470956+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 675,
+      "sha256": "9d7175dac6e922c69f9e2c93bb3db7204bf0aaff4332fbf662df87e9ac136e82"
+    },
+    {
+      "file": "soilgrids/phh2o_5-15cm_Q0.05.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_5-15cm_Q0.05&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:23.170355+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 671,
+      "sha256": "454bebaace86ff3d257fa62fb009dcb28e9d93ac0215c43e8e792f458ce801d8"
+    },
+    {
+      "file": "soilgrids/phh2o_5-15cm_Q0.95.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_5-15cm_Q0.95&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:23.226586+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 671,
+      "sha256": "b7fe383fd46bbae30eba7044543eda773be344229efd1da485558f47948d0313"
+    },
+    {
+      "file": "soilgrids/phh2o_15-30cm_mean.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_15-30cm_mean&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:23.901948+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 676,
+      "sha256": "5d00608fad8a189797f5a34757445adfa80a47185ac6a5ff798a076ec3da6bff"
+    },
+    {
+      "file": "soilgrids/phh2o_15-30cm_Q0.05.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_15-30cm_Q0.05&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:23.990431+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 673,
+      "sha256": "ab890ea55f2301e85629fa3dfbd3988ce0596855c391841a2096aa46d97a0266"
+    },
+    {
+      "file": "soilgrids/phh2o_15-30cm_Q0.95.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_15-30cm_Q0.95&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:24.944085+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 678,
+      "sha256": "8f5b6371c22b067619b3b61d3c5505110e017757d69b3afdb698a4a52c229e9d"
+    },
+    {
+      "file": "soilgrids/sand_0-5cm_mean.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=sand_0-5cm_mean&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:24.834438+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 727,
+      "sha256": "3026e379ed950db5f87078a733a6073aee07bee9309f98241cdb0a94c6a1f8f9"
+    },
+    {
+      "file": "soilgrids/sand_0-5cm_Q0.05.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=sand_0-5cm_Q0.05&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:25.630783+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 671,
+      "sha256": "1846fdc319a121e99fcf4b32056f10f60421e0820772d6441416691d27bdfd4d"
+    },
+    {
+      "file": "soilgrids/sand_0-5cm_Q0.95.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=sand_0-5cm_Q0.95&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:25.730415+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 732,
+      "sha256": "e4f5a0933eb8ef39ebf88db3962d32baa5319c695e9458f2c042394103c15fea"
+    },
+    {
+      "file": "soilgrids/clay_0-5cm_mean.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clay_0-5cm_mean&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:26.467722+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 744,
+      "sha256": "8c0356517d8358768cfbe5f6c8a8d18100cc49e266a25d05c759a40cb2d5ef0f"
+    },
+    {
+      "file": "soilgrids/clay_0-5cm_Q0.05.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clay_0-5cm_Q0.05&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:26.496262+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 635,
+      "sha256": "1a1426605967c1432967e3de6077ef752ccc786fb462ea5857b8a6b99f855f48"
+    },
+    {
+      "file": "soilgrids/clay_0-5cm_Q0.95.tif",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=clay_0-5cm_Q0.95&FORMAT=image%2Ftiff&SUBSET=X%28106.017%2C106.039%29&SUBSET=Y%2810.461833333333331%2C10.480166666666669%29&SUBSETTINGCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&OUTPUTCRS=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326",
+      "retrieved_at_utc": "2026-11-12T02:12:27.330140+00:00",
+      "http_status": 200,
+      "content_type": "image/tiff",
+      "bytes": 742,
+      "sha256": "770a16d8c7138c8755c0ffdd92467b2b9760b37dc73bbaa7f586220a92e337e7"
+    }
+  ]
+}

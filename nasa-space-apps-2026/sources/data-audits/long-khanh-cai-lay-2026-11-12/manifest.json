@@ -1,0 +1,81 @@
+{
+  "artifact_kind": "historical_locality_weather_probe_not_experiment_replication",
+  "review_date": "2026-11-12",
+  "request_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR&community=AG&longitude=106.11667&latitude=10.38333&start=20150101&end=20251231&format=JSON&time-standard=UTC",
+  "raw_file": "power_daily_2015_2025.json",
+  "raw_sha256": "f94ea0351c9495195e2bed33a4ee856234b18ca9cc101e9799b8a573732f72ea",
+  "raw_bytes": 268296,
+  "script_sha256": "f37bd10fdbf00080ce796221a40020b90b4009f41b789a2b6770592bd24a9261",
+  "header": {
+    "title": "NASA/POWER Source Native Resolution Daily Data",
+    "api": {
+      "version": "v2.10.3",
+      "name": "POWER Daily API"
+    },
+    "sources": [
+      "MERRA2",
+      "POWER"
+    ],
+    "fill_value": -999.0,
+    "time_standard": "UTC",
+    "start": "20150101",
+    "end": "20251231"
+  },
+  "parameters": {
+    "T2M": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters"
+    },
+    "T2M_MAX": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters Maximum"
+    },
+    "T2M_MIN": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters Minimum"
+    },
+    "PRECTOTCORR": {
+      "units": "mm/day",
+      "longname": "Precipitation Corrected"
+    }
+  },
+  "requested_point_lon_lat": [
+    106.11667,
+    10.38333
+  ],
+  "point_source": "https://mapcarta.com/15497128 (GeoNames 1575725)",
+  "point_role": "locality_reference_not_verified_farm_or_experimental_plot",
+  "returned_geometry": {
+    "type": "Point",
+    "coordinates": [
+      106.117,
+      10.383,
+      1.73
+    ]
+  },
+  "time_standard": "UTC",
+  "native_meteorology_support_deg": {
+    "latitude": 0.5,
+    "longitude": 0.625
+  },
+  "resolution_source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+  "technical_checks": "pass",
+  "days": 4018,
+  "values": 16072,
+  "extreme_rain_review_threshold_mm_per_day": 200,
+  "extreme_rain_flags": [
+    {
+      "date": "2020-06-14",
+      "rain_mm": 488.17,
+      "meaning": "exploratory review threshold, not proven error"
+    }
+  ],
+  "overall_quality": "warn",
+  "limitations": [
+    "Climate period2015-2025 differs from historical field experiments",
+    "No local station/irrigation/field weather validation",
+    "No soil or crop water model",
+    "Published treatment summaries are not raw independent training samples",
+    "No measured or predicted yield/water saving/soil change assigned to this grid"
+  ]
+}

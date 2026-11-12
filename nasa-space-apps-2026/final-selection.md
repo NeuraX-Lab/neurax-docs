@@ -1,5 +1,7 @@
 # Challenge đã chọn — Field Shift / NeuraX AgroTwin
 
+> Trạng thái 12/11 hiện hành: giữ Field Shift và **Mỹ Thành**, [START-HERE](planning/START-HERE.md), [roles Hưng-Việt cùng core](planning/my-thanh-team-roles-2026-11-12.md), [R0/R1/R2 tham khảo](planning/cases/my-thanh-cai-lay/rotation-evidence-for-bich.md). Đức Lập/bắp hạt/đậu phộng hoặc mè là nghiên cứu cũ; proposal 0.4 là snapshot, không khóa case/cây hiện tại. Chưa có khuyến cáo tại ruộng, baseline thực hoặc model end-to-end được kiểm.
+
 > 2026-11-04 · **Team đã chọn Field Shift theo xác nhận của người dùng.**
 > Căn cứ: [brief chi tiết](challenges/07-field-shift.md), [đội hình sáu người](../team/team-profile.md) và [shortlist v4](rankings/v4-data-qa-shortlist.md).
 

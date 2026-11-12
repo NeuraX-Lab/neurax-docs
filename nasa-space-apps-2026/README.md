@@ -1,21 +1,41 @@
-# NASA Space Apps 2026 — NeuraX Research
+# NASA Space Apps 2026 — nghiên cứu NeuraX
+
+> **ĐIỂM BẮT ĐẦU HIỆN HÀNH:** [Đọc trạng thái, vai trò và ba tài liệu cần dùng](planning/START-HERE.md). Mỹ Thành; Hưng-Việt cùng core; Hiếu backend remote. Các proposal/PDF cũ là snapshot, không dùng ghép phân công.
+
+
+**Ưu tiên trước giờ G:** [audit ngắn 12/11](planning/pre-event-readiness-audit-2026-11-12.md). Idea align theo brief nhưng phần bằng chứng đất–nước–cây chưa đủ; dừng mở rộng bản đồ/PDF. GO Team đã xác nhận nghiên cứu trước thi được phép, project work phải đợi giờ mở hackathon; không đọc các câu “prototype ngay” trong đề xuất cũ như cho phép làm submission trước T0.
+
+**Hồ sơ địa bàn/demo mới nhất gửi Bích (12/11):** [Mỹ Thành và block số hóa theo ảnh](planning/cases/my-thanh-cai-lay/README.md) · [nghiên cứu + quy trình demo](planning/cases/my-thanh-cai-lay/bich-site-and-demo-dossier.md) · [PDF có bản đồ](../output/pdf/NeuraX-AgroTwin-Site-and-Demo-Dossier-Bich.pdf). Bản này thay diễn giải ranh 17 ha/mẫu đất địa phương của snapshot cũ; chưa xác minh ruộng hoặc chốt khuyến cáo trồng cây. Demo không bắt buộc lấy đất địa phương. Chưa commit/push.
+
+**Snapshot đề xuất trước correction (không dùng làm scope hiện hành):** [Markdown 1.0](planning/team-proposal-2026-11-12.md) · [PDF](../output/pdf/NeuraX-AgroTwin-Team-Decision-Proposal.pdf). Đề nghị làm prototype reference/sandbox ngay, giữ farm-specific recommendation sau gate. Đã có ERA5 cross-check và exposure NASA; chưa có ground truth hoặc baseline hộ/thửa.
+
+**Audit nền Đức Lập trước khi so sánh địa bàn:** [audit Đức Lập](planning/cases/duc-lap/README.md), [NASA sample và QA](sources/data-audits/duc-lap-2026-11-12/README.md). Đã tải/kiểm 4.018 ngày POWER, quality WARN; chưa có hiện trạng hộ/thửa để khóa hai phương án. Các PDF 0.4/0.3 là snapshot trước lượt audit sample này.
+
+Phương án hành động: [local/global strategy](planning/local-to-global-strategy.md), tích hợp trong proposal 0.4; hardware paper 0.3 ghi nhánh HTTPSLAB chờ thông số và backup. Mục tiêu cạnh tranh local/global là định hướng chất lượng, chưa là kết quả hoặc cam kết.
+
+> Review 12/11: [đội thắng local/global](past-winners/evidence-review-2026-11-12.md), [tính mới AgroTwin so đối thủ](competitor-research/field-shift-novelty-audit-2026-11-12.md), [case Đức Lập và farm mô phỏng](planning/local-case-scope-and-simulation.md). Các điểm chính đã được tích hợp vào proposal 0.4 và PDF cập nhật 12/11.
 
 > Trạng thái 2026-11-04: team đã chọn Field Shift theo xác nhận của người dùng. Dữ liệu, vùng và quy tắc nông học vẫn cần kiểm trước khi triển khai.
 
-## Bắt đầu từ đây
+## Tài liệu nền và snapshot (đọc START-HERE trước)
 
-Việt làm **Technical Lead / DATA + AI**, chia module AI với Hưng; Quang Luật kiểm QA/thống kê độc lập và hỗ trợ An kiểm thiết bị. Quyền sở hữu chi tiết nằm trong team-workstreams và từng workflow.
+- [Proposal sơ bộ toàn dự án](planning/project-brief.md) / [PDF A4 cho cả team](../output/pdf/NeuraX-AgroTwin-Preliminary-Proposal.pdf): người dùng/giả thuyết, scope, DATA/K1, baseline, UX, architecture, đánh giá, phase, nguồn lực, rủi ro và gate; bản 0.4 ngày 12/11/2026.
+- [Paper kỹ thuật gửi An](planning/hardware-design-paper.md) và [PDF A4 đầy đủ](../output/pdf/NeuraX-AgroTwin-Technical-Paper-An.pdf): lý do chọn, alternatives, measurement/test plan, backup, phase và nguồn. [Brief cũ](planning/hardware-demo-brief.md) chỉ là tóm tắt phụ trợ.
 
-- [14 challenge dossiers](challenges/README.md): mỗi đề một file, phân tích + nguyên văn.
+Hưng-Việt cùng core; Hưng workflow/scope, Việt technical AI/Data Analysis; Bích Data/review nguồn-features; Hiếu backend remote; An ESP demo; Luật thống kê/đánh giá/QA từng block. Quyền sở hữu chi tiết nằm trong team-workstreams và từng workflow.
+
+- [14 hồ sơ challenge](challenges/README.md): mỗi đề một file, phân tích + nguyên văn.
 - [Nguồn đầu vào và mức xác nhận](sources/challenge-intake.md): Resources còn thiếu, truy cập trang challenge live trả lỗi.
 - [Kết quả kiểm tra tài liệu](sources/review-record.md): coverage, links, score, skill và giới hạn kiểm Mermaid.
 - [Shortlist v4](rankings/v4-data-qa-shortlist.md): cập nhật thế mạnh thống kê của Quang Luật; Field Shift, Earth Analog, MODIS/VIIRS được so theo điều kiện dữ liệu.
 - [Ba workflow cụ thể](planning/workflows/README.md): DATA input/output, baseline AI, payload DEPLOY, owner và tiêu chí bàn giao.
 - [Timeline HCMC](planning/event-timeline.md): 14–15/11/2026, NOVAWORLD theo team; baseline giờ có nghỉ và buffer, chưa là lịch BTC.
-- [Phân công DATA → AI → DEPLOY](planning/team-workstreams.md): six-owner matrix, Mermaid, task và onboarding Quang Luật.
+- [Phân công DATA → AI → DEPLOY](planning/team-workstreams.md): bảng sáu người, Mermaid, task và onboarding Quang Luật.
 - [Kiến trúc đề xuất](planning/architecture.md): gói D1/Q1/A1/E1/H1, metadata, QA, version và cách làm khi thiếu data.
 - [Hardware của An–Quang Luật](planning/hardware-preparation.md): BOM, chức năng, phép thử, thiết bị cần xác minh.
 - [Challenge đã chọn](final-selection.md): problem framing, phạm vi và các gate dữ liệu còn mở.
+
+- [Playbook cuộc thi](planning/competition-playbook.md): tiêu chí tham chiếu, evidence và ngôn ngữ bài nộp; cập nhật 06/11, chưa xác nhận đủ luật 2026/HCMC.
 
 ## 14 hồ sơ
 
