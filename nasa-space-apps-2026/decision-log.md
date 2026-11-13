@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — Decision Log
 
+## 2026-11-13 — tiếp nhận Resources, khảo sát data Mỹ Thành; chưa chọn dataset
+
+Người dùng yêu cầu lưu Resources, shortlist theo workflow Lab, notebook EDA từng nguồn và bản trao đổi DATA → AI. Đã lưu snapshot 24 nhóm và [audit/Q&A](resources/fieldshift-source-audit.md) trên nhánh docs riêng. Case MT-BLOCK-01 từ pack Hưng/Bích v1.3 (24/24 hash khớp), không tự coi ranh/crop/soil là field-verified. Lab branch riêng có EDA POWER/MODIS, SoilGrids model context; SMAP/IMERG access/metadata-only. **Không phê duyệt dataset/feature, không training, không thay quyết định chọn challenge.** Vai trò hiện hành theo pack 12/11 được ghi ở Lab; không sửa phân công lịch sử 30/10 hoặc thay đổi đang dở của người dùng.
+
 ## 2026-10-30 — Việt là Technical Lead, làm DATA và AI
 
 Người dùng xác nhận Việt biết xử lý DATA và làm AI, có thể đảm nhiệm Technical Lead. Kế hoạch hiện hành giao Việt kiến trúc/contract, pipeline và module AI cụ thể: Field Shift — forecast có gate và inference integration; Earth Analog — similarity implementation; MODIS/VIIRS — anomaly baseline. Hưng giữ hướng bài toán/scope và module AI còn lại, cùng review. Quang Luật giữ QA/E1 độc lập; Hiếu/An tự chủ trong contract để Việt không thành điểm nghẽn. Phân công chỉ coi Việt là người chuẩn hóa dữ liệu trong bản nháp trước đã được sửa.

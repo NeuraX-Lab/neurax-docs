@@ -1,5 +1,9 @@
 # Đề xuất chọn challenge — Field Shift / NeuraX AgroTwin
 
+## Bổ sung dữ liệu 13/11/2026
+
+[Resources và audit/Q&A mới](resources/README.md) cập nhật case Mỹ Thành từ pack v1.3 và EDA ứng viên trong Lab. Chưa chọn dataset/feature hoặc thay trạng thái quyết định challenge trong bản 30/10 bên dưới.
+
 > 2026-10-30 · **Khuyến nghị, chưa phải team đã chốt.**
 > Căn cứ: [brief chi tiết](challenges/07-field-shift.md), [đội hình sáu người](../team/team-profile.md) và [shortlist v4](rankings/v4-data-qa-shortlist.md).
 

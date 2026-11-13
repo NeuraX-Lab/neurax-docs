@@ -1,5 +1,9 @@
 # NeuraX Knowledge Base
 
+## Resources Field Shift — bổ sung 13/11/2026
+
+Đã tiếp nhận [24 nhóm Resources và audit/Q&A](nasa-space-apps-2026/resources/README.md), đối chiếu research pack Mỹ Thành bản 1.3. Có EDA ứng viên trong Lab; **chưa chọn dataset cho AI, chưa independent Q1/K1 approval**. Các mô tả trạng thái 30/10 bên dưới giữ mốc lịch sử của lần nghiên cứu đó.
+
 `neurax-docs` là kho nghiên cứu, hồ sơ team và quyết định của **NeuraX-Lab**: vì sao chọn hướng đi, giải quyết vấn đề gì và chuẩn bị ai làm gì.
 
 Hiện tại chỉ làm **Markdown + Mermaid**, gồm cả kiến trúc đề xuất và chuẩn bị hardware. Code sản phẩm và tài liệu hệ thống đã triển khai thuộc [nasasac26-neurax](https://github.com/NeuraX-Lab/nasasac26-neurax).

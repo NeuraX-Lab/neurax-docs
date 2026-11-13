@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## Resources và EDA — bổ sung 13/11/2026
+
+[Snapshot, shortlist và Q&A](resources/README.md) cập nhật tab Resources do người dùng cung cấp và case MT-BLOCK-01 / Mỹ Thành, Đồng Tháp. Lab khảo sát POWER, MODIS, SMAP, IMERG và SoilGrids từ pack; **không chốt source/model hoặc đổi trạng thái chọn challenge**. Nội dung 30/10 bên dưới là snapshot cũ.
+
 > Trạng thái 2026-10-30: đã phân tích đủ 14 đề chi tiết từ bản người dùng cung cấp; đội hình sáu người; đề xuất Field Shift, chưa khóa lựa chọn.
 
 ## Bắt đầu từ đây

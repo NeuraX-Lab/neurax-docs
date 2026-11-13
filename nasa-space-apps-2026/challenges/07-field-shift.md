@@ -1,5 +1,9 @@
 # 07 — Field Shift: Adapting Farms with NASA Data
 
+## Resources mới — 13/11/2026
+
+Xem [snapshot Resources và audit](../resources/README.md). Câu “Resources chưa có/kiểm đầy đủ” trong phân tích 30/10 bên dưới giữ ý nghĩa lịch sử; hiện đã lưu bản người dùng cung cấp và có audit ứng viên, chưa verified toàn bộ live Resources hoặc chọn dataset.
+
 > Cập nhật: 2026-10-30 · Đội hình: 6 người · Độ khó theo bản nguồn: Advanced · Intermediate.
 > Căn cứ: bản người dùng cung cấp `docs/challenges.md`, mục 6/14, từ dòng 216; nguyên văn ở cuối file. Resources chưa được cung cấp/kiểm chứng đầy đủ.
 

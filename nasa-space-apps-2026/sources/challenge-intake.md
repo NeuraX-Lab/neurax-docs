@@ -1,5 +1,9 @@
 # Nguồn đầu vào và quy ước bằng chứng
 
+## Intake bổ sung 13/11/2026
+
+Người dùng cung cấp nội dung Resources Field Shift gồm 24 nhóm. Đã lưu [snapshot](../resources/fieldshift-resources-supplied-2026-11-13.md) và [audit/Q&A](../resources/fieldshift-source-audit.md); trang challenge live vẫn trả 502. Research pack Mỹ Thành v1.3 đã kiểm 24 hash và được Lab dùng làm context AOI/soil, không phải ground truth. Thông tin Resources thiếu trong phần 30/10 bên dưới là lịch sử, không là trạng thái mới nhất.
+
 > Ngày tiếp nhận/phân tích: 2026-10-30 (Asia/Saigon).
 
 ## Bản đề được sử dụng
