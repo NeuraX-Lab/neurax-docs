@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## Bàn giao FieldShift v2 — 15/11/2026
+
+[Chỉ mục ba repository, báo cáo v2 và demo](planning/fieldshift-v2-handoff.md). DATA/AI nguồn thuộc Lab; product repository cung cấp UI/UX. Các snapshot v1 bên dưới được giữ để tra lịch sử.
+
 ## DATA và AI research v1 — 14/11 tối
 
 Hai báo cáo tách riêng: [DATA NASA + LOCAL + FARM preferences mô phỏng](planning/data-report-ai-v1.md) và [kiến trúc, training, evaluation, demo AI](planning/ai-report-v1.md). User đã cho phép mô phỏng mục tiêu FARM. HGB mưa và LLM selector đã được thử, nhưng baseline đơn giản tốt hơn nên giữ baseline; chưa có crop winner hoặc xác nhận canh tác tại ruộng. Các trạng thái “chưa train/chờ FARM” phía dưới là lịch sử trước bước này.
