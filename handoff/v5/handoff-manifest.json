@@ -1,0 +1,352 @@
+{
+  "schema_version": "agrotwin-v5-handoff-1",
+  "status": "V5_HANDOFF_VERIFIED",
+  "verified_at": "2026-11-14T10:52:46.371855+00:00",
+  "repositories": [
+    {
+      "repository": "neurax-fieldshift-lab",
+      "remote": "https://github.com/NeuraX-Lab/neurax-fieldshift-lab",
+      "branch": "ai/v5-viet-handoff",
+      "commit": "54bce495514fb3235fe7bd2d0df4ab001f74cca0",
+      "commit_kind": "payload_content_pin",
+      "V4_1_baseline_commit": "05e31b602bc3effc82fef4b91637b28301cc7b30",
+      "tree": "771cde907e0937008420209e3458b4b18dc8d166",
+      "checkout": "git checkout 54bce495514fb3235fe7bd2d0df4ab001f74cca0",
+      "access_Am2uocVi3t": "read",
+      "private": true
+    },
+    {
+      "repository": "nasasac26-neurax",
+      "remote": "https://github.com/NeuraX-Lab/nasasac26-neurax.git",
+      "branch": "handoff/v5-viet",
+      "commit": "728249bf6f92fa64df213c88f1e7539a25ab48bc",
+      "commit_kind": "payload_content_pin",
+      "V4_1_baseline_commit": "6e977964250781a672fb442cb72e2aea5461524b",
+      "tree": "f0c95b68de41bc15587eb456294f4047f7b341d2",
+      "checkout": "git checkout 728249bf6f92fa64df213c88f1e7539a25ab48bc",
+      "access_Am2uocVi3t": "read",
+      "private": false
+    },
+    {
+      "repository": "neurax-docs",
+      "remote": "https://github.com/NeuraX-Lab/neurax-docs",
+      "branch": "handoff/v5-viet",
+      "commit": "4ae955dceb49e40ee46b72dc0aa6cc268bf1c92e",
+      "commit_kind": "payload_content_pin",
+      "V4_1_baseline_commit": "d2ebf66fd0f6fb22c3062ab017781a39485411d8",
+      "tree": "6728fe1d3515cb8b478eb63dcf0f9a0c9d1310c9",
+      "checkout": "git checkout 4ae955dceb49e40ee46b72dc0aa6cc268bf1c92e",
+      "access_Am2uocVi3t": "write",
+      "private": false
+    }
+  ],
+  "pin_policy": "Exact compatible payload commits; metadata capsule is published afterward. Own publication SHA: git log -1 -- handoff/v5/handoff-manifest.json (not self-embedded).",
+  "docs_extraction": {
+    "parent": "7d691d320d153849035cf51a896c3ce0aa25fc52",
+    "source_V4_1": "d2ebf66fd0f6fb22c3062ab017781a39485411d8",
+    "reason": "Safe text extraction excludes unpublished Esri/Vantor artwork/PDF bundles, without rewriting original baseline/WIP.",
+    "original_checkout_branch": "checkpoint/v5-viet-unsanitized"
+  },
+  "runtime": {
+    "OS": "native Windows",
+    "python": "3.12.14",
+    "node": "24.22.1",
+    "npm_clean_install": "11.6.2",
+    "baseline_model_libraries": {
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "sklearn": "1.9.1",
+      "joblib": "1.6.0"
+    },
+    "fresh_backend_fastapi": "0.162.7 (baseline0.162.5);47tests pass",
+    "dependency_files": [
+      "lab/pyproject.toml",
+      "lab/requirements-eda-win-py312-20261113.txt",
+      "product/frontend/package-lock.json"
+    ],
+    "additional_full_test_dependency": "rasterio>=1.3; fresh1.5.2"
+  },
+  "contracts": {
+    "A1": "0.1-proposal",
+    "orchestration": "agrotwin-orchestration-1",
+    "research": "agrotwin-research-1",
+    "H1": "h1-monitoring-1",
+    "model": "v41-temperature-1",
+    "forecast": "null; actual production inference409/404"
+  },
+  "artifacts": {
+    "neurax-fieldshift-lab/neurax/resources/agrotwin/climate.json": {
+      "sha256_Git_blob_bytes": "068b1dcacb3361a9db6036bb7a49c39ac08882257dc31cf9920af8dbb52719ec",
+      "git_blob_oid": "513a15687a59d8f066243bfb728cf5f623143a4c"
+    },
+    "neurax-fieldshift-lab/neurax/resources/agrotwin/catalog.json": {
+      "sha256_Git_blob_bytes": "b797272652ba9b10ec73f81d1402c304eff5bb9fdf13fef64346774118366fa8",
+      "git_blob_oid": "bc5ff501409dd4925a59d4e037eeb1bc3ae1778c"
+    },
+    "neurax-fieldshift-lab/neurax/resources/agrotwin/case.json": {
+      "sha256_Git_blob_bytes": "d86da33ef001a9a27cff58045a0c85c9585cd4b6315e83a8afa327b569b4b8d0",
+      "git_blob_oid": "09619ac2b2ee60df5ca3b38d6ae9dd38cdb73a52"
+    },
+    "neurax-fieldshift-lab/neurax/resources/agrotwin/sources.json": {
+      "sha256_Git_blob_bytes": "7ae9b8400875e97abd1ac06e2d2634a5f6acd1844e2f110f81edcc0c2e1be521",
+      "git_blob_oid": "bef0bb418777889d2fe19bca22f12de4e2bc314e"
+    },
+    "neurax-fieldshift-lab/pyproject.toml": {
+      "sha256_Git_blob_bytes": "c35c0a176b77987dad1ee0eaefc589265db64ea23b1841dcefb6ae2f29a34f43",
+      "git_blob_oid": "cc952f2117c6450674784d16141df612817d7673"
+    },
+    "neurax-fieldshift-lab/tools/verify_v5_handoff.py": {
+      "sha256_Git_blob_bytes": "233f2feb3e19508ee0babdb33e97a0819dd02e69451b6d9bd01bd0541e48026c",
+      "git_blob_oid": "cce557afbdcc83d786aadfe6936ad419e0e9d53e"
+    },
+    "nasasac26-neurax/frontend/package-lock.json": {
+      "sha256_Git_blob_bytes": "56549ba2335f2be2294e53070f9111ddde5cfc14198b41f269499109a0cab248",
+      "git_blob_oid": "d71ae0fcb27c89b85eb536d2d5619497ce180af6"
+    },
+    "nasasac26-neurax/frontend/public/analysis/my-thanh.saved.json": {
+      "sha256_Git_blob_bytes": "3b61e638b91994c18763b0527bd8b9b40290aca41fe86915419f953909aaeb53",
+      "git_blob_oid": "f39ff9f85555c528a92d00c924145a414d97ac2d"
+    },
+    "nasasac26-neurax/frontend/public/research/e1.json": {
+      "sha256_Git_blob_bytes": "7810ce083f3a6700a65f9dc27cde8cf754ed4525117962acb9e7ad83cf8bd1c1",
+      "git_blob_oid": "0f5c71854aef69a54ee386e632dc828603d0a4cf"
+    },
+    "nasasac26-neurax/docs/execution/v4.1/evidence/report.json": {
+      "sha256_Git_blob_bytes": "7778b413aa7c1773477e50fad95e6ab2a5de1bfe8182b1e4440fb8d373716ef3",
+      "git_blob_oid": "d6babdd19d9a170c4462121b922b8e52e3008647"
+    },
+    "nasasac26-neurax/docs/execution/v4.1/evidence/final_predictions.csv": {
+      "sha256_Git_blob_bytes": "6d4181a8b62ead6e6525fdf39c8a752b93510c11539130c647b4ebba56569241",
+      "git_blob_oid": "b370edf689a8399941dd9e7191752b4b7e8f378c"
+    }
+  },
+  "model": {
+    "decision": "RESEARCH_ONLY",
+    "weights_shipped": false,
+    "baseline_artifact_sha256": "c3f661ad7c7f5159d45a263bb20a7d10def3f58d4b843ea5e541f1fdb2a4b6c1",
+    "normalized_sha256": "ff79f609ff0e7236487520576a78149d3ad984e2f55259844b8d638099d36c38",
+    "inference_consumer": "none; Power displays research report"
+  },
+  "reconstruction": {
+    "verify_no_fit": "lab/.venv/Scripts/python.exe tools/verify_v5_handoff.py --product-root ../nasasac26-neurax",
+    "existing_protocol_only": "lab/.venv/Scripts/python.exe -m neurax.agrotwin.research --out runs/v41-reproduction",
+    "raw_availability": "Optional original raw local only; curated monthly sample ships and suffices for baseline.",
+    "new_research_in_V5": false
+  },
+  "verification": {
+    "clean_install": "PASS_AFTER_DOCUMENTED_RASTERIO_FIX",
+    "initial_failure": "Test collection required rasterio; added existing optional dependency; no tests skipped/deleted.",
+    "backend": 47,
+    "frontend_unit": 21,
+    "browser": {
+      "startTime": "2026-11-14T10:47:13.496Z",
+      "duration": 74949.2,
+      "expected": 26,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "artifact_no_fit_verification": {
+      "status": "PASS",
+      "fits_performed": 0,
+      "months": 132,
+      "heldout_predictions": 24,
+      "recomputed_metrics": {
+        "candidate": {
+          "mae_degC": 0.4928593359456673,
+          "rmse_degC": 0.6212932302963811,
+          "bias_degC": -0.2642767060241897
+        },
+        "baseline": {
+          "mae_degC": 0.8317863749999996,
+          "rmse_degC": 1.089273104666574,
+          "bias_degC": 0.08632862499999971
+        }
+      },
+      "Q1": "131pass/1warn; rain flag retained",
+      "K1": "six draft, no approval promoted",
+      "API_analysis_cache_and_production_inference_gate": "PASS",
+      "artifact_text_sha256_LF": {
+        "dataset_inventory.json": "ca791892fe9516ef0695579504efcc9175dc88da21241e9d630f304d7bfe8f05",
+        "final_predictions.csv": "6d4181a8b62ead6e6525fdf39c8a752b93510c11539130c647b4ebba56569241",
+        "report.json": "7778b413aa7c1773477e50fad95e6ab2a5de1bfe8182b1e4440fb8d373716ef3",
+        "seasonality.csv": "528733ba7767119dcfd9a6f8d3b652132f698c6d4a3b3053deba054ec7b456f2",
+        "verification.json": "44763b5f8ecff0b84ca6631942e255b1bdfc39f99805edf8e6caa8a117256810"
+      },
+      "note": "Historical raw-byte hashes may differ by Git line endings; scientific JSON/prediction values explicitly checked."
+    },
+    "raw_to_monthly": {
+      "raw_available": true,
+      "raw_sha256": "60fd764713fde469a037889ec2459018821abddd842c089899ac01d34e0fdf32",
+      "expected_sha256": "60fd764713fde469a037889ec2459018821abddd842c089899ac01d34e0fdf32",
+      "n_reconstructed": 132,
+      "max_absolute_residual": {
+        "temp": 4.838709699583887e-07,
+        "rain": 5.684341886080802e-14
+      },
+      "passed": true,
+      "note": "Monthly numerical values reconstructed; retained manual source flags are Q1 sidecar, not corrections."
+    },
+    "logs": [
+      {
+        "path": "neurax-fieldshift-lab/clean-python-install.log",
+        "sha256": "a6e733d77dfed51fe2b009cf58e14629fe96e4817c9e56d5bcb5fa1a3e5525d2",
+        "bytes": 10676
+      },
+      {
+        "path": "neurax-fieldshift-lab/clean-rasterio-install.log",
+        "sha256": "a1e5e547544965883bb72751eea0c5c91b6a49d6c711e28b1f25bed9ad983c4c",
+        "bytes": 1603
+      },
+      {
+        "path": "neurax-fieldshift-lab/clean-backend-tests.log",
+        "sha256": "75ca0e2046c0c13b2bbe37c79d2b1b03cff6d23916eefd4ed3bd5dfdfd3b9dee",
+        "bytes": 1668
+      },
+      {
+        "path": "neurax-fieldshift-lab/clean-backend-tests-r2.log",
+        "sha256": "9cc454e966232bee3024d670f07a6a8f7c62906fb4d7aa5a9eb95fed51405188",
+        "bytes": 643
+      },
+      {
+        "path": "neurax-fieldshift-lab/clean-artifact-verification.json",
+        "sha256": "9b46d2e7af1a3e9da43c90a8dbec47950e92b97d98650ab60a2c7c4916cfa533",
+        "bytes": 1210
+      },
+      {
+        "path": "neurax-fieldshift-lab/clean-installed-requirements.txt",
+        "sha256": "c70d2f1be73d8441777103026bf11953f99f9f99224fbbc172bff1747e5da84d",
+        "bytes": 918
+      },
+      {
+        "path": "nasasac26-neurax/frontend/clean-npm-install.log",
+        "sha256": "8f18bfdbd0d514d04f6e539bac706d5945d39d878679c709a3235c47a16774f6",
+        "bytes": 29
+      },
+      {
+        "path": "nasasac26-neurax/frontend/clean-frontend-tests.log",
+        "sha256": "e80ae5f40a78f73e17975a099f6d60e7d3e5eb198ddaab4b5bbb14e6f8c10f3b",
+        "bytes": 281
+      },
+      {
+        "path": "nasasac26-neurax/frontend/clean-frontend-build.log",
+        "sha256": "99e983fa82e8bf0332ad4116c3a5ce06fa7efb8c428a29ce9e4b531dce8e350b",
+        "bytes": 3202
+      },
+      {
+        "path": "nasasac26-neurax/frontend/clean-browser-tests.log",
+        "sha256": "682e4977a57d49013cb5c35ee3282ff5a88701283acf7f058b05e51d7577fbe9",
+        "bytes": 3171
+      }
+    ]
+  },
+  "source_history_audit": [
+    {
+      "repo": "neurax-fieldshift-lab",
+      "new_blobs_scanned": 99,
+      "binary_paths": [
+        "docs/eda/2026-11-13/coverage/coverage.png",
+        "docs/eda/2026-11-13/power-2025-context.png",
+        "docs/eda/2026-11-13/sentinel-samples.png"
+      ],
+      "secrets": [],
+      "oversize": [],
+      "unapproved_binaries": []
+    },
+    {
+      "repo": "nasasac26-neurax",
+      "new_blobs_scanned": 145,
+      "binary_paths": [
+        "docs/execution/v4.1/evidence/eda.png",
+        "frontend/public/terrain/10/813/481.png",
+        "frontend/public/terrain/10/813/482.png",
+        "frontend/public/terrain/11/1627/963.png",
+        "frontend/public/terrain/11/1627/964.png",
+        "frontend/public/terrain/12/3254/1927.png",
+        "frontend/public/terrain/12/3254/1928.png",
+        "frontend/public/terrain/13/6508/3855.png",
+        "frontend/public/terrain/13/6508/3856.png",
+        "frontend/public/terrain/13/6509/3855.png",
+        "frontend/public/terrain/13/6509/3856.png",
+        "frontend/public/terrain/14/13016/7711.png",
+        "frontend/public/terrain/14/13016/7712.png",
+        "frontend/public/terrain/14/13016/7713.png",
+        "frontend/public/terrain/14/13017/7711.png",
+        "frontend/public/terrain/14/13017/7712.png",
+        "frontend/public/terrain/14/13017/7713.png",
+        "frontend/public/terrain/14/13018/7711.png",
+        "frontend/public/terrain/14/13018/7712.png",
+        "frontend/public/terrain/14/13018/7713.png"
+      ],
+      "secrets": [],
+      "oversize": [],
+      "unapproved_binaries": []
+    },
+    {
+      "repo": "neurax-docs",
+      "new_blobs_scanned": 3,
+      "binary_paths": [],
+      "secrets": [],
+      "oversize": [],
+      "unapproved_binaries": []
+    }
+  ],
+  "preserved_preexisting_tracked_WIP": [
+    "neurax-fieldshift-lab/AGENTS.md",
+    "neurax-fieldshift-lab/README.md",
+    "neurax-fieldshift-lab/docs/agent-orchestration.md",
+    "neurax-fieldshift-lab/docs/architecture-proposal.md",
+    "neurax-fieldshift-lab/docs/contracts.md",
+    "neurax-fieldshift-lab/docs/implementation-status.md",
+    "neurax-fieldshift-lab/docs/project-context.json",
+    "nasasac26-neurax/README.md",
+    "nasasac26-neurax/docs/architecture.md",
+    "neurax-docs/README.md",
+    "neurax-docs/nasa-space-apps-2026/README.md",
+    "neurax-docs/nasa-space-apps-2026/decision-log.md",
+    "neurax-docs/nasa-space-apps-2026/final-selection.md",
+    "neurax-docs/nasa-space-apps-2026/planning/START-HERE.md",
+    "neurax-docs/nasa-space-apps-2026/planning/architecture.md",
+    "neurax-docs/nasa-space-apps-2026/planning/team-workstreams.md",
+    "neurax-docs/nasa-space-apps-2026/planning/workflows/field-shift.md",
+    "neurax-docs/team/team-profile.md"
+  ],
+  "access": {
+    "checked_user": "Am2uocVi3t",
+    "checked_read_all_three": true,
+    "account_permissions_modified": false,
+    "future_work": "Lab/product push needs write or approved private fork; never public-fork private source."
+  },
+  "scientific_boundaries": [
+    "six K1drafts/two provisional packets unapproved",
+    "physical device not tested",
+    "real user study not done",
+    "no supervised crop labels",
+    "no production EO pipeline"
+  ],
+  "not_performed": [
+    "main merge",
+    "force push",
+    "permission changes",
+    "new research model",
+    "bulk imagery ingestion",
+    "dashboard redesign",
+    "external teammate message",
+    "paid services"
+  ],
+  "document_index": [
+    "START_HERE_FOR_VIET.md",
+    "DATASET_AND_SPECTRAL_RESEARCH.md",
+    "AI_RESEARCH_E1_AND_MENTOR_PACKET.md",
+    "AI_TO_DASHBOARD_CONTRACT.md",
+    "K1_H1_RESEARCH_BOUNDARIES.md",
+    "V5_CHECKOUT_REPRO_INTEGRATION_RUNBOOK.md",
+    "V5_HANDOFF_MANIFEST.md",
+    "MENTOR_DECISION_LOG.md"
+  ],
+  "publication_note": "Lab payload received documentation-only completion after clean tests. No runtime/dependency/source-data changes since the tested clone."
+}
