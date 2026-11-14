@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## Local evidence và ML/RAG — 14/11 chiều
+
+[Bích bản có nguồn và bổ sung dữ liệu địa phương](planning/local-evidence-review-2026-11-14.md): source audit, soil/station/study tables, corpus Anh–Việt và workflow forecast/recommender/RAG dự tính. Chưa chốt features hoặc train.
+
 ## EDA vệ tinh và kiến trúc ML + RAG — 14/11
 
 [Review Bích, MODIS/SMAP/Sentinel-2 và đề xuất ML + RAG](planning/satellite-bich-ml-rag-2026-11-14.md). Người dùng yêu cầu cùng chốt features sau khi xem EDA và kiến trúc dự tính; chưa training hoặc chốt output.
