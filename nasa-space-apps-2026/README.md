@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## Quyết định DATA v1 — 14/11/2026
+
+[Workflow được user đồng ý, LOCAL tập trung và DATA v1](planning/data-block-v1.md): chốt thứ tự DATA trước AI, chọn features A8/B10, preprocessing và fusion theo đúng grain. Các trạng thái chưa chọn features trong snapshot cũ bên dưới đã được cập nhật bằng quyết định này. FARM INPUT chờ user cung cấp; chưa train hoặc build RAG.
+
 ## Local evidence và ML/RAG — 14/11 chiều
 
 [Bích bản có nguồn và bổ sung dữ liệu địa phương](planning/local-evidence-review-2026-11-14.md): source audit, soil/station/study tables, corpus Anh–Việt và workflow forecast/recommender/RAG dự tính. Chưa chốt features hoặc train.
