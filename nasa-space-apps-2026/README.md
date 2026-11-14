@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## EDA vệ tinh và kiến trúc ML + RAG — 14/11
+
+[Review Bích, MODIS/SMAP/Sentinel-2 và đề xuất ML + RAG](planning/satellite-bich-ml-rag-2026-11-14.md). Người dùng yêu cầu cùng chốt features sau khi xem EDA và kiến trúc dự tính; chưa training hoặc chốt output.
+
 ## Resources và EDA — bổ sung 13/11/2026
 
 [Snapshot, shortlist và Q&A](resources/README.md) cập nhật tab Resources do người dùng cung cấp và case MT-BLOCK-01 / Mỹ Thành, Đồng Tháp. Lab khảo sát POWER, MODIS, SMAP, IMERG và SoilGrids từ pack; **không chốt source/model hoặc đổi trạng thái chọn challenge**. Nội dung 30/10 bên dưới là snapshot cũ.
