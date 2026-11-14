@@ -67,3 +67,6 @@ Tách **theo bản đề**, **nguồn web đã đọc**, **candidate/cần kiể
 V1/v2/v3 là lịch sử; v4 cập nhật shortlist và vai trò, không chấm lại toàn bộ 14 đề. Các nhận định đối thủ/winner cũ chưa có hồ sơ nguồn từng dự án; không dùng như bằng chứng đã xác minh trong quyết định hiện hành.
 
 [Repository strategy](governance/repository-strategy.md) phân biệt nghiên cứu/proposal ở đây với code và as-built docs ở repo sản phẩm. Hồ sơ tổ chức và community defaults thuộc NeuraX-Lab/.github.
+## Handoff Data và workflow 14/11/2026
+
+[Requirement gửi Bích và workflow/baseline thứ Bảy](nasa-space-apps-2026/planning/data-handoff-2026-11-14/README.md) cập nhật đầu ra đất–mưa–luân canh, Hưng đang làm dashboard, Việt NASA/external/preprocessing/AI và Bích local/reference. EDA được làm trước; chưa chọnfeature/preprocessing/fusion/model. Notion chỉ có bản chuẩn bị local, chưa livewrites.

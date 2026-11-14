@@ -90,3 +90,6 @@ For the leading candidates, verify:
 - 48-hour end-to-end feasibility.
 
 After this audit, produce ranking v3 and run a small technical feasibility spike for the leading options before final lock.
+## 2026-11-14 — dashboard outputs, Vietnam data request và baseline target
+
+Người dùng định hướng soil information + rainfall forecast + rotation support; Hưng đang thiết kế dashboard, Việt làmNASA/externaldata/preprocessing/AI. Yêu cầu xongEDA rồi bàn preprocessing/combine; giao Bích tìmpublic/free/Vietnam data vàreferences, baseline chiều–tối thứBảy14/11. [Requirement/workflow](planning/data-handoff-2026-11-14/README.md) ghi rõ ngàyđíchuser yêu cầu và exactgiờ đềxuất. LabEDA mới dùngPOWER2015–10/2026 (4322ngày/142tháng), khôngmodel-fit/fusion. Notionplugin installed nhưngwrite tools vắng; CUAstoppedURLguard nên chưa tạoNotionobjects; draftCSV/MD không tựsynced. Không đổi trạng thái chọndataset/K1approval.
