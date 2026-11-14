@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## DATA và AI research v1 — 14/11 tối
+
+Hai báo cáo tách riêng: [DATA NASA + LOCAL + FARM preferences mô phỏng](planning/data-report-ai-v1.md) và [kiến trúc, training, evaluation, demo AI](planning/ai-report-v1.md). User đã cho phép mô phỏng mục tiêu FARM. HGB mưa và LLM selector đã được thử, nhưng baseline đơn giản tốt hơn nên giữ baseline; chưa có crop winner hoặc xác nhận canh tác tại ruộng. Các trạng thái “chưa train/chờ FARM” phía dưới là lịch sử trước bước này.
+
 ## Quyết định DATA v1 — 14/11/2026
 
 [Workflow được user đồng ý, LOCAL tập trung và DATA v1](planning/data-block-v1.md): chốt thứ tự DATA trước AI, chọn features A8/B10, preprocessing và fusion theo đúng grain. Các trạng thái chưa chọn features trong snapshot cũ bên dưới đã được cập nhật bằng quyết định này. FARM INPUT chờ user cung cấp; chưa train hoặc build RAG.
