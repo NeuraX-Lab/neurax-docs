@@ -1,4 +1,4 @@
-﻿# Việt — kịch bản bám slide 4–5, tối đa mục tiêu 75 giây
+# Việt — kịch bản bám slide 4–5, tối đa mục tiêu 75 giây
 
 Đã đối chiếu trực tiếp hình slide 4 và 5 hiện hành. Chỉ nói nội dung có trên hai trang. Chọn một ngôn ngữ để thuyết trình, không đọc hai bản nối tiếp.
 
@@ -6,7 +6,7 @@ Phân bổ: **slide 4: 0–35 giây; slide 5: 35–72 giây; chuyển sang Hưng
 
 ## English — slide 4, 0–35s
 
-NASA POWER provides rainfall, temperature and humidity across 514 months, from 1984 to October 2026. We check units, missing days and the calendar, then fit same-month historical averages. These are regional estimates; drainage and salinity need local information. The December rainfall estimate is 33.68 millimetres, ranging from zero to 93.27. Nominal coverage is 80 percent; diagnostic rainfall coverage was 67.7 percent.
+NASA POWER provides rainfall, temperature and humidity across 514 months, from 1984 to October 2026. We check units, missing days and the calendar, then fit same-month historical averages. These are regional estimates. The December rainfall estimate is 33.68 millimetres, with an empirical uncertainty range from zero to 93.27. Nominal coverage is 80 percent; diagnostic rainfall coverage was 67.7 percent.
 
 ## English — slide 5, 35–72s
 
@@ -14,7 +14,7 @@ Here, the climate branch feeds the decision layer. The second branch searches se
 
 ## Tiếng Việt — slide 4, 0–35 giây
 
-NASA POWER cung cấp mưa, nhiệt độ và độ ẩm trong 514 tháng, từ năm 1984 đến tháng 10 năm 2026. Chúng tôi kiểm đơn vị, ngày thiếu và lịch, rồi tính trung bình lịch sử theo cùng tháng. Đây là ước tính vùng; thoát nước và độ mặn cần thông tin địa phương. Ước tính mưa tháng 12 là 33,68 milimét, với khoảng từ 0 đến 93,27. Độ bao phủ mục tiêu là 80%; độ bao phủ mưa trong đánh giá đạt 67,7%.
+NASA POWER cung cấp mưa, nhiệt độ và độ ẩm trong 514 tháng, từ năm 1984 đến tháng 10 năm 2026. Chúng tôi kiểm đơn vị, ngày thiếu và lịch, rồi tính trung bình lịch sử theo cùng tháng. Đây là ước tính vùng. Ước tính mưa tháng 12 là 33,68 milimét, với khoảng bất định thực nghiệm từ 0 đến 93,27. Độ bao phủ mục tiêu là 80%; độ bao phủ mưa trong đánh giá đạt 67,7%.
 
 ## Tiếng Việt — slide 5, 35–72 giây
 
