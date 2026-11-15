@@ -1,34 +1,37 @@
-# Việt — lời thoại slide 4 và 5
+﻿# Việt — kịch bản bám slide 4–5, tối đa mục tiêu 75 giây
 
-Phân công đã chốt: **Ngọc Bích: 1–3; Việt: 4–5; Hưng: 6–7.** Video 30 giây phát riêng. Việt có khoảng 75 giây: slide 4 khoảng 25 giây; slide 5 khoảng 50 giây gồm kiến trúc và ví dụ. Phần Anh khoảng 140 từ, nên có thời gian chỉ vào visual và chuyển người nói.
+Đã đối chiếu trực tiếp hình slide 4 và 5 hiện hành. Chỉ nói nội dung có trên hai trang. Chọn một ngôn ngữ để thuyết trình, không đọc hai bản nối tiếp.
 
-## Slide 4 — NASA DATA
+Phân bổ: **slide 4: 0–35 giây; slide 5: 35–72 giây; chuyển sang Hưng trước giây 75.** Các khoảng là mốc tập nói, chưa phải thời lượng đo từ giọng của Việt. Đọc rõ khoảng 140–150 từ tiếng Anh/phút; dành vài giây chỉ vào visual. Các số thập phân và tên thuật toán cần tập trước, không đọc vội để chạy giờ.
 
-### English
+## English — slide 4, 0–35s
 
-Thank you, Bích. NASA POWER provides our climate backbone: rainfall, temperature and humidity across 514 months, from 1984 through October 2026. We check units and missing days before building monthly estimates. The chart shows regional climate history, not measurements from one farm. Our seasonal baseline also displays an uncertainty range, so farmers can see the limits of the estimate.
+NASA POWER provides rainfall, temperature and humidity across 514 months, from 1984 to October 2026. We check units, missing days and the calendar, then fit same-month historical averages. These are regional estimates; drainage and salinity need local information. The December rainfall estimate is 33.68 millimetres, ranging from zero to 93.27. Nominal coverage is 80 percent; diagnostic rainfall coverage was 67.7 percent.
 
-### Tiếng Việt
+## English — slide 5, 35–72s
 
-Cảm ơn Bích. NASA POWER là trục dữ liệu khí hậu của chúng tôi: mưa, nhiệt độ và độ ẩm trong 514 tháng, từ năm 1984 đến tháng 10/2026. Chúng tôi kiểm đơn vị và ngày thiếu dữ liệu trước khi tạo ước tính theo tháng. Biểu đồ thể hiện lịch sử khí hậu vùng, không phải phép đo của một ruộng. Baseline theo mùa cũng hiển thị khoảng bất định để người dùng nhìn thấy giới hạn của ước tính.
+Here, the climate branch feeds the decision layer. The second branch searches seventeen bilingual evidence cards using BM25 and character TF-IDF, checks support and source hashes, then returns a cited answer or refusal. Farm constraints also enter the decision layer. The local API returns options and citations; the dashboard is pending. In the example, poor drainage conflicts with the mungbean guideline, so mungbean is blocked. Hưng will continue.
 
-## Slide 5 — Method và demo tĩnh
+## Tiếng Việt — slide 4, 0–35 giây
 
-### English
+NASA POWER cung cấp mưa, nhiệt độ và độ ẩm trong 514 tháng, từ năm 1984 đến tháng 10 năm 2026. Chúng tôi kiểm đơn vị, ngày thiếu và lịch, rồi tính trung bình lịch sử theo cùng tháng. Đây là ước tính vùng; thoát nước và độ mặn cần thông tin địa phương. Ước tính mưa tháng 12 là 33,68 milimét, với khoảng từ 0 đến 93,27. Độ bao phủ mục tiêu là 80%; độ bao phủ mưa trong đánh giá đạt 67,7%.
 
-ArgoTwin has two blocks. The climate block uses seasonal mean climatology. The evidence block searches seventeen bilingual cards using BM25 and character TF-IDF, then checks question support and source integrity. It returns a cited answer or declines when evidence is insufficient.
+## Tiếng Việt — slide 5, 35–72 giây
 
-Here, poor drainage is a declared input. The mungbean guideline warns against waterlogged sites, so the system blocks that option. This shows how evidence becomes a decision check. Hưng will now explain our validation and next steps.
+Nhánh khí hậu đưa kết quả vào tầng quyết định. Nhánh còn lại tìm trong 17 thẻ bằng chứng song ngữ bằng BM25 và TF-IDF theo ký tự, kiểm mức hỗ trợ và hash nguồn, rồi trả câu có trích dẫn hoặc từ chối. Các ràng buộc ruộng cũng đi vào tầng quyết định. API trả phương án và trích dẫn; dashboard đang chờ cập nhật. Trong ví dụ, thoát nước kém xung đột với quy trình đậu xanh, nên phương án đậu xanh bị chặn. Mời Hưng trình bày tiếp.
 
-### Tiếng Việt
+## Chỉ theo visual, không thêm lời ngoài slide
 
-ArgoTwin có hai khối. Khối khí hậu dùng trung bình lịch sử theo mùa. Khối bằng chứng tìm trong 17 thẻ song ngữ bằng BM25 và character TF-IDF, sau đó kiểm mức hỗ trợ câu hỏi và tính toàn vẹn nguồn. Hệ thống trả câu trả lời có trích dẫn hoặc từ chối khi thiếu bằng chứng.
+| Mốc | Chỉ vào đâu | Nội dung lời nói |
+|---|---|---|
+| 0–10s | 514 và ba biến khí hậu | Nguồn NASA POWER, khoảng thời gian |
+| 10–19s | Flow căn giữa bên trái và ô thông tin vùng | Kiểm dữ liệu, trung bình cùng tháng, giới hạn địa phương |
+| 19–35s | Khối seasonal baseline dưới biểu đồ mưa | 33.68, khoảng 0–93.27, nominal 80% và diagnostic 67.7% |
+| 35–54s | Hai nhánh và dòng RAG method | Climate, 17 cards, hybrid search, checks, cited answer/refusal |
+| 54–62s | Decision layer, Local API, Dashboard UI | Farm constraints, outputs, UI pending |
+| 62–72s | Ba ô worked example | Poor drainage → guideline → mungbean blocked, chuyển Hưng |
+| 72–75s | Chuyển người nói | Dự phòng ngắt câu, chuyển slide |
 
-Trong ví dụ này, thoát nước kém là thông tin khai báo. Quy trình đậu xanh cảnh báo tránh nơi bị úng, nên hệ thống chặn phương án đó. Đây là cách bằng chứng được chuyển thành một bước kiểm quyết định. Hưng sẽ trình bày tiếp phần kiểm chứng và các bước tiếp theo.
+Nếu tập thực tế bị trễ, bỏ câu “The local API returns options and citations; the dashboard is pending.” / “API trả phương án và trích dẫn; dashboard đang chờ cập nhật.” để lấy lại vài giây. Không cắt số liệu coverage vì 80% không phải accuracy.
 
-## Điểm chỉ trên slide
-
-- Slide 4: chỉ 514 tháng, rồi chart mưa và dải bất định. Không đọc từng nhãn trong flow.
-- Slide 5: chỉ nhánh trên khi nói climate, nhánh dưới khi nói evidence; xuống ba ô ví dụ khi nói poor drainage. Không có thao tác bấm hoặc nội dung ẩn.
-- Đọc một ngôn ngữ trong slot; bản Việt phục vụ hiểu nghĩa và luyện nói. Không đọc cả hai nối tiếp.
-- Không gọi khoảng 80% là accuracy, hoặc nói hệ thống đã chọn được cây tốt nhất. Climatology là baseline thống kê; phần evidence không fine-tune LLM.
+Bản này không thêm farmer benefits, yield, forecast superiority, live demo hoặc kết quả không xuất hiện trên slide. Bản Việt dùng “độ bao phủ” cho coverage; không đổi thành “độ chính xác”.
