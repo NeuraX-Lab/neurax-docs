@@ -1,5 +1,9 @@
 # NeuraX Knowledge Base
 
+## Selected system AI v4 — 15/11/2026
+
+[Bộ báo cáo selected v4 và API Dashboard](nasa-space-apps-2026/selected-system-v4/README.md): người dùng chốt ML v3 + RAG v4 + pooled. Có kiến trúc giải thích cho người không chuyên, báo cáo DATA/validation sau fit, cẩm nang, ghi chú các version và audit DATA→AI→DEMO. Đây là version AI được chọn, khác tên v4 của bảng ranking lịch sử. Source Dashboard mới của Hưng còn chờ; chưa tuyên bố đã ghép frontend.
+
 ## Resources Field Shift — bổ sung 13/11/2026
 
 Đã tiếp nhận [24 nhóm Resources và audit/Q&A](nasa-space-apps-2026/resources/README.md), đối chiếu research pack Mỹ Thành bản 1.3. Có EDA ứng viên trong Lab; **chưa chọn dataset cho AI, chưa independent Q1/K1 approval**. Các mô tả trạng thái 30/10 bên dưới giữ mốc lịch sử của lần nghiên cứu đó.

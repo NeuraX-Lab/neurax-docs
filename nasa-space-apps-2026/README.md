@@ -1,5 +1,9 @@
 # NASA Space Apps 2026 — NeuraX Research
 
+## Selected AI system v4
+
+[Báo cáo và hợp đồng API cho Dashboard](selected-system-v4/README.md). Chốt theo yêu cầu người dùng15/11/2026; giữ lịch sử v1–v6, không tự nâng version và không gọi diagnostic đã lộ là test độc lập.
+
 ## Bàn giao FieldShift v2 — 15/11/2026
 
 [Chỉ mục ba repository, báo cáo v2 và demo](planning/fieldshift-v2-handoff.md). DATA/AI nguồn thuộc Lab; product repository cung cấp UI/UX. Các snapshot v1 bên dưới được giữ để tra lịch sử.
